@@ -10,7 +10,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.supinfo.suprail.dao.UserDao;
-import com.supinfo.suprail.interfaces.IUserDao;
+import com.supinfo.suprail.interfaces.dao.IUserDao;
+import com.supinfo.suprail.interfaces.job.IUserJob;
+import com.supinfo.suprail.job.UserJob;
 
 @Configuration
 @ComponentScan(basePackages="com.supinfo.suprail")
@@ -38,5 +40,10 @@ public class GeneralConfiguration extends WebMvcConfigurerAdapter{
     @Bean
     public IUserDao getUserDao() {
         return new UserDao();
+    }
+    
+    @Bean
+    public IUserJob getUserJob() {
+        return new UserJob();
     }
 }

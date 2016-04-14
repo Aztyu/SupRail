@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.supinfo.suprail.entity.User;
-import com.supinfo.suprail.interfaces.IUserDao;
+import com.supinfo.suprail.interfaces.dao.IUserDao;
+import com.supinfo.suprail.interfaces.job.IUserJob;
 
 @Controller
 public class UserController {
 	@Autowired
-    IUserDao user_dao;
+    IUserJob user_job;
     
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String getCreationUser(Model model,HttpServletRequest request) {
@@ -23,12 +24,22 @@ public class UserController {
     
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String saveUser(Model model, HttpServletRequest request){
-        User u = new User();
-        u.setFirstName(request.getParameter("firstname"));
-        u.setLastName(request.getParameter("lastname"));
+        User u;
         
-        user_dao.createUser(u);
-        
-        return "redirect:/index";
+        try{
+	        u = new User();
+	        
+	        u.setFirstName(request.getParameter("firstname"));
+	        u.setLastName(request.getParameter("lastname"));
+	        u.setEmail(request.getParameter("email"));
+	        
+	        
+	        user_job.createUser(u, request.getParameter("password"));
+	        
+	        return "redirect:/index";
+        }catch(Exception ex){
+        	model.addAttribute("error", "error");
+        	return "register";
+        }
     }
 }

@@ -5,7 +5,7 @@ import javax.persistence.EntityTransaction;
 
 import com.supinfo.suprail.database.PersistenceManager;
 import com.supinfo.suprail.entity.User;
-import com.supinfo.suprail.interfaces.IUserDao;
+import com.supinfo.suprail.interfaces.dao.IUserDao;
 
 public class UserDao implements IUserDao{
 	@Override
