@@ -3,8 +3,8 @@ package com.supinfo.suprail.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+/*@Entity
 public class Station {
 	@Id
 	private int id;
-}
+}*/

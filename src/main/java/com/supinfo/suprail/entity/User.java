@@ -6,7 +6,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.Generated;
 
 import com.supinfo.suprail.util.BaseUtil;
 
@@ -14,6 +18,7 @@ import com.supinfo.suprail.util.BaseUtil;
 public class User {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
 	private String userName;
