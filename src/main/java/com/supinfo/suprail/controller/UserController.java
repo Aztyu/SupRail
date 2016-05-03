@@ -33,7 +33,6 @@ public class UserController {
 	        u.setLastName(request.getParameter("lastname"));
 	        u.setEmail(request.getParameter("email"));
 	        
-	        
 	        user_job.createUser(u, request.getParameter("password"));
 	        
 	        return "redirect:/index";
@@ -41,5 +40,16 @@ public class UserController {
         	model.addAttribute("error", "error");
         	return "register";
         }
+    }
+    
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String loginUser(Model model,HttpServletRequest request) {
+        try{
+        	User user = user_job.getUser((String)request.getParameter("login"), (String)request.getParameter("password"));
+        	request.getSession().setAttribute("user", user);
+        }catch(Exception ex){
+        	return "home";
+        }
+    	return "index";		
     }
 }

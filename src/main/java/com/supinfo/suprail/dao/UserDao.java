@@ -2,6 +2,7 @@ package com.supinfo.suprail.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 
 import com.supinfo.suprail.database.PersistenceManager;
 import com.supinfo.suprail.entity.User;
@@ -17,9 +18,14 @@ public class UserDao implements IUserDao{
         et.commit();
         em.close();
     }
+	
+	@Override
+	public User getUser(String login, String password) {
+		EntityManager em = PersistenceManager.getEntityManager();
+		Query query = em.createQuery("SELECT u FROM User AS u WHERE u.userName = :login AND u.password = :password");
+		query.setParameter("log", login);
+		query.setParameter("pwd", password);
+		return (User)query.getSingleResult();
 
-    @Override
-    public User getUser() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	}
 }

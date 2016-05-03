@@ -42,9 +42,8 @@ public class UserJob implements IUserJob{
 	}
 
 	@Override
-	public User getUser() {
-		// TODO Auto-generated method stub
-		return null;
+	public User getUser(String login, String password) {
+		return dao.getUser(login, password);
 	}
 
 }

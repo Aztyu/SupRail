@@ -4,5 +4,5 @@ import com.supinfo.suprail.entity.User;
 
 public interface IUserDao {
 	public void createUser(User user);
-    public User getUser();
+    public User getUser(String login, String password);
 }
