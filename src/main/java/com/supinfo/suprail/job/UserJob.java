@@ -21,14 +21,8 @@ public class UserJob implements IUserJob{
 	@Override
 	public void createUser(User user, String password) {
 		try {
-			SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
-			String salt = String.valueOf(secureRandom.nextInt());
-			String to_hash = String.valueOf(salt) + password;
-			
-			MessageDigest crypt = MessageDigest.getInstance("SHA-1");
-	        crypt.reset();
-	        crypt.update(password.getBytes("UTF-8"));
-	        String hash = BaseUtil.byteToHex(crypt.digest());
+			String salt = BaseUtil.generateSalt();
+	        String hash = BaseUtil.getSaltedPassword(salt, password);
 		
 	        user.setSalt(salt);
 	        user.setPassword(hash);
@@ -42,8 +36,9 @@ public class UserJob implements IUserJob{
 	}
 
 	@Override
-	public User getUser(String login, String password) {
-		return dao.getUser(login, password);
+	public User getUser(String login, String password) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+		String salted = BaseUtil.getSaltedPassword(dao.getUserSalt(login), password);
+		return dao.getUser(login, salted);
 	}
 
 }

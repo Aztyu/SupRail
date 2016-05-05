@@ -22,10 +22,18 @@ public class UserDao implements IUserDao{
 	@Override
 	public User getUser(String login, String password) {
 		EntityManager em = PersistenceManager.getEntityManager();
-		Query query = em.createQuery("SELECT u FROM User AS u WHERE u.userName = :login AND u.password = :password");
+		Query query = em.createQuery("SELECT u FROM User AS u WHERE u.email = :log AND u.password = :pwd");
 		query.setParameter("log", login);
 		query.setParameter("pwd", password);
 		return (User)query.getSingleResult();
 
+	}
+	
+	@Override
+	public String getUserSalt(String login) {
+		EntityManager em = PersistenceManager.getEntityManager();
+		Query query = em.createQuery("SELECT u.salt FROM User AS u WHERE u.email = :log");
+		query.setParameter("log", login);
+		return (String)query.getSingleResult();
 	}
 }

@@ -11,23 +11,11 @@
 		<meta name="google-signin-client_id" content="62410611142-3mese73l1crnh0hc3p5rdr4k0eicdpb5.apps.googleusercontent.com">
 	</head>
 	<body>
+		<%@ include file="include/header.jsp" %>
 		<h1>
 			Welcome to SupRail  
 		</h1>
 		
 		<P>  The time on the server is ${serverTime}. </P>
-		<form action="${pageContext.request.contextPath}/login" method="POST">
-			 Login:<br>
-			  <input type="text" name="login"><br>
-			  Password:<br>
-			  <input type="password" name="password">
-			  <button type="submit">connexion</button>
-		</form>
-		
-		<div class="g-signin2" data-onsuccess="onSignIn"></div>
-	
-		<script>
-			
-		</script>
 	</body>
 </html>

@@ -6,17 +6,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-        <form action="${pageContext.request.contextPath}/register" method="post">
-            First name:<br>
-            <input type="text" name="firstname"><br>
-            Last name:<br>
-            <input type="text" name="lastname"><br>
-            Email:<br>
-            <input type="text" name="email"><br>
-            Password:<br>
-            <input type="text" name="password"><br><br>
-            <input type="submit" value="Submit">
-        </form>
+	<body>
+		<%@ include file="include/header.jsp" %>
+		<form action="${pageContext.request.contextPath}/register" method="post">
+		    First name:<br>
+		    <input type="text" name="firstname"><br>
+		    Last name:<br>
+		    <input type="text" name="lastname"><br>
+		    Email:<br>
+		    <input type="text" name="email"><br>
+		    Password:<br>
+		    <input type="password" name="password"><br><br>
+		    <input type="submit" value="Submit">
+		</form>
     </body>
 </html>

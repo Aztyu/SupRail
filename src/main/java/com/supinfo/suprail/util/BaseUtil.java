@@ -1,10 +1,15 @@
 package com.supinfo.suprail.util;
 
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.Formatter;
 import java.util.Random;
 
 public class BaseUtil {
 	private static String random_str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	
 	public static String generateRandomString(int size){
 		String random = new String();
 		Random rand = new Random();
@@ -26,5 +31,18 @@ public class BaseUtil {
 	    String result = formatter.toString();
 	    formatter.close();
 	    return result;
+	}
+	
+	public static String getSaltedPassword(String salt, String password) throws UnsupportedEncodingException, NoSuchAlgorithmException{
+		String to_hash = String.valueOf(salt) + password;
+		MessageDigest crypt = MessageDigest.getInstance("SHA-1");
+        crypt.reset();
+        crypt.update(to_hash.getBytes("UTF-8"));
+        return BaseUtil.byteToHex(crypt.digest());
+	}
+	
+	public static String generateSalt() throws NoSuchAlgorithmException{
+		SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
+		return String.valueOf(secureRandom.nextInt());
 	}
 }

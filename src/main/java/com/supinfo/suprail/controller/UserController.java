@@ -35,7 +35,7 @@ public class UserController {
 	        
 	        user_job.createUser(u, request.getParameter("password"));
 	        
-	        return "redirect:/index";
+	        return "redirect:/";
         }catch(Exception ex){
         	model.addAttribute("error", "error");
         	return "register";
@@ -50,6 +50,12 @@ public class UserController {
         }catch(Exception ex){
         	return "home";
         }
-    	return "index";		
+    	return "main";		
+    }
+    
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logoutUser(Model model,HttpServletRequest request) {
+        request.getSession().removeAttribute("user");
+    	return "home";		
     }
 }
