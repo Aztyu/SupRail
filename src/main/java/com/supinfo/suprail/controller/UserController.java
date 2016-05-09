@@ -1,15 +1,17 @@
 package com.supinfo.suprail.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.supinfo.suprail.entity.User;
-import com.supinfo.suprail.interfaces.dao.IUserDao;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 
 @Controller
@@ -50,7 +52,18 @@ public class UserController {
         }catch(Exception ex){
         	return "home";
         }
-    	return "main";		
+    	return "redirect:/main";		
+    }
+    
+    @RequestMapping(value = "/login/google", method = RequestMethod.POST)
+    public ResponseEntity<String> loginGoogleUser(Model model,HttpServletRequest request) {
+        try{
+        	User user = user_job.getUserFromGoogle((String)request.getParameter("google_id"));
+        	request.getSession().setAttribute("user", user);
+        }catch(Exception ex){
+        	return new ResponseEntity<String>(HttpStatus.FORBIDDEN);
+        }
+        return new ResponseEntity<String>(HttpStatus.OK);		
     }
     
     @RequestMapping(value = "/logout", method = RequestMethod.GET)

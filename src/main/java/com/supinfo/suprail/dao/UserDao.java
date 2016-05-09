@@ -1,5 +1,7 @@
 package com.supinfo.suprail.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
@@ -35,5 +37,18 @@ public class UserDao implements IUserDao{
 		Query query = em.createQuery("SELECT u.salt FROM User AS u WHERE u.email = :log");
 		query.setParameter("log", login);
 		return (String)query.getSingleResult();
+	}
+	
+	@Override
+	public User getGoogleUser(String email) {
+		EntityManager em = PersistenceManager.getEntityManager();
+		Query query = em.createQuery("SELECT u FROM User AS u WHERE u.email = :email AND u.isGoogleUser = 1");
+		query.setParameter("email", email);
+		List results = query.getResultList();
+		if(results.isEmpty()){
+			return null;
+		}else{
+			return (User)results.get(0);
+		}
 	}
 }

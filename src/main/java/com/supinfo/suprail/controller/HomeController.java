@@ -49,4 +49,9 @@ public class HomeController {
 		
 		return "index";
 	}
+	
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String mainUserPage(Model model) {
+		return "main";
+	}
 }

@@ -9,5 +9,17 @@ function onSignIn(googleUser) {
 
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
-    console.log("ID Token: " + id_token);		
+    console.log("ID Token: " + id_token);
+
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		  if (xhttp.readyState == 2 && xhttp.status == 200) {
+		    window.location.href = "http://localhost:8080/suprail/main";
+		  }else{
+				console.log("error");
+			}
+		};
+		xhttp.open("POST", "/suprail/login/google", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("google_id=" + id_token);
 }
