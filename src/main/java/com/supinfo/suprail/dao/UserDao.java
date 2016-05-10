@@ -42,7 +42,7 @@ public class UserDao implements IUserDao{
 	@Override
 	public User getGoogleUser(String email) {
 		EntityManager em = PersistenceManager.getEntityManager();
-		Query query = em.createQuery("SELECT u FROM User AS u WHERE u.email = :email AND u.isGoogleUser = 1");
+		Query query = em.createQuery("SELECT u FROM User AS u WHERE u.email = :email AND u.googleUser = 1");
 		query.setParameter("email", email);
 		List results = query.getResultList();
 		if(results.isEmpty()){

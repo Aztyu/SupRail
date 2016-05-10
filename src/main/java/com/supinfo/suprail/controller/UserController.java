@@ -55,15 +55,15 @@ public class UserController {
     	return "redirect:/main";		
     }
     
-    @RequestMapping(value = "/login/google", method = RequestMethod.POST)
-    public ResponseEntity<String> loginGoogleUser(Model model,HttpServletRequest request) {
+    @RequestMapping(value = "/login/google", method = RequestMethod.GET)
+    public String loginGoogleUser(Model model,HttpServletRequest request) {
         try{
         	User user = user_job.getUserFromGoogle((String)request.getParameter("google_id"));
         	request.getSession().setAttribute("user", user);
         }catch(Exception ex){
-        	return new ResponseEntity<String>(HttpStatus.FORBIDDEN);
+        	return "home";
         }
-        return new ResponseEntity<String>(HttpStatus.OK);		
+        return "redirect:/main";		
     }
     
     @RequestMapping(value = "/logout", method = RequestMethod.GET)

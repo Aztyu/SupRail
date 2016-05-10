@@ -29,8 +29,8 @@ public class User {
 	private String password;
 	private String salt;
 	
-	private boolean isGoogleUser;
-	private boolean isFacebookUser;
+	private boolean googleUser;
+	private boolean facebookUser;
 	
 	public String getFirstName() {
 		return firstName;
@@ -69,16 +69,16 @@ public class User {
 		this.password = password;
 	}
 	public boolean isGoogleUser() {
-		return isGoogleUser;
+		return googleUser;
 	}
 	public void setGoogleUser(boolean isGoogleUser) {
-		this.isGoogleUser = isGoogleUser;
+		this.googleUser = isGoogleUser;
 	}
 	public boolean isFacebookUser() {
-		return isFacebookUser;
+		return facebookUser;
 	}
 	public void setFacebookUser(boolean isFacebookUser) {
-		this.isFacebookUser = isFacebookUser;
+		this.facebookUser = isFacebookUser;
 	}
 	public String getSalt() {
 		return salt;

@@ -14,6 +14,14 @@
 	</c:when>
 	<c:otherwise>
 		<p>Welcome ${ sessionScope.user.firstName }</p>
-		<a href="${pageContext.request.contextPath}/logout">Déconnexion</a>
+		<c:choose>
+			<c:when test="${ sessionScope.user.googleUser == true }">
+				<button onclick="googleLogOut()">Déconnexion</button>
+			</c:when>
+			<c:otherwise>
+				<button onclick="simpleLogOut()">Déconnexion</button>
+			</c:otherwise>
+		</c:choose>
+		
 	</c:otherwise>
 </c:choose>
