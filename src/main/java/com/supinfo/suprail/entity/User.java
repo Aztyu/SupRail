@@ -16,10 +16,9 @@ import com.supinfo.suprail.util.BaseUtil;
 
 @Entity
 public class User {
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private long id;
 	
 	private String userName;
 	private String firstName;
@@ -44,7 +43,7 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 	public void setId(int id) {

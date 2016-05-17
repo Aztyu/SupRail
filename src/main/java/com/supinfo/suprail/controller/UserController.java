@@ -61,6 +61,7 @@ public class UserController {
         	User user = user_job.getUserFromGoogle((String)request.getParameter("google_id"));
         	request.getSession().setAttribute("user", user);
         }catch(Exception ex){
+        	ex.printStackTrace();
         	return "home";
         }
         return "redirect:/main";		
