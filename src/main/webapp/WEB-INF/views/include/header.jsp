@@ -12,6 +12,7 @@
 		
 		<a href="${pageContext.request.contextPath}/register">Créer un compte</a>
 	</c:when>
+	
 	<c:otherwise>
 		<p>Welcome ${ sessionScope.user.firstName }</p>
 		<c:choose>

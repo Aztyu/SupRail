@@ -6,7 +6,6 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<%@ include file="include/header.jsp" %>
 		<form action="${pageContext.request.contextPath}/register" method="post">
 		    First name:<br>
 		    <input type="text" name="firstname"><br>

@@ -20,14 +20,14 @@ public class TrainJob implements ITrainJob{
 		List<Line> lines = new ArrayList<Line>();
 		
 		//Toutes les lignes
-		Line l1 = new Line("1", "Lille-Brest", 200.0, null);
-		Line l2 = new Line("2", "Stasbourg-Paris", 140.0, null);
-		Line l3 = new Line("3", "Paris-Bayonne", 170.0, null);
-		Line l4 = new Line("4", "Paris-Nice", 250.0, null);
-		Line l5 = new Line("5", "La Rochelle-Grenoble", 120.0, null);
-		Line l6 = new Line("6", "Saint-Étienne-Genève", 150.0, null);
-		Line l7 = new Line("7", "Bordeaux-Perpignan", 200.0, null);
-		Line l8 = new Line("8", "Avignon-Perpignan", 220.0, null);
+		Line l1 = new Line(1, "1", "Lille-Brest", 200.0);
+		Line l2 = new Line(2, "2", "Stasbourg-Paris", 140.0);
+		Line l3 = new Line(3, "3", "Paris-Bayonne", 170.0);
+		Line l4 = new Line(4, "4", "Paris-Nice", 250.0);
+		Line l5 = new Line(5, "5", "La Rochelle-Grenoble", 120.0);
+		Line l6 = new Line(6, "6", "Saint-Étienne-Genève", 150.0);
+		Line l7 = new Line(7, "7", "Bordeaux-Perpignan", 200.0);
+		Line l8 = new Line(8, "8", "Avignon-Perpignan", 220.0);
 		
 		//Station carrefour
 		Station paris = new Station(1, "Paris", "");
@@ -48,14 +48,14 @@ public class TrainJob implements ITrainJob{
 		l5.addStation(angouleme, 2);
 		
 		l3.addStation(bordeaux, 6);
-		l7.addStation(bordeaux, 0);
+		l7.addStation(bordeaux, 1);
 		
 		l4.addStation(lyon, 4);
 		l5.addStation(lyon, 5);
 		l6.addStation(lyon, 2);
 		
 		l4.addStation(avignon, 6);
-		l8.addStation(avignon, 0);
+		l8.addStation(avignon, 1);
 		
 		l8.addStation(perpignan, 4);
 		
@@ -96,6 +96,14 @@ public class TrainJob implements ITrainJob{
 		l8.addStation(new Station(33, "Nimes", ""), 2);
 		l8.addStation(new Station(34, "Montpellier", ""), 3);
 		
+		lines.add(l1);
+		lines.add(l2);
+		lines.add(l3);
+		lines.add(l4);
+		lines.add(l5);
+		lines.add(l6);
+		lines.add(l7);
+		lines.add(l8);
 		
 		for(Line line : lines){
 			dao.createLine(line);

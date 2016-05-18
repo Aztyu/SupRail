@@ -17,6 +17,7 @@ public class StationLineAssociation {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
+	
 	  /*@Id
 	  private long station_id;
 	  

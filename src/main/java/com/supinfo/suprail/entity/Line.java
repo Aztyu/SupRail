@@ -15,7 +15,7 @@ import com.supinfo.suprail.entity.association.StationLineAssociation;
 @Entity
 public class Line {
 	@Id
-	private long id;
+	private int id;
 	
 	private String reference;
 	private String name;
@@ -25,24 +25,26 @@ public class Line {
 	private List<StationLineAssociation> stations;
 	
 	public Line(){
+		this.id = -1;
 		this.name = new String();
 		this.reference = new String();
 		this.avg_speed = 0.0;
 		this.stations = new ArrayList<StationLineAssociation>(); 
 	}
 	
-	public Line(String reference, String name, double avg_speed, List<StationLineAssociation> stations){
+	public Line(int id, String reference, String name, double avg_speed){
+		this.id = id;
 		this.name = name;
 		this.reference = reference;
 		this.avg_speed = avg_speed;
-		this.stations.addAll(stations);
+		this.stations = new ArrayList<StationLineAssociation>(); 
 	}
 	
 	public long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -83,5 +85,8 @@ public class Line {
 		sla.setLine(this);
 		sla.setStation(station);
 		sla.setStation_order(station_order);
+		
+		this.stations.add(sla);
+		station.getLines().add(sla);
 	}
 }
