@@ -1,5 +1,6 @@
 package com.supinfo.suprail.entity.association;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,27 +13,26 @@ import com.supinfo.suprail.entity.Line;
 import com.supinfo.suprail.entity.Station;
 
 @Entity
-@IdClass(StationLineAssociationId.class)
 public class StationLineAssociation {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	  /*@Id
-	  private long station_id;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Station station;
+  
+	@ManyToOne
+	private Line line;
+
+	private long station_order;
 	  
-	  @Id
-	  private long line_id;*/
-	
-	  private long station_order;
-	  
-	  @ManyToOne
+	  /*@ManyToOne
 	  @PrimaryKeyJoinColumn(name="STATION_ID", referencedColumnName="ID")
 	  private Station station;
 	  
 	  @ManyToOne
 	  @PrimaryKeyJoinColumn(name="LINE_ID", referencedColumnName="ID")
-	  private Line line;
+	  private Line line;*/
 
 	public long getStation_order() {
 		return station_order;
@@ -58,11 +58,5 @@ public class StationLineAssociation {
 		this.line = line;
 	}
 
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}  
+	
 }
