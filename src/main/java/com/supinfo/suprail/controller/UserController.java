@@ -34,10 +34,11 @@ public class UserController {
 	        u.setFirstName(request.getParameter("firstname"));
 	        u.setLastName(request.getParameter("lastname"));
 	        u.setEmail(request.getParameter("email"));
+	        u.setPassword(request.getParameter("password"));
 	        
-	        user_job.createUser(u, request.getParameter("password"));
+	        request.getSession().setAttribute("user", user_job.createUser(u));
 	        
-	        return "redirect:/";
+	        return "redirect:/user/main";
         }catch(Exception ex){
         	model.addAttribute("error", "error");
         	return "register";
@@ -52,7 +53,7 @@ public class UserController {
         }catch(Exception ex){
         	return "home";
         }
-    	return "redirect:/main";		
+    	return "redirect:/user/main";		
     }
     
     @RequestMapping(value = "/login/google", method = RequestMethod.GET)

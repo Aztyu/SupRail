@@ -9,10 +9,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import com.supinfo.suprail.dao.TrainDao;
-import com.supinfo.suprail.dao.UserDao;
-import com.supinfo.suprail.interfaces.dao.ITrainDao;
-import com.supinfo.suprail.interfaces.dao.IUserDao;
 import com.supinfo.suprail.interfaces.job.ITrainJob;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 import com.supinfo.suprail.job.TrainJob;
@@ -35,25 +31,9 @@ public class GeneralConfiguration extends WebMvcConfigurerAdapter{
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
     
-    /*@Bean
-    public MultipartResolver multipartResolver() {
-            CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
-            return multipartResolver;
-    }*/
-     
-    @Bean
-    public IUserDao getUserDao() {
-        return new UserDao();
-    }
-    
     @Bean
     public IUserJob getUserJob() {
         return new UserJob();
-    }
-    
-    @Bean
-    public ITrainDao getTrainDao() {
-        return new TrainDao();
     }
     
     @Bean

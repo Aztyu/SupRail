@@ -8,7 +8,7 @@ import java.security.NoSuchAlgorithmException;
 import com.supinfo.suprail.entity.User;
 
 public interface IUserJob {
-    public User getUser(String login, String password) throws UnsupportedEncodingException, NoSuchAlgorithmException;
-	public void createUser(User user, String password);
+    public User getUser(String login, String password) throws UnsupportedEncodingException, NoSuchAlgorithmException, IOException;
+	public User createUser(User user) throws IOException;
 	public User getUserFromGoogle(String google_id) throws GeneralSecurityException, IOException;
 }
