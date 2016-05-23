@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
     
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/min/wickedpicker.min.js"></script>  
     <script type="text/javascript" src="js/lib/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="js/lib/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript" src="js/lib/jquery.owl.carousel.js"></script>
@@ -29,6 +30,7 @@
 
     <!-- CSS LIBRARY -->
     <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/wickedpicker.min.css">
     <link rel="stylesheet" type="text/css" href="css/lib/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/lib/awe-booking-font.css">
     <link rel="stylesheet" type="text/css" href="css/lib/owl.carousel.css">
@@ -56,7 +58,64 @@
 <!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
 <!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+<script>
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into this app.';
+    } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+        'into Facebook.';
+    }
+  }
 
+    function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1585975828398691',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+      FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+    function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
+</script>
 
     <!-- PAGE WRAP -->
     <div id="page-wrap">
@@ -319,28 +378,28 @@
                                         <label>Date/Heure départ</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-calendar"></i>
-                                            <input type="text" id="date_timepicker_start" value="20/06/2016">
+                                            <input type="text" id="date_timepicker_start" class="timepicker" value="20/06/2016">
                                         </div>
                                     </div>
                                     <div class="form-elements">
                                         <label>Date/Heure retour</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-calendar"></i>
-                                            <input type="text" id="date_timepicker_end" value="21/06/2016">
+                                            <input type="text" id="date_timepicker_end" class="timepicker" value="21/06/2016">
                                         </div>
                                     </div>
                                     <div class="form-elements">
                                         <label>Heure de départ</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-clock"></i>
-                                            <input type="text" id="timepicker_start" value="08:00">
+                                            <input type="text" name="timepicker" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
                                         </div>
                                     </div>
                                     <div class="form-elements">
                                         <label>Heure de retour</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-clock"></i>
-                                            <input type="text" id="timepicker_end" value="08:00">
+                                            <input type="text" id="timepicker_end" class="timepicker-24-hr hasWickedpicker">
                                         </div>
                                     </div>
                                 </div>
@@ -374,6 +433,11 @@
                     <div class="section-title">
                         <h3>More than <a href="destinations-grid.html">238 Destinations</a> is waiting</h3>
                     </div>
+                    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
                     <div class="row">
                         <div class="awe-masonry">
                             <!-- GALLERY ITEM -->
@@ -1044,6 +1108,12 @@
     <!-- REVOLUTION DEMO -->
     <script type="text/javascript" src="revslider-demo/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript" src="revslider-demo/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript">
+            $('.timepicker-24-hr').wickedpicker({now: '0:00', twentyFour: true, title:
+                    'Heure', showSeconds: false});
+            var timepickers = $('.timepicker-24-hr').wickedpicker(); 
+            console.log(timepickers.wickedpicker('time', 1));// pour avoir la valeur d'un des timepicker
+        </script>
     <script type="text/javascript">
         if($('#slider-revolution').length) {
             $('#slider-revolution').show().revolution({
