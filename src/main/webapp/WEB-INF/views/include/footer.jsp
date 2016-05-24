@@ -16,7 +16,7 @@
                                 <img src="${pageContext.request.contextPath}/resources/images/logo-footer.png" alt="">
                             </div>
                             <div class="widget_content">
-                                <p>SUPRAIL - Lyon 16 rue desparmet</p>
+                                <p>SUPRAIL - Lyon 16 rue Desparmet</p>
                                 <p>06.72.58.44.24</p>
                                 <a href="#">contact@suprail.com</a>
                             </div>
@@ -29,7 +29,7 @@
                         <div class="widget widget_about_us">
                             <h3>A PROPOS</h3>
                             <div class="widget_content">
-                                <p>Suprail est une entreprise professionnel affiliÃ© aux entreprises de transports ferroviÃ¨res, nous vous proposons une billeterie en ligne afin de rÃ©server votre billet pour le voyage de votre choix.</p>
+                                <p>Suprail est une entreprise professionnel affiliée aux entreprises de transports ferroviaires, nous vous proposons une billeterie en ligne afin de réserver votre billet pour le voyage de votre choix.</p>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                     <!-- END / WIDGET -->
                 </div>
                 <div class="copyright">
-                    <p>Â©2016 SUPRAILâ„¢ - Tous droits rÃ©servÃ©s.</p>
+                    <p>@2016 SUPRAIL© - Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
