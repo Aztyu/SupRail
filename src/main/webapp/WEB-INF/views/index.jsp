@@ -72,14 +72,14 @@
                                         <label>From</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-marker-1"></i>
-                                            <input type="text" value="Ho Chi Minh, Hanoi, Vietnam">
+                                            <input type="text" id="searchStartCity" value="Ville de départ">
                                         </div>
                                     </div>
                                     <div class="form-elements">
                                         <label>To</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-marker-1"></i>
-                                            <input type="text" value="Ankara, Turkey">
+                                            <input type="text" id="searchEndCity" value="Ville d'arrivée">
                                         </div>
                                     </div>
                                 </div>
