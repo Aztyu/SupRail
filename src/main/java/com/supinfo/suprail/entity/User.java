@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.HashMap;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -107,5 +108,26 @@ public class User {
 	}
 	public void setFacebookUser(boolean facebookUser) {
 		this.facebookUser = facebookUser;
+	}
+	
+	// Functions //
+	
+	public HashMap<String, Object> getParamsMap() {
+		// TODO Auto-generated method stub
+		HashMap<String, Object> param_map = new HashMap<String, Object>();
+		param_map.put("firstname", this.getFirstName());
+		param_map.put("lastname", this.getLastName());
+		param_map.put("password", this.getPassword());
+		param_map.put("country", this.getCountry());
+		param_map.put("city", this.getCity());
+		param_map.put("address", this.getAddress());
+		param_map.put("zipcode", this.getZipcode());
+		param_map.put("phone", this.getPhone());
+		
+		return param_map;
+	}
+	
+	public String getApiAuthString(){
+		return "id=" + this.getId() + "&=" + this.getPassword();
 	}
 }

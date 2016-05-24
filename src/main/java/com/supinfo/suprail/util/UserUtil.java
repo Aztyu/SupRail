@@ -24,18 +24,5 @@ public class UserUtil {
 		return param_string.toString();
 	}
 
-	public static HashMap<String, Object> registerParamsMap(User u) {
-		// TODO Auto-generated method stub
-		HashMap<String, Object> param_map = new HashMap<String, Object>();
-		param_map.put("firstname", u.getFirstName());
-		param_map.put("lastname", u.getLastName());
-		param_map.put("country", u.getCountry());
-		param_map.put("city", u.getCity());
-		param_map.put("address", u.getAddress());
-		param_map.put("zipcode", u.getZipcode());
-		param_map.put("phone", u.getPhone());
-		
-		return param_map;
-	}
 
 }

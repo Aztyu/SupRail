@@ -49,6 +49,7 @@ public class UserController {
     public String updateUser(Model model, HttpServletRequest request){
     	try{
     		User u = (User) request.getSession().getAttribute("user");
+    		
         	u.setFirstName(request.getParameter("firstname"));
             u.setLastName(request.getParameter("lastname"));
             u.setEmail(request.getParameter("email"));
@@ -66,7 +67,6 @@ public class UserController {
     	
     		model.addAttribute("errorupdregister", "error");
     		return "/customer-info";
-    		
     	}
     }
     
@@ -100,6 +100,4 @@ public class UserController {
         request.getSession().removeAttribute("user");
     	return "home";		
     }
-    
-    
 }
