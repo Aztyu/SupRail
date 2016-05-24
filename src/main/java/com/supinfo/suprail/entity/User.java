@@ -10,9 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.Generated;
-
-import com.supinfo.suprail.util.BaseUtil;
 
 @Entity
 public class User {
@@ -33,7 +30,12 @@ public class User {
 	
 	private boolean googleUser;
 	private boolean facebookUser;
-	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -46,13 +48,6 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public long getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -64,24 +59,6 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public boolean isGoogleUser() {
-		return googleUser;
-	}
-	public void setGoogleUser(boolean isGoogleUser) {
-		this.googleUser = isGoogleUser;
-	}
-	public boolean isFacebookUser() {
-		return facebookUser;
-	}
-	public void setFacebookUser(boolean isFacebookUser) {
-		this.facebookUser = isFacebookUser;
-	}
-	public String getSalt() {
-		return salt;
-	}
-	public void setSalt(String salt) {
-		this.salt = salt;
 	}
 	public String getCountry() {
 		return country;
@@ -95,6 +72,12 @@ public class User {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	public int getZipcode() {
 		return zipcode;
 	}
@@ -107,13 +90,22 @@ public class User {
 	public void setPhone(int phone) {
 		this.phone = phone;
 	}
-	public void setId(long id) {
-		this.id = id;
+	public String getSalt() {
+		return salt;
 	}
-	public String getAddress() {
-		return address;
+	public void setSalt(String salt) {
+		this.salt = salt;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public boolean isGoogleUser() {
+		return googleUser;
+	}
+	public void setGoogleUser(boolean googleUser) {
+		this.googleUser = googleUser;
+	}
+	public boolean isFacebookUser() {
+		return facebookUser;
+	}
+	public void setFacebookUser(boolean facebookUser) {
+		this.facebookUser = facebookUser;
 	}
 }
