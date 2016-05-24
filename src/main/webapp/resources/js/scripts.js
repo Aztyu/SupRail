@@ -215,22 +215,24 @@
     function aweCalendar() {
         $("#date_timepicker_start").datepicker({
             dateFormat: 'dd/mm/yy',
+            yearRange: '2016:2017',
             dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
             dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
             numberOfMonths: 1,
             onSelect: function(selected){
                 $("#date_timepicker_end").datepicker("option","minDate", selected)
             }
-        });
+        }).datepicker("setDate", new Date());
         $("#date_timepicker_end").datepicker({ 
         numberOfMonths: 1,
+        yearRange: '2016:2017',
         dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
         dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
         dateFormat: 'dd/mm/yy',
         onSelect: function(selected) {
            $("#date_timepicker_start").datepicker("option","maxDate", selected)
             }
-        });
+        }).datepicker("setDate", new Date());
     }
 
     function priceSlider() {
