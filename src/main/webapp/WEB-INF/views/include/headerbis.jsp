@@ -66,7 +66,7 @@
                     <nav class="navigation awe-navigation" data-responsive="1200">
                         <ul class="menu-list">
                             <li class="menu-item-has-children">
-                                <a href="index.html">Accueil</a>
+                                <a href="${pageContext.request.contextPath}/index">Accueil</a>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="destinations-list.html">Destinations</a>
@@ -149,16 +149,13 @@
                             
                             <li class="menu-item-has-children" style="border-left: 1px solid #D4D4D4;">
 	                            <c:if test="${empty sessionScope.user}">
-	                            <a href="contact.html"><i class="fa fa-user" aria-hidden="true"></i></a>
-	                            <ul class="sub-menu" style="margin-top: 23px;">
-	                                    <li><a href="register">Connexion / Inscriptions</a></li>
-	                                </ul>
+	                            <a href="${pageContext.request.contextPath}/register"><i class="fa fa-user" aria-hidden="true"></i> Inscriptions / Connexion</a>
 	                            </c:if>
 	                            
 								<c:if test="${not empty sessionScope.user}">
-									<a href="contact.html"><i class="fa fa-user" aria-hidden="true"></i> Bonjour ${sessionScope.user.lastName}</a>
-									<ul class="sub-menu" style="margin-top: 23px;">
-                                      <li><a href="register">Mes informations</a></li>
+									<a href="${pageContext.request.contextPath}/user/updateUser"><i class="fa fa-user" aria-hidden="true"></i> Bonjour ${sessionScope.user.lastName}</a>
+									<ul class="sub-menu">
+                                      <li><a href="${pageContext.request.contextPath}/user/updateUser">Mes informations</a></li>
                                       <li>
 								        <c:choose>
 											<c:when test="${ sessionScope.user.googleUser == true }">

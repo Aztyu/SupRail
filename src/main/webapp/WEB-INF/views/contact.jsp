@@ -30,7 +30,7 @@
                                 </div>
                                 
                                 <div class="form-item form-captcha">
-                                    <img src="images/img/captcha-demo.png" alt="" class="wpcf7-captchac">
+                                    <img src="${pageContext.request.contextPath}/resources/images/img/captcha-demo.png" alt="" class="wpcf7-captchac">
                                     <span class="wpcf7-form-control-wrap">
                                         <input type="text" value="Captcha" required>
                                     </span>

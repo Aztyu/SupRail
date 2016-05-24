@@ -6,7 +6,6 @@
 
 <section class="checkout-section-demo">
 	<div class="container">
-	
 	    <div class="row">
 	        <div class="col-lg-12">
 	            <div class="checkout-page__top">
@@ -29,6 +28,7 @@
 	        <div class="col-lg-9">
 	            <div class="checkout-page__content">
 	                <div class="customer-content">
+	                	<form>
 	                    <div class="woocommerce-billing-fields">
 	                        <h3><i class="fa fa-user" aria-hidden="true"></i> Informations personnelles</h3>
 	                        <div class="form-row" id="billing_first_name_field">
@@ -37,11 +37,11 @@
 	                        </div>
 	                        <div class="form-row" id="billing_last_name_field">
 	                            <label>Prénom</label>
-	                            <input type="text" name="lastname" value="${sessionScope.user.lastname}">
+	                            <input type="text" name="lastname" value="${sessionScope.user.lastName}">
 	                        </div>
 	                        <div class="form-row" id="billing_email">
 	                            <label>Email</label>
-	                            <input type="text" name="email" value="${sessionScope.user.email}">
+	                            <input type="text" name="email" disabled="disabled" readonly value="${sessionScope.user.email}">
 	                        </div>
 	                        <div class="form-row" id="billing_country_field">
 	                            <label>Pays</label>
@@ -63,50 +63,14 @@
 	                            <label>Phone</label>
 	                            <input type="text" name="phone" value="${sessionScope.user.phone}">
 	                        </div>
+	                        
 	                    </div>
-	
-	                    <div class="woocommerce-shipping-fields">
-	                        <h3 id="ship-to-different-address">
-	                            <label for="ship-to-different-address-checkbox">Mes informations de facturation sont les mêmes</label>
-	                            <input id="ship-to-different-address-checkbox" class="checkBill" type="checkbox" checked="checked">
-	
-	                        </h3>
-	                        <div class="shipping_address">
-	                            <div class="form-row" id="billing_first_name_field">
-	                            <label>Nom</label>
-	                            <input type="text">
-	                        </div>
-	                        <div class="form-row" id="billing_last_name_field">
-	                            <label>Prénom</label>
-	                            <input type="text">
-	                        </div>
-	                        <div class="form-row" id="billing_email">
-	                            <label>Email</label>
-	                            <input type="text">
-	                        </div>
-	                        <div class="form-row" id="billing_country_field">
-	                            <label>Pays</label>
-	                            <input type="text">
-	                        </div>
-	                        <div class="form-row" id="billing_city_field">
-	                            <label>Ville</label>
-	                            <input type="text">
-	                        </div>
-	                        <div class="form-row" id="billing_address_1_field">
-	                            <label>Address</label>
-	                            <input type="text">
-	                        </div>
-	                        <div class="form-row" id="billing_postcode_field">
-	                            <label>Postcode / zip</label>
-	                            <input type="text">
-	                        </div>
-	                        <div class="form-row" id="billing_phone_field">
-	                            <label>Phone</label>
-	                            <input type="text">
-	                        </div>
+	                    <div id="payment">
+	                        <div class="form-row place-order">
+	                           <input type="submit" class="button alt" id="place_order" value="Enregistrer" onclick="return confirm('Êtes-vous sûr de votre choix ?')">
 	                        </div>
 	                    </div>
-	                    
+	                    </form>
 	                </div>
 	            </div>
 	        </div>

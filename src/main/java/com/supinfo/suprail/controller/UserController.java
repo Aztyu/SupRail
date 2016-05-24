@@ -45,6 +45,16 @@ public class UserController {
         }
     }
     
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    public String contactSupport(Model model,HttpServletRequest request) {
+        return "contact";		
+    }
+    
+    @RequestMapping(value = "/user/updateUser", method = RequestMethod.GET)
+    public String getUpdateUser(Model model,HttpServletRequest request) {
+        return "customer-info";		
+    }
+    
     @RequestMapping(value = "/user/updateUser", method = RequestMethod.POST)
     public String updateUser(Model model, HttpServletRequest request){
     	try{
@@ -98,6 +108,6 @@ public class UserController {
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logoutUser(Model model,HttpServletRequest request) {
         request.getSession().removeAttribute("user");
-    	return "home";		
+    	return "redirect:/";		
     }
 }

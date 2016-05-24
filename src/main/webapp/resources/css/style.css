@@ -1481,6 +1481,7 @@ span.dropcap {
 
 .ui-widget-content {
   color: #777;
+  z-index: 99999999999999999999999999999;
 }
 
 .awe-search-tabs {
