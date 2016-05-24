@@ -5,16 +5,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
@@ -41,26 +47,17 @@ public class ApiRequest {
 	}
 	
 	@SuppressWarnings("deprecation")	
-	public static String sendPOSTRequest(String req_url, HashMap<String, Object> param_map) throws IOException{
-		HttpParams httpParameters = new BasicHttpParams();
-		
-		for(Entry<String, Object> values : param_map.entrySet()){
-			httpParameters.setParameter(values.getKey(), values.getValue());
-		}
-		
-        int timeoutConnection = 12000;
-        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
-        int timeoutSocket = 15000;
-        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+	public static String sendPOSTRequest(String req_url, List<NameValuePair> param_map) throws IOException{
+		HttpClient httpclient = HttpClients.createDefault();
+		HttpPost httppost = new HttpPost(req_url);
 
-        HttpClient hc = new DefaultHttpClient(httpParameters);
-        HttpPost p = new HttpPost(req_url);
-        //p.setEntity(new StringEntity(json, "UTF8"));
-        p.setHeader("Content-type", "application/json");
-        p.setParams(httpParameters);
-        HttpResponse resp = hc.execute(p);
-        String jsonReturn = EntityUtils.toString(resp.getEntity());
+		httppost.setEntity(new UrlEncodedFormEntity(param_map, "UTF-8"));
+
+		//Execute and get the response.
+		HttpResponse response = httpclient.execute(httppost);
 		
-		return jsonReturn; 
+		String jsonReturn = EntityUtils.toString(response.getEntity());
+		
+		return jsonReturn;
 	}
 }

@@ -65,7 +65,7 @@ public class UserJob implements IUserJob{
 	
 	@Override
 	public void updateUser(User u) throws  Exception {
-		String req_url = BaseParam.base_api_url + "/user/edit?"; 
+		String req_url = BaseParam.base_api_url + "/user/edit"; 
 		
 		String result = ApiRequest.sendPOSTRequest(req_url, u.getParamsMap());
 		
