@@ -4,8 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-		<%@ include file="include/headerbis.jsp" %>
-
+<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
         <!-- HERO SECTION -->
         <section class="hero-section">
             <div id="slider-revolution">
@@ -103,14 +102,14 @@
                                         <label>Heure de départ</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-clock"></i>
-                                            <input type="text" id="timepicker_start" value="08:00">
+                                            <input type="text" name="timepicker" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
                                         </div>
                                     </div>
                                     <div class="form-elements">
                                         <label>Heure de retour</label>
                                         <div class="form-item">
                                             <i class="awe-icon awe-icon-clock"></i>
-                                            <input type="text" id="timepicker_end" value="08:00">
+                                            <input type="text" id="timepicker_end" class="timepicker-24-hr hasWickedpicker">
                                         </div>
                                     </div>
                                 </div>
@@ -712,6 +711,12 @@
 <!-- REVOLUTION DEMO -->
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/revslider-demo/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/revslider-demo/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/min/wickedpicker.min.js"></script>  
+    <script type="text/javascript">
+            $('.timepicker-24-hr').wickedpicker({now: '0:00', twentyFour: true, title:'Heure', showSeconds: false});
+            var timepickers = $('.timepicker-24-hr').wickedpicker(); 
+           // console.log(timepickers.wickedpicker('time', 1));// pour avoir la valeur d'un des timepicker
+    </script>
     <script type="text/javascript">
         if($('#slider-revolution').length) {
             $('#slider-revolution').show().revolution({
@@ -791,7 +796,6 @@
                 startWithSlide:0
             });
         }
-    </script>
 <%@ include file="include/footer.jsp" %>
 </body>
 </html>
