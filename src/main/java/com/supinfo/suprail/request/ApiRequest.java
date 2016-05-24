@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map.Entry;
+import java.util.Set;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -36,8 +41,13 @@ public class ApiRequest {
 	}
 	
 	@SuppressWarnings("deprecation")	
-	public static String sendPOSTRequest(String req_url, String json) throws IOException{
+	public static String sendPOSTRequest(String req_url, HashMap<String, Object> param_map) throws IOException{
 		HttpParams httpParameters = new BasicHttpParams();
+		
+		for(Entry<String, Object> values : param_map.entrySet()){
+			httpParameters.setParameter(values.getKey(), values.getValue());
+		}
+		
         int timeoutConnection = 12000;
         HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
         int timeoutSocket = 15000;
@@ -45,8 +55,9 @@ public class ApiRequest {
 
         HttpClient hc = new DefaultHttpClient(httpParameters);
         HttpPost p = new HttpPost(req_url);
-        p.setEntity(new StringEntity(json, "UTF8"));
+        //p.setEntity(new StringEntity(json, "UTF8"));
         p.setHeader("Content-type", "application/json");
+        p.setParams(httpParameters);
         HttpResponse resp = hc.execute(p);
         String jsonReturn = EntityUtils.toString(resp.getEntity());
 		

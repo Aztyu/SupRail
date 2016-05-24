@@ -57,6 +57,9 @@ public class UserController {
             u.setLastName(request.getParameter("address"));
             u.setEmail(request.getParameter("zipcode"));
             u.setPassword(request.getParameter("phone"));
+            
+            user_job.updateUser(u);
+            
             model.addAttribute("updregisterOk", "error");
             return "/customer-info";
     	}catch(Exception ex){

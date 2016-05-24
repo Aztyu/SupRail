@@ -62,4 +62,18 @@ public class UserJob implements IUserJob{
 		
 		return user;
 	}
+	
+	@Override
+	public void updateUser(User u) throws  Exception {
+		String req_url = BaseParam.base_api_url + "/user/edit?"; 
+		
+		String result = ApiRequest.sendPOSTRequest(req_url, UserUtil.registerParamsMap(u));
+		
+		JSONObject json = new JSONObject(result);
+		
+		int status = json.getInt("status");
+		if(status != 200){
+			throw new Exception();
+		}
+	}
 }
