@@ -214,7 +214,7 @@
 
     function aweCalendar() {
         $("#date_timepicker_start").datepicker({
-            dateFormat: 'dd-mm-yy',
+            dateFormat: 'dd/mm/yy',
             dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
             dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
             numberOfMonths: 1,
