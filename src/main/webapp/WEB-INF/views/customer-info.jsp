@@ -28,7 +28,7 @@
 	        <div class="col-lg-9">
 	            <div class="checkout-page__content">
 	                <div class="customer-content">
-	                	<form>
+	                	<form action="${pageContext.request.contextPath}/user/updateUser" method="POST">
 	                    <div class="woocommerce-billing-fields">
 	                        <h3><i class="fa fa-user" aria-hidden="true"></i> Informations personnelles</h3>
 	                        <div class="form-row" id="billing_first_name_field">
