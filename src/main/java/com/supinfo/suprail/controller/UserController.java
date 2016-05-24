@@ -64,10 +64,7 @@ public class UserController {
     		model.addAttribute("errorupdregister", "error");
     		return "/customer-info";
     		
-    	}
-    	
-        
-    	
+    	}	
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)
