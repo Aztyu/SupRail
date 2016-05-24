@@ -226,7 +226,7 @@
         numberOfMonths: 1,
         dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
         dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
-        dateFormat: 'dd-mm-yy',
+        dateFormat: 'dd/mm/yy',
         onSelect: function(selected) {
            $("#date_timepicker_start").datepicker("option","maxDate", selected)
             }
