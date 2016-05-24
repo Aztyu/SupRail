@@ -58,9 +58,9 @@ public class UserController {
             u.setZipcode(Integer.parseInt(request.getParameter("zipcode")));
             u.setPhone(Integer.parseInt(request.getParameter("phone")));
             
-            model.addAttribute("updregisterOk", "info");
             user_job.updateUser(u);
             
+            model.addAttribute("updregisterOk", "info");
             return "/customer-info";
     	}catch(Exception ex){
     	
