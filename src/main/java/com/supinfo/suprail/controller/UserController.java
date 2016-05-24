@@ -47,9 +47,25 @@ public class UserController {
     
     @RequestMapping(value = "/user/updateUser", method = RequestMethod.POST)
     public String updateUser(Model model, HttpServletRequest request){
-    	User u = (User) request.getSession().getAttribute("user");
-    	// A FINIR
-    	return "/customer-info";
+    	try{
+    		User u = (User) request.getSession().getAttribute("user");
+        	u.setFirstName(request.getParameter("firstname"));
+            u.setLastName(request.getParameter("lastname"));
+            u.setEmail(request.getParameter("email"));
+            u.setPassword(request.getParameter("country"));
+            u.setFirstName(request.getParameter("city"));
+            u.setLastName(request.getParameter("address"));
+            u.setEmail(request.getParameter("zipcode"));
+            u.setPassword(request.getParameter("phone"));
+            model.addAttribute("updregisterOk", "error");
+            return "/customer-info";
+    	}catch(Exception ex){
+    		model.addAttribute("errorupdregister", "error");
+    		return "/customer-info";
+    	}
+    	
+        
+    	
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)
