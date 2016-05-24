@@ -37,12 +37,19 @@ public class UserController {
 	        u.setPassword(request.getParameter("password"));
 	        
 	        request.getSession().setAttribute("user", user_job.createUser(u));
-	        
-	        return "redirect:/user/main";
+	        model.addAttribute("registerok", "info");
+	        return "/register";
         }catch(Exception ex){
-        	model.addAttribute("error", "error");
+        	model.addAttribute("erroregister", "error");
         	return "register";
         }
+    }
+    
+    @RequestMapping(value = "/user/updateUser", method = RequestMethod.POST)
+    public String updateUser(Model model, HttpServletRequest request){
+    	User u = (User) request.getSession().getAttribute("user");
+    	// A FINIR
+    	return "/customer-info";
     }
     
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -51,9 +58,10 @@ public class UserController {
         	User user = user_job.getUser((String)request.getParameter("login"), (String)request.getParameter("password"));
         	request.getSession().setAttribute("user", user);
         }catch(Exception ex){
-        	return "home";
+        	model.addAttribute("errorlogin", "error");
+        	return "/register";
         }
-    	return "redirect:/user/main";		
+    	return "redirect:/";		
     }
     
     @RequestMapping(value = "/login/google", method = RequestMethod.GET)
@@ -62,10 +70,11 @@ public class UserController {
         	User user = user_job.getUserFromGoogle((String)request.getParameter("google_id"));
         	request.getSession().setAttribute("user", user);
         }catch(Exception ex){
+        	model.addAttribute("errorlogin", "error");
         	ex.printStackTrace();
-        	return "home";
+        	return "/register";
         }
-        return "redirect:/main";		
+        return "redirect:/";		
     }
     
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
@@ -73,4 +82,6 @@ public class UserController {
         request.getSession().removeAttribute("user");
     	return "home";		
     }
+    
+    
 }

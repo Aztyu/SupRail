@@ -26,7 +26,7 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
-		return "home";
+		return "index";
 	}
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
@@ -39,6 +39,6 @@ public class HomeController {
 	
 	@RequestMapping(value = "/user/main", method = RequestMethod.GET)
 	public String mainUserPage(Model model) {
-		return "main";
+		return "index";
 	}
 }
