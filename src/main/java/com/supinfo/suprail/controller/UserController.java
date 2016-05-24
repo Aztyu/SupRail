@@ -52,16 +52,18 @@ public class UserController {
         	u.setFirstName(request.getParameter("firstname"));
             u.setLastName(request.getParameter("lastname"));
             u.setEmail(request.getParameter("email"));
-            u.setPassword(request.getParameter("country"));
-            u.setFirstName(request.getParameter("city"));
-            u.setLastName(request.getParameter("address"));
-            u.setEmail(request.getParameter("zipcode"));
-            u.setPassword(request.getParameter("phone"));
-            model.addAttribute("updregisterOk", "error");
+            u.setCountry(request.getParameter("country"));
+            u.setCity(request.getParameter("city"));
+            u.setAddress(request.getParameter("address"));
+            u.setZipcode(Integer.parseInt(request.getParameter("zipcode")));
+            u.setPhone(Integer.parseInt(request.getParameter("phone")));
+            model.addAttribute("updregisterOk", "info");
             return "/customer-info";
     	}catch(Exception ex){
+    	
     		model.addAttribute("errorupdregister", "error");
     		return "/customer-info";
+    		
     	}
     	
         
