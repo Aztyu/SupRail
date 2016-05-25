@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+
 import com.supinfo.suprail.entity.association.StationLineAssociation;
 
 @Entity
@@ -69,4 +72,6 @@ public class Station {
 	public void setLines(List<StationLineAssociation> lines) {
 		this.lines = lines;
 	}
+	
+
 }

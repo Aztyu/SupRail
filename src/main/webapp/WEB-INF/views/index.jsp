@@ -62,25 +62,24 @@
                             <i class="awe-icon awe-icon-train"></i>
                         </a>
                     </li>
-
                 </ul>
                 <div class="awe-search-tabs__content tabs__content">
                     <div id="awe-search-tabs-4" class="search-flight">
                         <h2>RECHERCHER UN TRAJET</h2>
-                        <form>
+                        <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <div class="form-group">
                                 <div class="form-elements">
                                     <label>From</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
-                                        <input type="text" id="searchStartCity" value="Ville de départ">
+                                        <input type="text" id="StartCity" value="Ville de départ" required>
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>To</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
-                                        <input type="text" id="searchEndCity" value="Ville d'arrivée">
+                                        <input type="text" id="EndCity" value="Ville d'arrivée" required>
                                     </div>
                                 </div>
                             </div>
@@ -89,28 +88,28 @@
                                     <label>Date/Heure départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_start" value="20/06/2016">
+                                        <input type="text" id="date_timepicker_start" value="20/06/2016" required>
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>Date/Heure retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_end" value="21/06/2016">
+                                        <input type="text" id="date_timepicker_end" value="21/06/2016" required>
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>Heure de départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-clock"></i>
-                                        <input type="text" name="timepicker" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
+                                        <input type="text" name="timepicker" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>Heure de retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-clock"></i>
-                                        <input type="text" id="timepicker_end" class="timepicker-24-hr hasWickedpicker">
+                                        <input type="text" id="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +126,7 @@
                                 </div>
                             </div>
                             <div class="form-actions">
-                                <input type="submit" value="Rechercher">
+                                <input type="submit" id="submitTravel" value="Rechercher">
                             </div>
                         </form>
                     </div>
@@ -142,7 +141,7 @@
         <div class="container">
             <div class="destination-grid-content">
                 <div class="section-title">
-                    <h3>More than <a href="destinations-grid.html">238 Destinations</a> is waiting</h3>
+                    <h3>SUPRAIL dessert plus de <a href="#">34 stations</a> dans toute la France.</h3>
                 </div>
                 <div class="row">
                     <div class="awe-masonry">
@@ -154,16 +153,16 @@
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Florenze</a></h2>
+                                <h2><a href="#">Paris</a></h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">Italy</a></li>
+                                        <li><a href="#">France</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">845</span>
-                                available hotel
+                                <span class="count">21</span>
+                                voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
@@ -175,16 +174,16 @@
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Toluca</a></h2>
+                                <h2><a href="#">Toulouse</a></h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">USA</a></li>
+                                        <li><a href="#">France</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">132</span>
-                                available hotel
+                                <span class="count">20</span>
+                                voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
@@ -196,16 +195,16 @@
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Venice</a></h2>
+                                <h2><a href="#">Lyon</a></h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">Italy</a></li>
+                                        <li><a href="#">France</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">2341</span>
-                                available hotel
+                                <span class="count">60</span>
+                                voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
@@ -217,16 +216,16 @@
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Ohio</a></h2>
+                                <h2><a href="#">Lille</a></h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">USA</a></li>
+                                        <li><a href="#">France</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">2531</span>
-                                available hotel
+                                <span class="count">29</span>
+                                voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
@@ -238,107 +237,23 @@
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Venice</a></h2>
+                                <h2><a href="#">Bordeaux</a></h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">Italy</a></li>
+                                        <li><a href="#">France</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">2531</span>
-                                available hotel
-                            </div>
-                        </div>
-                        <!-- END / GALLERY ITEM -->
-                        <!-- GALLERY ITEM -->
-                        <div class="awe-masonry__item">
-                            <a href="#">
-                                <div class="image-wrap image-cover">
-                                    <img src="${pageContext.request.contextPath}/resources/images/img/6.jpg" alt="">
-                                </div>
-                            </a>
-                            <div class="item-title">
-                                <h2><a href="#">Mandives</a></h2>
-                                <div class="item-cat">
-                                    <ul>
-                                        <li><a href="#">Mandives</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item-available">
-                                <span class="count">2531</span>
-                                available hotel
-                            </div>
-                        </div>
-                        <!-- END / GALLERY ITEM -->
-                        <!-- GALLERY ITEM -->
-                        <div class="awe-masonry__item">
-                            <a href="#">
-                                <div class="image-wrap image-cover">
-                                    <img src="${pageContext.request.contextPath}/resources/images/img/7.jpg" alt="">
-                                </div>
-                            </a>
-                            <div class="item-title">
-                                <h2><a href="#">Istanbul</a></h2>
-                                <div class="item-cat">
-                                    <ul>
-                                        <li><a href="#">Turkey</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item-available">
-                                <span class="count">2531</span>
-                                available hotel
-                            </div>
-                        </div>
-                        <!-- END / GALLERY ITEM -->
-                        <!-- GALLERY ITEM -->
-                        <div class="awe-masonry__item">
-                            <a href="#">
-                                <div class="image-wrap image-cover">
-                                    <img src="${pageContext.request.contextPath}/resources/images/img/8.jpg" alt="">
-                                </div>
-                            </a>
-                            <div class="item-title">
-                                <h2><a href="#">Bali</a></h2>
-                                <div class="item-cat">
-                                    <ul>
-                                        <li><a href="#">Thailand</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item-available">
-                                <span class="count">2531</span>
-                                available hotel
-                            </div>
-                        </div>
-                        <!-- END / GALLERY ITEM -->
-                        <!-- GALLERY ITEM -->
-                        <div class="awe-masonry__item">
-                            <a href="#">
-                                <div class="image-wrap image-cover">
-                                    <img src="${pageContext.request.contextPath}/resources/images/img/9.jpg" alt="">
-                                </div>
-                            </a>
-                            <div class="item-title">
-                                <h2><a href="#">Phu Quoc</a></h2>
-                                <div class="item-cat">
-                                    <ul>
-                                        <li><a href="#">Vietnam</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="item-available">
-                                <span class="count">2531</span>
-                                available hotel
+                                <span class="count">89</span>
+                                voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
                     </div>
                 </div>
                 <div class="more-destination">
-                    <a href="#">More Destinations</a>
+                    <a href="#">Découvrez toutes les villes que nous desservons</a>
                 </div>
             </div>
         </div>
@@ -715,7 +630,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/min/wickedpicker.min.js"></script>  
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slider.js"></script>
-	
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
 	<%@ include file="include/footer.jsp" %>
 	
 	</body>

@@ -1642,6 +1642,7 @@ span.dropcap {
   font-size: 16px;
   color: #666;
   pointer-events: none;
+  z-index: 999;
 }
 .awe-search-tabs__content .ui-tabs-panel .form-elements .awe-select-wrapper {
   width: 100%;

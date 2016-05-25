@@ -105,6 +105,19 @@ public class UserController {
         return "redirect:/";		
     }
     
+    @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)
+    public String searchTravel(Model model,HttpServletRequest request) {
+        try{
+        	//Controller de la recherche
+        	//request.getSession().setAttribute("user", user);
+        }catch(Exception ex){
+        	model.addAttribute("errorlogin", "error");
+        	return "/register";
+        }
+    	return "redirect:/";		
+    }
+    
+    
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logoutUser(Model model,HttpServletRequest request) {
         request.getSession().removeAttribute("user");

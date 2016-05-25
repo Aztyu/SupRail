@@ -21,17 +21,20 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/lib/owl.carousel.css"/> ">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/lib/jquery-ui.css"/> ">
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/revslider-demo/css/settings.css"/> ">
+	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/lib/easy-autocomplete.min.css"/> ">
+   <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/lib/easy-autocomplete.themes.min.css"/>" >
     <!-- MAIN STYLE -->
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/> "> 
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/demo.css"/> "> 
    	<link id="colorreplace" rel="stylesheet" type="text/css" href="<c:url value="/resources/css/colors/blue.css"/> ">
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery-1.11.2.min.js"></script>
+    <script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/lib/jquery-ui.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery.owl.carousel.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/theia-sticky-sidebar.js"></script>
-    <script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery.easy-autocomplete.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/scripts.js"></script>
     
     <!-- CONNEXION GOOGLE API -->
