@@ -3,7 +3,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <%@ include file="include/headerbis.jsp" %>
-
 <section class="awe-parallax register-page-demo">
    <div class="awe-overlay"></div>
    <div class="container">
@@ -38,6 +37,8 @@
                       <div style="margin-top:84px;"></div>
                       <div class="hr"><span style="color:#6C6966">OU</span></div> 
                       <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-size="xlarge"></fb:login-button>
+                      <div id="status"></div>
                   </form>
           </div>
           

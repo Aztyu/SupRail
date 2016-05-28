@@ -9917,3 +9917,8 @@ select {
   -ms-transition: none;
   -o-transition: none;
 }
+
+.g-signin2 {
+	display: inline-block;
+	margin-right: 20px;
+}
