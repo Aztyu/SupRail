@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.User;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 
@@ -108,7 +109,8 @@ public class UserController {
     @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)
     public String searchTravel(Model model,HttpServletRequest request) {
         try{
-        	//Controller de la recherche
+        	SearchStation schStation = new SearchStation();
+        	
         	//request.getSession().setAttribute("user", user);
         }catch(Exception ex){
         	model.addAttribute("errorlogin", "error");

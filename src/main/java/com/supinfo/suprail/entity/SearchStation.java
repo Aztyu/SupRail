@@ -34,66 +34,25 @@ public class SearchStation {
 	public DateTime getArrivalDate() {
 		return arrivalDate;
 	}
+	public void setArrivalDate(DateTime arrivalDate) {
+		this.arrivalDate = arrivalDate;
+	}
+
+	public int getPassager() {
+		return passager;
+	}
+
+	public void setPassager(int passager) {
+		this.passager = passager;
+	}
 	
 	public List<NameValuePair> getParamsTravel() {
 		List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
 		urlParameters.add(new BasicNameValuePair("id", String.valueOf((this.getId() ))));
 		urlParameters.add(new BasicNameValuePair("departDate", String.valueOf(this.getDepartDate())));
 		urlParameters.add(new BasicNameValuePair("arrivalDate", String.valueOf(this.getArrivalDate())));
-
+		urlParameters.add(new BasicNameValuePair("passager", String.valueOf(this.getPassager())));
 		return urlParameters;
 	}
 
-
-
-
-
-
-
-
-
-	public void setArrivalDate(DateTime arrivalDate) {
-		this.arrivalDate = arrivalDate;
-	}
-
-
-
-
-
-
-
-
-
-	public int getPassager() {
-		return passager;
-	}
-
-
-
-
-
-
-
-
-
-	public void setPassager(int passager) {
-		this.passager = passager;
-	}
-
-
-
-
-
-
-
-
-
-	public List<NameValuePair> getParamsMap() {
-		List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
-		urlParameters.add(new BasicNameValuePair("nameStart", this.getName()));
-		urlParameters.add(new BasicNameValuePair("nameEnd", this.getName()));
-		urlParameters.add(new BasicNameValuePair("nameStart", this.getName()));
-
-		return urlParameters;
-	}
 }

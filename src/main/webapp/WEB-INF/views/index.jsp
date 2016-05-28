@@ -268,7 +268,7 @@
                     <div class="sale-flights-tabs tabs">
                         <ul>
                         
-                            <li><a href="#sale-flights-tabs-2">Recent items</a></li>
+                            <li><a href="#sale-flights-tabs-2">Les derniers voyages recherchés</a></li>
                         </ul>
                         <div class="sale-flights-tabs__content tabs__content">
 
@@ -279,7 +279,7 @@
                                         <tr>
                                             <td class="sale-flights-tabs__item-flight">
                                                 <div class="image-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/40-40.jpg" alt="">
+                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/underground.png" alt="">
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
@@ -307,7 +307,7 @@
                                                 <div class="line"></div>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
-                                                <h4>Arrive</h4>
+                                                <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
                                                     <li>12:30</li>
@@ -315,7 +315,7 @@
                                                 <div class="line"></div>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
-                                                <h4>Duration</h4>
+                                                <h4>Durée</h4>
                                                 <ul>
                                                     <li>38h5m</li>
                                                     <li>38h5m</li>
@@ -331,7 +331,7 @@
                                         <tr>
                                             <td class="sale-flights-tabs__item-flight">
                                                 <div class="image-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/40-40.jpg" alt="">
+                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/underground.png" alt="">
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
@@ -357,14 +357,14 @@
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
-                                                <h4>Arrive</h4>
+                                                <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
                                                     <li>12:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
-                                                <h4>Duration</h4>
+                                                <h4>Durée</h4>
                                                 <ul>
                                                     <li>38h5m</li>
                                                     <li>38h5m</li>
@@ -378,7 +378,7 @@
                                         <tr>
                                             <td class="sale-flights-tabs__item-flight">
                                                 <div class="image-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/40-40.jpg" alt="">
+                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/underground.png" alt="">
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
@@ -404,14 +404,14 @@
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
-                                                <h4>Arrive</h4>
+                                                <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
                                                     <li>12:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
-                                                <h4>Duration</h4>
+                                                <h4>Durée</h4>
                                                 <ul>
                                                     <li>38h5m</li>
                                                     <li>38h5m</li>
@@ -425,7 +425,7 @@
                                         <tr>
                                             <td class="sale-flights-tabs__item-flight">
                                                 <div class="image-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/40-40.jpg" alt="">
+                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/underground.png" alt="">
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
@@ -451,14 +451,14 @@
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
-                                                <h4>Arrive</h4>
+                                                <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
                                                     <li>12:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
-                                                <h4>Duration</h4>
+                                                <h4>Durée</h4>
                                                 <ul>
                                                     <li>38h5m</li>
                                                     <li>38h5m</li>
@@ -472,7 +472,7 @@
                                         <tr>
                                             <td class="sale-flights-tabs__item-flight">
                                                 <div class="image-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/40-40.jpg" alt="">
+                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/underground.png" alt="">
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
@@ -498,14 +498,14 @@
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
-                                                <h4>Arrive</h4>
+                                                <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
                                                     <li>12:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
-                                                <h4>Duration</h4>
+                                                <h4>Durée</h4>
                                                 <ul>
                                                     <li>38h5m</li>
                                                     <li>38h5m</li>
@@ -519,7 +519,7 @@
                                         <tr>
                                             <td class="sale-flights-tabs__item-flight">
                                                 <div class="image-wrap">
-                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/40-40.jpg" alt="">
+                                                    <img src="${pageContext.request.contextPath}/resources/images/thumb/underground.png" alt="">
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
@@ -545,14 +545,14 @@
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
-                                                <h4>Arrive</h4>
+                                                <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
                                                     <li>12:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
-                                                <h4>Duration</h4>
+                                                <h4>Durée</h4>
                                                 <ul>
                                                     <li>38h5m</li>
                                                     <li>38h5m</li>
