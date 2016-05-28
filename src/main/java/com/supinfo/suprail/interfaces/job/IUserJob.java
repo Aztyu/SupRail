@@ -15,5 +15,4 @@ public interface IUserJob {
 	public User createUser(User user) throws IOException;
 	public User getUserFromGoogle(String google_id) throws GeneralSecurityException, IOException;
 	public void updateUser(User u) throws Exception;
-	public void test() throws JsonGenerationException, JsonMappingException, IOException;
 }

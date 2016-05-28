@@ -10,8 +10,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.supinfo.suprail.interfaces.job.ITrainJob;
+import com.supinfo.suprail.interfaces.job.ITravelJob;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 import com.supinfo.suprail.job.TrainJob;
+import com.supinfo.suprail.job.TravelJob;
 import com.supinfo.suprail.job.UserJob;
 
 @Configuration
@@ -36,8 +38,17 @@ public class GeneralConfiguration extends WebMvcConfigurerAdapter{
         return new UserJob();
     }
     
+
     @Bean
     public ITrainJob getTrainJob() {
         return new TrainJob();
     }
+    
+
+    @Bean
+    public ITravelJob getTravelJob() {
+        return new TravelJob();
+    }
+    
+    
 }

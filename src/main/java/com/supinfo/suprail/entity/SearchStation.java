@@ -1,6 +1,10 @@
 package com.supinfo.suprail.entity;
 
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
@@ -13,9 +17,9 @@ public class SearchStation {
 	
 	private long departure_station_id;
 	
-	private DateTime departure_date;
+	private Date departure_date;
 	
-	private DateTime arrivalDate; //L' heure de départ du trajet retour
+	private Date arrival_date; //L' heure de départ du trajet retour
 	
 	private int passager;
 
@@ -35,28 +39,31 @@ public class SearchStation {
 		this.departure_station_id = departure_station_id;
 	}
 
-	public DateTime getDeparture_date() {
-		return departure_date;
-	}
-
-	public void setDeparture_date(DateTime departure_date) {
-		this.departure_date = departure_date;
+	
+	public void setDeparture_date(String departure_date, String time) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = sdf.parse(departure_date);
+		Timestamp timestamp = new Timestamp(date.getTime());
+		int hour = Integer.parseInt(time.substring(0, 2));
+		int minute = Integer.parseInt(time.substring(3, 5));
+		
+		timestamp.setMinutes(minute);
+		timestamp.setHours(hour);
+		
+		this.departure_date = timestamp;
 	}
 	
-	public void setDeparture_date(DateTime departure_date, int hour, int minutes) {
-		this.departure_date = departure_date;
-	}
-
-	public DateTime getArrivalDate() {
-		return arrivalDate;
-	}
-
-	public void setArrivalDate(DateTime arrivalDate) {
-		this.arrivalDate = arrivalDate;
-	}
-	
-	public void setArrivalDate(DateTime arrivalDate, int hour, int minutes) {
-		this.arrivalDate = arrivalDate;
+	public void setArrivalDate(String arrival_date, String time) throws ParseException {
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = sdf.parse(arrival_date);
+		Timestamp timestamp = new Timestamp(date.getTime());
+		int hour = Integer.parseInt(time.substring(0, 2));
+		int minute = Integer.parseInt(time.substring(3, 5));
+		
+		timestamp.setMinutes(minute);
+		timestamp.setHours(hour);
+		
+		this.arrival_date = timestamp;
 	}
 
 	public int getPassager() {
