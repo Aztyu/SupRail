@@ -1,5 +1,7 @@
 package com.supinfo.suprail.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,8 @@ public class TravelController {
         try{
         	SearchStation schStation = new SearchStation();
         	
-        	schStation.setDeparture_station_id(Long.parseLong((String) request.getAttribute("station_id")));
+        	Map debug = request.getParameterMap();
+        	schStation.setDeparture_station_id(Long.parseLong((String) request.getParameter("StartCityId")));
         	//TODO récupére toutes les données de la recherche
         	
         	travel_job.findTravel(schStation);
