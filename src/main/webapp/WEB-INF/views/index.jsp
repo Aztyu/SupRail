@@ -73,6 +73,7 @@
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="StartCity" value="Ville de départ" required>
+                                        <input type="hidden" value="" id="StartCityId">
                                     </div>
                                 </div>
                                 <div class="form-elements">
@@ -80,6 +81,7 @@
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="EndCity" value="Ville d'arrivée" required>
+                                        <input type="hidden" value="" id="EndCityId">
                                     </div>
                                 </div>
                             </div>
@@ -631,6 +633,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slider.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
 	<%@ include file="include/footer.jsp" %>
 	
 	</body>
