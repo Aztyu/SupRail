@@ -5,6 +5,9 @@ import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
 import java.security.NoSuchAlgorithmException;
 
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+
 import com.supinfo.suprail.entity.User;
 
 public interface IUserJob {
@@ -12,4 +15,5 @@ public interface IUserJob {
 	public User createUser(User user) throws IOException;
 	public User getUserFromGoogle(String google_id) throws GeneralSecurityException, IOException;
 	public void updateUser(User u) throws Exception;
+	public void test() throws JsonGenerationException, JsonMappingException, IOException;
 }

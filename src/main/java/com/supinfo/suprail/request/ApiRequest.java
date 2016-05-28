@@ -45,13 +45,26 @@ public class ApiRequest {
 		in.close();
 		return response.toString(); 
 	}
-	
-	@SuppressWarnings("deprecation")	
+		
 	public static String sendPOSTRequest(String req_url, List<NameValuePair> param_map) throws IOException{
 		HttpClient httpclient = HttpClients.createDefault();
 		HttpPost httppost = new HttpPost(req_url);
 
 		httppost.setEntity(new UrlEncodedFormEntity(param_map, "UTF-8"));
+
+		//Execute and get the response.
+		HttpResponse response = httpclient.execute(httppost);
+		
+		String jsonReturn = EntityUtils.toString(response.getEntity());
+		
+		return jsonReturn;
+	}
+	
+	public static String sendPOSTRequest(String req_url, String json) throws IOException{
+		HttpClient httpclient = HttpClients.createDefault();
+		HttpPost httppost = new HttpPost(req_url);
+
+		httppost.setEntity(new StringEntity(json, "UTF-8"));
 
 		//Execute and get the response.
 		HttpResponse response = httpclient.execute(httppost);

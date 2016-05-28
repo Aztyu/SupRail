@@ -4,11 +4,15 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.security.NoSuchAlgorithmException;
 
+import javax.naming.directory.SearchResult;
 
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONObject;
 
 import com.supinfo.suprail.config.BaseParam;
+import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.User;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 import com.supinfo.suprail.request.ApiRequest;
@@ -68,6 +72,25 @@ public class UserJob implements IUserJob{
 		String req_url = BaseParam.base_api_url + "/user/edit"; 
 		
 		String result = ApiRequest.sendPOSTRequest(req_url, u.getParamsMap());
+		
+		JSONObject json = new JSONObject(result);
+		
+		int status = json.getInt("status");
+		if(status != 200){
+			throw new Exception();
+		}
+	}
+	
+	@Override
+	public void test() throws JsonGenerationException, JsonMappingException, IOException {
+		String req_url = BaseParam.base_api_url + "/travel/find"; 
+		
+		SearchStation sr = new SearchStation();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String json_param = mapper.writeValueAsString(sr);
+		
+		String result = ApiRequest.sendPOSTRequest(req_url, json_param);
 		
 		JSONObject json = new JSONObject(result);
 		

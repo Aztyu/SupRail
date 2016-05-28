@@ -110,6 +110,7 @@ public class UserController {
         try{
         	//Controller de la recherche
         	//request.getSession().setAttribute("user", user);
+        	user_job.test();
         }catch(Exception ex){
         	model.addAttribute("errorlogin", "error");
         	return "/register";
