@@ -4496,7 +4496,7 @@ body.single-post .blog-page__content > .post .post-content {
 .attraction-item .item-body,
 .hotel-item .item-body {
   position: relative;
-  padding: 18px 34px;
+  padding: 18px 25px;
   width: 50%;
   float: left;
   overflow: hidden;
@@ -4808,7 +4808,7 @@ body.single-post .blog-page__content > .post .post-content {
   width: 60%;
 }
 .flight-item .item-price-more {
-  padding: 10px 30px;
+  padding: 10px 10px;
 }
 .flight-item .item-price-more .price {
   font-style: normal;
