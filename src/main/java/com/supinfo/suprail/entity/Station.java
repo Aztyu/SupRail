@@ -22,24 +22,12 @@ public class Station {
 	
 	private String name;
 	private String address;
-	
+	private String zipcode;
+	private String city;
+	private String country;
+
 	@OneToMany(mappedBy="station")
 	private List<StationLineAssociation> lines;
-	
-	public Station(){
-		this.id = -1;
-		this.name = new String();
-		this.address = new String();
-		this.lines = new ArrayList<StationLineAssociation>();
-		
-	}
-	
-	public Station(long id, String name, String address){
-		this.id = id;
-		this.name = name;
-		this.address = address;
-		this.lines = new ArrayList<StationLineAssociation>();
-	}
 
 	public long getId() {
 		return id;
@@ -63,6 +51,31 @@ public class Station {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 	
 	public List<StationLineAssociation> getLines() {
