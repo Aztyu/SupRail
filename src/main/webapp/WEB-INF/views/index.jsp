@@ -72,16 +72,16 @@
                                     <label>From</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
-                                        <input type="text" id="StartCity" value="Ville de départ" required>
-                                        <input type="hidden" value="" id="StartCityId">
+                                        <input type="text" id="StartCity" value="Ville de départ" required name="StartCity">
+                                        <input type="hidden" value="" id="StartCityId" name="StartCityId">
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>To</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
-                                        <input type="text" id="EndCity" value="Ville d'arrivée" required>
-                                        <input type="hidden" value="" id="EndCityId">
+                                        <input type="text" id="EndCity" value="Ville d'arrivée" required name="EndCity">
+                                        <input type="hidden" value="" id="EndCityId" name="EndCityId">
                                     </div>
                                 </div>
                             </div>
@@ -90,28 +90,28 @@
                                     <label>Date/Heure départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_start" value="20/06/2016" required>
+                                        <input type="text" id="date_timepicker_start" value="20/06/2016" required name="date_timepicker_start">
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>Date/Heure retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_end" value="21/06/2016" required>
+                                        <input type="text" id="date_timepicker_end" value="21/06/2016" required name="date_timepicker_end">
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>Heure de départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-clock"></i>
-                                        <input type="text" name="timepicker" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
+                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>Heure de retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-clock"></i>
-                                        <input type="text" id="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
+                                        <input type="text" id="timepicker_end" name="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                                 <div class="form-elements">
                                     <label>Voyageur</label>
                                     <div class="form-item">
-                                        <select class="awe-select">
+                                        <select class="awe-select" name="travelers">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
