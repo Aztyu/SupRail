@@ -17,28 +17,11 @@ public class SearchStation {
 	
 	private long departure_station_id;
 	
-	private Date departure_date;
+	private Timestamp departure_date;
 	
-	private Date arrival_date; //L' heure de départ du trajet retour
+	private Timestamp arrival_date; //L' heure de départ du trajet retour
 	
 	private int passager;
-
-	public long getArrival_station_id() {
-		return arrival_station_id;
-	}
-
-	public void setArrival_station_id(long arrival_station_id) {
-		this.arrival_station_id = arrival_station_id;
-	}
-
-	public long getDeparture_station_id() {
-		return departure_station_id;
-	}
-
-	public void setDeparture_station_id(long departure_station_id) {
-		this.departure_station_id = departure_station_id;
-	}
-
 	
 	public void setDeparture_date(String departure_date, String time) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -66,6 +49,38 @@ public class SearchStation {
 		this.arrival_date = timestamp;
 	}
 
+	public long getArrival_station_id() {
+		return arrival_station_id;
+	}
+
+	public void setArrival_station_id(long arrival_station_id) {
+		this.arrival_station_id = arrival_station_id;
+	}
+
+	public long getDeparture_station_id() {
+		return departure_station_id;
+	}
+
+	public void setDeparture_station_id(long departure_station_id) {
+		this.departure_station_id = departure_station_id;
+	}
+
+	public Timestamp getDeparture_date() {
+		return departure_date;
+	}
+
+	public void setDeparture_date(Timestamp departure_date) {
+		this.departure_date = departure_date;
+	}
+
+	public Timestamp getArrival_date() {
+		return arrival_date;
+	}
+
+	public void setArrival_date(Timestamp arrival_date) {
+		this.arrival_date = arrival_date;
+	}
+
 	public int getPassager() {
 		return passager;
 	}
@@ -73,6 +88,4 @@ public class SearchStation {
 	public void setPassager(int passager) {
 		this.passager = passager;
 	}
-	
-	
 }
