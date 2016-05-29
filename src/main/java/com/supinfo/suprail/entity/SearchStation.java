@@ -28,7 +28,7 @@ public class SearchStation {
 		Date date = sdf.parse(departure_date);
 		Timestamp timestamp = new Timestamp(date.getTime());
 		int hour = Integer.parseInt(time.substring(0, 2));
-		int minute = Integer.parseInt(time.substring(3, 5));
+		int minute = Integer.parseInt(time.substring(5, 7));
 		
 		timestamp.setMinutes(minute);
 		timestamp.setHours(hour);
@@ -41,7 +41,7 @@ public class SearchStation {
 		Date date = sdf.parse(arrival_date);
 		Timestamp timestamp = new Timestamp(date.getTime());
 		int hour = Integer.parseInt(time.substring(0, 2));
-		int minute = Integer.parseInt(time.substring(3, 5));
+		int minute = Integer.parseInt(time.substring(5, 7));
 		
 		timestamp.setMinutes(minute);
 		timestamp.setHours(hour);

@@ -30,12 +30,11 @@ public class TravelController {
         try{
         	SearchStation schStation = new SearchStation();
         	
-        	Map debug = request.getParameterMap();
         	schStation.setDeparture_station_id(Long.parseLong((String) request.getParameter("StartCityId")));
         	schStation.setArrival_station_id(Long.parseLong((String) request.getParameter("EndCityId")));
         	schStation.setDeparture_date(request.getParameter("date_timepicker_start"), request.getParameter("timepicker_start"));
         	schStation.setArrivalDate(request.getParameter("date_timepicker_end"), request.getParameter("timepicker_end"));
-        	schStation.setPassager(Integer.parseInt(request.getParameter(request.getParameter("travelers"))));
+        	schStation.setPassager(Integer.parseInt(request.getParameter("travelers")));
         	
         	travel_job.findTravel(schStation);
         	model.addAttribute("registerok", "info");
