@@ -119,7 +119,7 @@
                                 <div class="form-elements">
                                     <label>Voyageur</label>
                                     <div class="form-item">
-                                        <select class="awe-select" name="travelers">
+                                        <select class="awe-select" name="travelers" id="travelers">
                                             <option>1</option>
                                             <option>2</option>
                                             <option>3</option>
