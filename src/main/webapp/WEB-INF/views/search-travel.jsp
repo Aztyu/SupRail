@@ -14,49 +14,14 @@
                     <!-- BREADCRUMB -->
                     <div class="breadcrumb">
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Accueil</a></li>
                             <li><span>Train</span></li>
                         </ul>
                     </div>
                     <!-- BREADCRUMB -->
                     <div class="find">
-                        <h2 class="text-center">RECHERCHER UN TRAJET</h2>
-                        <form>
-                            <div class="form-group">
-                                <div class="form-elements">
-                                    <label>From</label>
-                                    <div class="form-item">
-                                        <i class="awe-icon awe-icon-marker-1"></i>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="form-elements">
-                                    <label>To</label>
-                                    <div class="form-item">
-                                        <i class="awe-icon awe-icon-marker-1"></i>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="form-elements">
-                                    <label>Depart on</label>
-                                    <div class="form-item">
-                                        <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" class="awe-calendar" value="Date">
-                                    </div>
-                                </div>
-                                <div class="form-elements">
-                                    <label>Return on</label>
-                                    <div class="form-item">
-                                        <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" class="awe-calendar" value="Date">
-                                    </div>
-                                </div>
-
-                                <div class="form-actions">
-                                    <input type="submit" value="Find My Train">
-                                </div>
-                            </div>
-                        </form>
+                        <h2 class="text-center">CHOISISSEZ LE TRAJET QUI VOUS CONVIENT</h2>
+                       
                     </div>
                 </div>
             </div>
@@ -78,13 +43,11 @@
                     <div class="col-md-9 col-md-push-3">
                         <div class="filter-page__content">
                             <div class="filter-item-wrapper">
-
-                            <h4> SÉLECTIONNEZ VOTRE TRAJET</h4>
                                 <!-- ITEM -->
                                 <div class="flight-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/flight/1.jpg" alt="">
+                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width:123px;margin-top:22px;">
                                         </div>
                                     </div>
                                     <div class="item-body">
@@ -156,7 +119,7 @@
                                 <div class="flight-item">
                                     <div class="item-media">
                                         <div class="image-cover">
-                                            <img src="images/flight/2.jpg" alt="">
+                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 22px;">
                                         </div>
                                     </div>
                                     <div class="item-body">
@@ -250,9 +213,11 @@
                     </div>
                     <div class="col-md-3 col-md-pull-9">
                         <div class="page-sidebar">
+                        	<form action="">
                             <!-- WIDGET -->
                             <div class="widget widget_has_radio_checkbox_text">
-                                <h3>Votre recherche</h3>
+                            
+                                <h3 style="font-size:18px;"><i class="awe-icon awe-icon-search" style="color:gray;margin-right:7px;"></i>   Votre recherche</h3>
                                 <div class="widget_content">
                                     <label>
                                         <input type="checkbox">
@@ -260,7 +225,7 @@
                                         Aller
                                     </label>
                                     <label>
-                                        <input type="checkbox">
+                                        <input type="checkbox" checked>
                                         <i class="awe-icon awe-icon-check"></i>
                                         Aller / Retour
                                     </label>
@@ -278,208 +243,57 @@
                                             <input type="text" value="Borde">
                                         </span>
                                     </label>
-                                </div>
-                            </div>
-                            <!-- END / WIDGET -->
-
-                            <!-- WIDGET -->
-                            <div class="widget widget_price_filter">
-                                <h3>Price Level</h3>
-                                <div class="price-slider-wrapper">
-                                    <div class="price-slider"></div>
-                                    <div class="price_slider_amount">
-                                        <div class="price_label">
-                                            <span class="from"></span> - <span class="to"></span>
-                                        </div>
+                                    <label>Voyageur</label>
+                                    <div class="form-item" >
+                                        <select class="awe-select" style="width:58px!important;" name="travelers" id="travelers">
+                                            <option selected="selected">1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <!-- END / WIDGET -->
 
                             <!-- WIDGET -->
-                            <div class="widget widget_has_radio_checkbox">
-                                <h3>Star Rating</h3>
-                                <ul>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                <i class="fa fa-star"></i>
-                                            </span>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            <span class="rating">
-                                                Unrated
-                                            </span>
-                                        </label>
-                                    </li>
-                                </ul>
+                            <div class="widget widget_price_filter">
+                                <h3><i class="awe-icon awe-icon-calendar" style="color:gray;margin-right:7px;"></i> Dates</h3>
+                                    <div class="form-item">
+                                        
+                                        <input type="text" class="awe-calendar" value="Date de départ">
+                                    </div>
+                                    <div style="margin:18px;"></div>
+                                    <div class="form-item">
+                                       
+                                        <input type="text" class="awe-calendar" value="Date d'arrivée">
+                                    </div>
+                                    <div style="margin:28px;"></div>
                             </div>
                             <!-- END / WIDGET -->
 
                             <!-- WIDGET -->
                             <div class="widget widget_has_radio_checkbox">
-                                <h3>Distance</h3>
-                                <ul>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Airport
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Shopping District
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Attractions
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Near Traffic station
-                                        </label>
-                                    </li>
-                                </ul>
+                                <h3><i class="awe-icon awe-icon-clock" style="color:gray;margin-right:7px;"></i> Horaires</h3>
+                                <div class="form-item">
+                                        
+                                        <input type="text" class="awe-calendar" value="Heure de départ ">
+                                        
+                                    </div>
+                                    <div style="margin:18px;"></div>
+                                    <div class="form-item">
+                                       
+                                        <input type="text" class="awe-calendar" value="Heure d'arrivée">
+                                    </div>
+                                                                        <div style="margin:18px;"></div>
+                                    
                             </div>
                             <!-- END / WIDGET -->
 
                             <!-- WIDGET -->
-                            <div class="widget widget_has_radio_checkbox">
-                                <h3>Service Include</h3>
-                                <ul>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Room service
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Laundry
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Meal at room
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Wifi &amp; internet
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Parking lot
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            TV and appliances
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Pool
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox">
-                                            <i class="awe-icon awe-icon-check"></i>
-                                            Gym and Spa
-                                        </label>
-                                    </li>
-                                </ul>
+                              <div class="form-actions">
+                                <input type="submit" id="submitTravel" value="Rechercher" class="btn-remix">
                             </div>
-                            <!-- END / WIDGET -->
-
-                            <!-- WIDGET -->
-                            <div class="widget widget_product_tag_cloud">
-                                <h3>Tags</h3>
-                                <div class="tagcloud">
-                                    <a href="#">Hotel</a>
-                                    <a href="#">Motel</a>
-                                    <a href="#">Hostel</a>
-                                    <a href="#">Homestay</a>
-                                </div>
-                            </div>
-                            <!-- END / WIDGET -->
-
+						</form>
                         </div>
                     </div>
                 </div>

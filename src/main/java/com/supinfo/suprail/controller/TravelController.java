@@ -20,9 +20,9 @@ public class TravelController {
 	@Autowired
 	ITravelJob travel_job;
 	
-	@RequestMapping(value = "/searchTravel", method = RequestMethod.GET)
-    public String getCreationUser(Model model,HttpServletRequest request) {
-        return "/search-travel";		
+	@RequestMapping(value = "/search-travel", method = RequestMethod.GET)
+    public String getSearchPage(Model model,HttpServletRequest request) {
+        return "/search-travel";	
     }
 
     @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)
@@ -40,8 +40,8 @@ public class TravelController {
         	travel_job.findTravel(schStation);
         	model.addAttribute("registerok", "info");
         }catch(Exception ex){
-        	model.addAttribute("errorlogin", "error");
-        	return "/register";
+        	model.addAttribute("errorsearch", "error");
+        	return "/index";
         }
     	return "redirect:/search-travel";		
     }

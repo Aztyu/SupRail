@@ -65,6 +65,8 @@
                 </ul>
                 <div class="awe-search-tabs__content tabs__content">
                     <div id="awe-search-tabs-4" class="search-flight">
+
+						
                         <h2>RECHERCHER UN TRAJET</h2>
                         <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <div class="form-group">
@@ -90,14 +92,14 @@
                                     <label>Date/Heure départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_start" value="20/06/2016" required name="date_timepicker_start">
+                                        <input type="text" id="date_timepicker_start" value="" required name="date_timepicker_start">
                                     </div>
                                 </div>
                                 <div class="form-elements">
                                     <label>Date/Heure retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_end" value="21/06/2016" required name="date_timepicker_end">
+                                        <input type="text" id="date_timepicker_end" value="" required name="date_timepicker_end">
                                     </div>
                                 </div>
                                 <div class="form-elements">
