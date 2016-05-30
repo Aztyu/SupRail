@@ -43,8 +43,7 @@
                                                     <div class="time">Thursday 12 Feb 2015 | Total time: 33h 30m</div>
                                                 </div>
                                                 <div class="price">
-                                                    <span class="amount">$1200</span>
-                                                    <a href="sale-flight-popup.html" class="initiative-choose-other-open">Choose other</a>
+                                                    <span class="amount">Total : 120€</span>
                                                 </div>
                                             </div>
                                             <table class="initiative-table">
@@ -53,16 +52,20 @@
                                                         <th>
                                                             <div class="item-thumb">
                                                                 <div class="image-thumb">
-                                            						<img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 22px;">
+                                            						<img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="">
                                                                 </div>
                                                                 <div class="text">
-                                                                    <span>Quatar Airway</span>
-                                                                    <p>QR-829</p>
-                                                                    <span>Economy</span>
+                                                                    <span>SUPRAIL</span>
+                                                                    <p>TER 47584</p>
+                                                                    <hr style="margin:5px 0 9px">
+                                                                    <a href="#demo" data-toggle="collapse"><span>Plus d'infos</span><br/>
+                                                                    	<i class="awe-icon awe-icon-downflech"></i>
+                                                                	</a>
                                                                 </div>
                                                             </div>
                                                         </th>
-                                                        <td>
+                                                         
+														<td>
                                                             <div class="item-body">
                                                                 <div class="item-from">
                                                                     <h3>HAN</h3>
@@ -81,14 +84,19 @@
                                                                     <p class="desc">Doha, Doha</p>
                                                                 </div>
                                                             </div>
+                                                            <div id="demo" class="collapse">
+                                                            <hr style="margin: 5px 0 9px;">
+                                                                <p style="font-size: 15px;font-weight: 500;color: #333333"><i class="awe-icon awe-icon-info" style="color:#0091ea;"></i> INFOS COMPLÉMENTAIRES</p>
+                                                                <span>Plus d'infos</span>
+														</div>
                                                         </td>
+                                                        
                                                     </tr>
                                                     <tr>
                                                         <th>
                                                             <div class="item-thumb">
                                                                 <div class="image-thumb">
-                                                                    <img src="images/flight/4.jpg" alt="">
-                                                                </div>
+<img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="">                                                                </div>
                                                                 <div class="text">
                                                                     <span>Quatar Airway</span>
                                                                     <p>QR-829</p>
@@ -121,96 +129,7 @@
                                             </table>
                                         </div>
                                         <!-- END / ITEM -->
-                                        <!-- ITEM -->
-                                        <div class="initiative__item">
-                                            <div class="initiative-top">
-                                                <div class="title">
-                                                    <div class="from-to">
-                                                        <span class="from">Ha Noi</span>
-                                                        <i class="awe-icon awe-icon-arrow-right"></i>
-                                                        <span class="to">New York</span>
-                                                    </div>
-                                                    <div class="time">Thursday 12 Feb 2015 | Total time: 33h 30m</div>
-                                                </div>
-                                                <div class="price">
-                                                    <span class="amount">$1200</span>
-                                                    <a href="sale-flight-popup.html" class="initiative-choose-other-open">Choose other</a>
-                                                </div>
-                                            </div>
-                                            <table class="initiative-table">
-                                                <tbody>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="item-thumb">
-                                                                <div class="image-thumb">
-                                            							<img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 22px;">
-                                                                </div>
-                                                                <div class="text">
-                                                                    <span>Quatar Airway</span>
-                                                                    <p>QR-829</p>
-                                                                    <span>Economy</span>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <td>
-                                                            <div class="item-body">
-                                                                <div class="item-from">
-                                                                    <h3>HAN</h3>
-                                                                    <span class="time">14:15</span>
-                                                                    <span class="date">Thu, 12 Feb, 2015</span>
-                                                                    <p class="desc">John F Kennedy, New York</p>
-                                                                </div>
-                                                                <div class="item-time">
-                                                                    <i class="fa fa-clock-o"></i>
-                                                                    <span>10h 25m</span>
-                                                                </div>
-                                                                <div class="item-to">
-                                                                    <h3>DOH</h3>
-                                                                    <span class="time">23:10</span>
-                                                                    <span class="date">Thu, 12 Feb, 2015</span>
-                                                                    <p class="desc">Doha, Doha</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>
-                                                            <div class="item-thumb">
-                                                                <div class="image-thumb">
-                                                                    <img src="images/flight/4.jpg" alt="">
-                                                                </div>
-                                                                <div class="text">
-                                                                    <span>Quatar Airway</span>
-                                                                    <p>QR-829</p>
-                                                                    <span>Economy</span>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <td>
-                                                            <div class="item-body">
-                                                                <div class="item-from">
-                                                                    <h3>HAN</h3>
-                                                                    <span class="time">14:15</span>
-                                                                    <span class="date">Thu, 12 Feb, 2015</span>
-                                                                    <p class="desc">John F Kennedy, New York</p>
-                                                                </div>
-                                                                <div class="item-time">
-                                                                    <i class="fa fa-clock-o"></i>
-                                                                    <span>10h 25m</span>
-                                                                </div>
-                                                                <div class="item-to">
-                                                                    <h3>DOH</h3>
-                                                                    <span class="time">23:10</span>
-                                                                    <span class="date">Thu, 12 Feb, 2015</span>
-                                                                    <p class="desc">Doha, Doha</p>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- END / ITEM -->
+                                        
                                     </div>
                                 </div>
                                 
@@ -277,11 +196,4 @@
                 </div>
             </div>
         </section>
-        <script type="text/javascript">
-	$('.toggle-menu-responsive').on('click', function(evt) {
-        evt.preventDefault();
-        $(this).toggleClass('toggle-active');
-        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
-    });
-	</script>
 	<%@ include file="include/footer.jsp" %>

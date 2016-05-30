@@ -237,3 +237,11 @@
 	font-family: FontAwesome;
 	content: "\f017";
 }
+.awe-icon-danger:before{
+	font-family: FontAwesome;
+	content : "\f06a";
+}
+.awe-icon-downflech:before{
+	font-family: FontAwesome;
+	content : "\f078";
+}

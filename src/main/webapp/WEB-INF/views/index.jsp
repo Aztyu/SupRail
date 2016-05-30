@@ -6,6 +6,8 @@
 <html>
 	<%@ include file="include/headerbis.jsp" %>
 	<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	
     <!-- HERO SECTION -->
     <section class="hero-section">
         <div id="slider-revolution">
@@ -63,10 +65,36 @@
                         </a>
                     </li>
                 </ul>
+                
+					<button type="button" id="errorSearch" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="display:none;">Open Modal</button>
+					<script>
+					function myFunction() {
+					    document.getElementById("errorSearch").click();
+					}
+					</script>
+					<div id="myModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+					
+					    <!-- Modal content-->
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4 class="modal-title"><i class="awe-icon awe-icon-danger"></i> Erreur !</h4>
+					      </div>
+					      <div class="modal-body">
+					        <p>Une erreur est survenue, veuillez recommencer</p>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+					      </div>
+					    </div>
+					
+					  </div>
+					</div>
+			     
                 <div class="awe-search-tabs__content tabs__content">
                     <div id="awe-search-tabs-4" class="search-flight">
 
-						
                         <h2>RECHERCHER UN TRAJET</h2>
                         <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <div class="form-group">
