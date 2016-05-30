@@ -30,7 +30,6 @@ public class TravelController {
         try{
         	SearchStation schStation = new SearchStation();
         	
-        	Map debug = request.getParameterMap();
         	schStation.setDeparture_station_id(Long.parseLong((String) request.getParameter("StartCityId")));
         	schStation.setArrival_station_id(Long.parseLong((String) request.getParameter("EndCityId")));
         	schStation.setPassager(Integer.parseInt(request.getParameter(request.getParameter("travelers"))));
