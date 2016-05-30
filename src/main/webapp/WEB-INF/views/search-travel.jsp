@@ -5,7 +5,7 @@
 
 <html>
 	<%@ include file="include/headerbis.jsp" %>
-	
+		<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
 	        <!-- HEADING PAGE -->
         <section class="awe-parallax category-heading-section-demo">
             <div class="awe-overlay"></div>
@@ -304,4 +304,11 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
+	<script type="text/javascript">
+	$('.toggle-menu-responsive').on('click', function(evt) {
+        evt.preventDefault();
+        $(this).toggleClass('toggle-active');
+        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
+    });
+	</script>
 	<%@ include file="include/footer.jsp" %>

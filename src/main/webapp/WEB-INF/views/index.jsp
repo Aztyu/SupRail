@@ -71,7 +71,7 @@
                         <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <div class="form-group">
                                 <div class="form-elements">
-                                    <label>From</label>
+                                    <label>Aller</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="StartCity" value="Ville de départ" required name="StartCity">
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                                 <div class="form-elements">
-                                    <label>To</label>
+                                    <label>Retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="EndCity" value="Ville d'arrivée" required name="EndCity">
@@ -89,17 +89,10 @@
                             </div>
                             <div class="form-group">
                                 <div class="form-elements">
-                                    <label>Date/Heure départ</label>
+                                    <label>Date départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
                                         <input type="text" id="date_timepicker_start" value="" required name="date_timepicker_start">
-                                    </div>
-                                </div>
-                                <div class="form-elements">
-                                    <label>Date/Heure retour</label>
-                                    <div class="form-item">
-                                        <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_end" value="" required name="date_timepicker_end">
                                     </div>
                                 </div>
                                 <div class="form-elements">
@@ -109,6 +102,14 @@
                                         <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
                                     </div>
                                 </div>
+                                <div class="form-elements">
+                                    <label>Date retour</label>
+                                    <div class="form-item">
+                                        <i class="awe-icon awe-icon-calendar"></i>
+                                        <input type="text" id="date_timepicker_end" value="" required name="date_timepicker_end">
+                                    </div>
+                                </div>
+                                
                                 <div class="form-elements">
                                     <label>Heure de retour</label>
                                     <div class="form-item">
@@ -636,6 +637,13 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slider.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
+	<script type="text/javascript">
+	$('.toggle-menu-responsive').on('click', function(evt) {
+        evt.preventDefault();
+        $(this).toggleClass('toggle-active');
+        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
+    });
+	</script>
 	<%@ include file="include/footer.jsp" %>
 	
 	</body>

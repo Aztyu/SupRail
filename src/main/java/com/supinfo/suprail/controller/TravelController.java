@@ -33,17 +33,20 @@ public class TravelController {
         	Map debug = request.getParameterMap();
         	schStation.setDeparture_station_id(Long.parseLong((String) request.getParameter("StartCityId")));
         	schStation.setArrival_station_id(Long.parseLong((String) request.getParameter("EndCityId")));
+        	schStation.setPassager(Integer.parseInt(request.getParameter(request.getParameter("travelers"))));
         	schStation.setDeparture_date(request.getParameter("date_timepicker_start"), request.getParameter("timepicker_start"));
         	schStation.setArrivalDate(request.getParameter("date_timepicker_end"), request.getParameter("timepicker_end"));
-        	schStation.setPassager(Integer.parseInt(request.getParameter(request.getParameter("travelers"))));
         	
         	travel_job.findTravel(schStation);
-        	model.addAttribute("registerok", "info");
+        	model.addAttribute("searchOk", "info");
         }catch(Exception ex){
         	model.addAttribute("errorsearch", "error");
         	return "/index";
         }
     	return "redirect:/search-travel";		
     }
-
+    @RequestMapping(value = "/user/historyUser", method = RequestMethod.GET)
+    public String getHistoryPage(Model model,HttpServletRequest request) {
+        return "customer-history";	
+    }
 }

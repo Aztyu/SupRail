@@ -66,7 +66,7 @@
                 <div class="container">
                     <!-- LOGO -->
                     <div class="logo">
-                        <a href="index.html"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""></a>
+                        <a href="${pageContext.request.contextPath}/index.html"><img src="${pageContext.request.contextPath}/resources/images/logo.png" alt=""></a>
                     </div>
                     <!-- END / LOGO -->
                     
@@ -164,6 +164,7 @@
 									<a href="${pageContext.request.contextPath}/user/updateUser"><i class="fa fa-user" aria-hidden="true"></i> Bonjour ${sessionScope.user.lastName}</a>
 									<ul class="sub-menu">
                                       <li><a href="${pageContext.request.contextPath}/user/updateUser">Mes informations</a></li>
+                                      <li><a href="${pageContext.request.contextPath}/user/historyUser">Historique</a></li>
                                       <li>
 								        <c:choose>
 											<c:when test="${ sessionScope.user.googleUser == true }">

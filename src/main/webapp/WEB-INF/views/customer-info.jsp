@@ -77,5 +77,11 @@
 	    </div>
 	</div>
 </section>
-
+<script type="text/javascript">
+	$('.toggle-menu-responsive').on('click', function(evt) {
+        evt.preventDefault();
+        $(this).toggleClass('toggle-active');
+        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
+    });
+	</script>
 <%@ include file="include/footer.jsp" %>
