@@ -25,6 +25,8 @@ public class Station {
 	private String zipcode;
 	private String city;
 	private String country;
+	private double latitude;
+	private double longitude;
 
 	@OneToMany(mappedBy="station")
 	private List<StationLineAssociation> lines;
@@ -86,5 +88,19 @@ public class Station {
 		this.lines = lines;
 	}
 	
+	public double getLatitude() {
+		return latitude;
+	}
 
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
 }

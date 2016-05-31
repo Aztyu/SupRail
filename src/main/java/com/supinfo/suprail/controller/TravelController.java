@@ -48,4 +48,9 @@ public class TravelController {
     public String getHistoryPage(Model model,HttpServletRequest request) {
         return "customer-history";	
     }
+    
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String getTest(Model model,HttpServletRequest request) {
+        return "/test";	
+    }
 }
