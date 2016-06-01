@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/> "> 
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/demo.css"/> "> 
    	<link id="colorreplace" rel="stylesheet" type="text/css" href="<c:url value="/resources/css/colors/blue.css"/> ">
+    	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery-1.11.2.min.js"></script>
     <script type='text/javascript' src="${pageContext.request.contextPath}/resources/js/lib/jquery-ui.js"></script>
@@ -51,6 +52,7 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
+    
 </head>
 <body>
     <!-- PAGE WRAP -->
@@ -77,80 +79,12 @@
                                 <a href="${pageContext.request.contextPath}/index">Accueil</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="destinations-list.html">Destinations</a>
-                                <ul class="sub-menu">
-                                    <li><a href="destinations-list.html">List</a></li>
-                                    <li><a href="destinations-grid.html">Grid</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="destinations-trip.html">Detail</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="destinations-trip.html">Trips in destination</a></li>
-                                            <li><a href="destinations-hotel.html">Hotels in destination</a></li>
-                                            <li><a href="destinations-attraction.html">Attraction in destination</a></li>
-                                            <li><a href="destinations-flight.html">Flights in destination</a></li>
-                                            <li><a href="destinations-train.html">Train in destination</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="destinations-list-dark.html">List (Dark)</a></li>
-                                    <li><a href="destinations-grid-dark.html">Grid (Dark)</a></li>
-                                    <li class="menu-item-has-children">
-                                        <a href="destinations-trip.html">Detail (Dark)</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="destinations-trip-dark.html">Trips in destination</a></li>
-                                            <li><a href="destinations-hotel-dark.html">Hotels in destination</a></li>
-                                            <li><a href="destinations-attraction-dark.html">Attraction in destination</a></li>
-                                            <li><a href="destinations-flight-dark.html">Flights in destination</a></li>
-                                            <li><a href="destinations-train-dark.html">Train in destination</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <a href="${pageContext.request.contextPath}/station-info">Nos gares</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="train.html">Train</a>
-                                <ul class="sub-menu">
-                                    <li><a href="train.html">Train</a></li>
-                                    <li><a href="train-detail.html">Train Detail</a></li>
-                                    <li><a href="train-dark.html">Train (Dark)</a></li>
-                                    <li><a href="train-detail-dark.html">Train Detail (Dark)</a></li>
-                                </ul>
+                                <a href="attraction.html">A propos</a>
                             </li>
-                            <li class="menu-item-has-children">
-                                <a href="attraction.html">Attraction</a>
-                                <ul class="sub-menu">
-                                    <li><a href="attraction.html">Attraction</a></li>
-                                    <li><a href="attraction-detail.html">Attraction Detail</a></li>
-                                    <li><a href="attraction-dark.html">Attraction (Dark)</a></li>
-                                    <li><a href="attraction-detail-dark.html">Attraction Detail (Dark)</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children current-menu-parent">
-                                <a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    
-                                    <li class="menu-item-has-children current-menu-parent">
-                                        <a href="login.html">Log In</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="login.html">Log In</a></li>
-                                            <li class="current-menu-item"><a href="register.html">Register</a></li>
-                                            <li><a href="login.html">Log In (Dark)</a></li>
-                                            <li><a href="register.html">Register (Dark)</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="checkout-yourcart.html">Checkout</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="checkout-yourcart.html">Your cart</a></li>
-                                            <li><a href="checkout-customer.html">Customer</a></li>
-                                            <li><a href="checkout-complete.html">Complete</a></li>
-                                            <li><a href="checkout-yourcart-dark.html">Your cart (Dark)</a></li>
-                                            <li><a href="checkout-customer-dark.html">Customer (Dark)</a></li>
-                                            <li><a href="checkout-complete-dark.html">Complete (Dark)</a></li>
-                                        </ul>
-                                    </li>
-                                
-
-                                </ul>
-                            </li>
+                            
                             <li class="menu-item-has-children">
                                 <a href="contact.html">Contact</a>
                             </li>

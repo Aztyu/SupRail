@@ -6,7 +6,6 @@
 <html>
 	<%@ include file="include/headerbis.jsp" %>
 	<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
-	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 	
     <!-- HERO SECTION -->
     <section class="hero-section">
