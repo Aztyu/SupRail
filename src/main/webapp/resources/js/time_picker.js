@@ -6,7 +6,8 @@ $(document).ready(function() {
 	var currentdate = new Date();
 	var hour = currentdate.getHours();
 	var min = currentdate.getMinutes();
-	var time = hour + ":" + min;
+	var has_zero = currentdate.getMinutes() < 10 ? '0' : '';
+	var time = hour + " : " + has_zero + min;
 	$('#timepicker_start').val(time);
 	$('#timepicker_end').val(time);
 });
