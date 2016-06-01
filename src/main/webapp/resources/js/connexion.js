@@ -6,7 +6,7 @@ gapi.load('auth2', function() {
 
 function onSignIn(googleUser) {
 	  var profile = googleUser.getBasicProfile();
-    var id_token = googleUser.getAuthResponse().id_token;
+	  var id_token = googleUser.getAuthResponse().id_token;
 		window.location.href = "http://localhost:8080/suprail/login/google?google_id=" + id_token;
 }
 
@@ -73,5 +73,6 @@ function statusChangeCallback(response) {
       console.log('Connexion réussie pour: ' + response.name);
       document.getElementById('status').innerHTML =
         'Merci de vous être connecté, ' + response.name + '!';
+	  window.location.href = "http://localhost:8080/suprail/login/facebook?facebook_id=" + response.authResponse.accessToken;
     });
   }
