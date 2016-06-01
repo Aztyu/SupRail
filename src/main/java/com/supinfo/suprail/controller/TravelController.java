@@ -52,4 +52,9 @@ public class TravelController {
     public String getInfoStation(Model model,HttpServletRequest request) {
         return "station-info";	
     }
+    
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String getTest(Model model,HttpServletRequest request) {
+        return "/test";	
+    }
 }
