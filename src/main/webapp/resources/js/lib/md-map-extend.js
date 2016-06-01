@@ -27,8 +27,8 @@
                 autoCenter: false,
                 zoom: 12,
                 changeIcon: true,
-                iconMarker: 'images/marker.png',
-                iconMarkerActive: 'images/marker-active.png',
+                iconMarker: 'resources/images/marker.png',
+                iconMarkerActive: 'resources/images/marker-active.png',
                 scrollwheel: true,
                 // Callback
                 init: function(){},

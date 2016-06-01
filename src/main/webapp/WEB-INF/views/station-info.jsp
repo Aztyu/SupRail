@@ -92,64 +92,23 @@
                             <div class="product-slider-wrapper">
                                 <div class="product-slider">
                                     <div class="item">
-                                        <img src="images/img/1.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/images/img/1.jpg" alt="">
                                     </div>
                                     <div class="item">
-                                        <img src="images/img/2.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/images/img/2.jpg" alt="">
                                     </div>
                                     <div class="item">
-                                        <img src="images/img/3.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/images/img/3.jpg" alt="">
                                     </div>
                                     <div class="item">
-                                        <img src="images/img/4.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/images/img/4.jpg" alt="">
                                     </div>
                                     <div class="item">
-                                        <img src="images/img/5.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/images/img/5.jpg" alt="">
                                     </div>
-                                    <div class="item">
-                                        <img src="images/img/6.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/img/7.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/img/8.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="images/img/9.jpg" alt="">
-                                    </div>
+                                   
                                 </div>
-                                <div class="product-slider-thumb-row">
-                                    <div class="product-slider-thumb">
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-1.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-2.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-3.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-4.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-5.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-6.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-7.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-8.jpg" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="images/img/demo-thumb-9.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <h3 style="font-size: 20px;font-weight: 600;color: #0091ea;border-bottom: 2px solid #D4D4D4;padding: 8px 0;margin-top: 0;">Localisation de la gare</h3>
                             <div class="tour-map">

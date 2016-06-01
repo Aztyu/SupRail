@@ -641,7 +641,7 @@
                 autoCenter: true,
                 zoom: 10,
                 style: 'shadesOfGrey',
-                iconMarker: 'images/marker-product-map.png',
+                iconMarker: 'resources/images/marker-product-map.png',
                 scrollwheel: false
             });
         }
@@ -650,8 +650,8 @@
                 appendTo: '.tour-map',
                 autoCenter: true,
                 zoom: 10,
-                style: 'shadesOfGrey',
-                iconMarker: 'images/marker-product-map.png',
+                style: 'none',
+                iconMarker: 'resources/images/marker-product-map.png',
                 scrollwheel: false
             });
         }

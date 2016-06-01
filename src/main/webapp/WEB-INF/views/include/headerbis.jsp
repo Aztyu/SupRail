@@ -40,14 +40,14 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery.owl.carousel.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/theia-sticky-sidebar.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/md-map-extend.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lib/jquery.easy-autocomplete.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/scripts.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- CONNEXION GOOGLE API -->
     <script src="https://apis.google.com/js/platform.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/connexion.js"></script>	
-    
-    
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
