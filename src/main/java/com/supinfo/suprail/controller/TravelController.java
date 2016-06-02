@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.supinfo.suprail.entity.SearchStation;
+import com.supinfo.suprail.entity.Travel;
 import com.supinfo.suprail.interfaces.job.ITravelJob;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 
@@ -29,14 +30,16 @@ public class TravelController {
     public String searchTravel(Model model,HttpServletRequest request) {
         try{
         	SearchStation schStation = new SearchStation();
-        	
+
         	schStation.setDeparture_station_id(Long.parseLong((String) request.getParameter("StartCityId")));
         	schStation.setArrival_station_id(Long.parseLong((String) request.getParameter("EndCityId")));
-        	schStation.setPassager(Integer.parseInt(request.getParameter(request.getParameter("travelers"))));
+        	schStation.setPassager(Integer.parseInt(request.getParameter("travelers")));
         	schStation.setDeparture_date(request.getParameter("date_timepicker_start"), request.getParameter("timepicker_start"));
         	schStation.setArrivalDate(request.getParameter("date_timepicker_end"), request.getParameter("timepicker_end"));
         	
-        	travel_job.findTravel(schStation);
+        	Travel travel = travel_job.findTravel(schStation);
+
+        	model.addAttribute("travel", travel);
         	model.addAttribute("searchOk", "info");
         }catch(Exception ex){
         	model.addAttribute("errorsearch", "error");
