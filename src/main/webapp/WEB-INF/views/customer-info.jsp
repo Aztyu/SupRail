@@ -18,9 +18,9 @@
 	        <div class="col-lg-3">
 	            <div class="checkout-page__sidebar">
 	                <ul>
-	                    <li><a href="checkout-yourcart.html">Votre panier</a></li>
-	                    <li class="current"><a href="checkout-customer.html">Vos informations</a></li>
-	                    <li><a href="checkout-complete.html">Vos achats</a></li>
+	                    <li><a href="${pageContext.request.contextPath}/user/historyUser">Votre panier</a></li>
+                        <li class="current"><a href="${pageContext.request.contextPath}/user/updateUser">Vos informations</a></li>
+                        <li><a href="${pageContext.request.contextPath}/checkout-complete">Commande terminée</a></li>
 	                </ul>
 	            </div>
 	        </div>

@@ -103,7 +103,7 @@ public class UserController {
         	ex.printStackTrace();
         	return "/register";
         }
-        return "redirect:/";		
+        return "redirect:/";
     }
        
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
