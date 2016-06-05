@@ -62,25 +62,25 @@ public class SearchStep {
 	
 	public String getFormatedStartDate(){
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String test = sdf.format(this.start_time.getDate());
-		return test;
+		Date date = new Date(this.start_time.getTime());
+		return sdf.format(date);
 	}
 	
 	public String getFormatedStopDate(){
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String test = sdf.format(this.end_time.getDate());
-		return test;
+		Date date = new Date(this.end_time.getTime());
+		return sdf.format(date);
 	}
 	
 	public String getFormatedStartTime(){
-		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
-		String test = sdf.format(this.start_time.getDate());
-		return test;
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		Date date = new Date(this.start_time.getTime());
+		return sdf.format(date);
 	}
 	
 	public String getFormatedStopTime(){
-		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
-		String test = sdf.format(this.start_time.getDate());
-		return test;
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		Date date = new Date(this.end_time.getTime());
+		return sdf.format(date);
 	}
 }
