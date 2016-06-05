@@ -23,16 +23,21 @@ public class TravelJob implements ITravelJob{
 		ObjectMapper mapper = new ObjectMapper();
 		String json_param = mapper.writeValueAsString(search);		//On récupère le json de l'objet
 		
+		
+		
+		
+		//Debug
+		//String json_travel = "{'retour':[{'start_time':1465116480000,'start':{'latitude':0,'name':'Marseille','id':22,'longitude':0},'end_time':1465122240000,'end':{'zipcode':'75571','country':'FRANCE','address':'Place Louis Armand','city':'Paris','latitude':0,'name':'Paris, Gare de Lyon','id':1,'longitude':0},'train_trip':{'departure_date':1465113600000,'aller':false,'id':12}}],'aller':[{'start_time':1465113600000,'start':{'zipcode':'75571','country':'FRANCE','address':'Place Louis Armand','city':'Paris','latitude':0,'name':'Paris, Gare de Lyon','id':1,'longitude':0},'end_time':1465122240000,'end':{'latitude':0,'name':'Marseille','id':22,'longitude':0},'train_trip':{'departure_date':1465113600000,'aller':true,'id':11}}]}";
+		
 		String result = ApiRequest.sendPOSTRequest(req_url, json_param);
-		
 		JSONObject json = new JSONObject(result);
-		
 		String json_travel = json.getJSONObject("travel").toString();
+		
 		Travel travel = mapper.readValue(json_travel, Travel.class);
 		
 		//TODO : récupération de l'objet et affichage dans une nouvelle page
 		
-		int status = json.getInt("status");
+		int status = json.getInt("html_status");
 		if(status != 200){
 			throw new Exception();
 		}

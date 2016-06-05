@@ -1,6 +1,7 @@
 package com.supinfo.suprail.entity;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
@@ -57,5 +58,29 @@ public class SearchStep {
 
 	public void setTrain_trip(TrainTrip train_trip) {
 		this.train_trip = train_trip;
+	}
+	
+	public String getFormatedStartDate(){
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String test = sdf.format(this.start_time.getDate());
+		return test;
+	}
+	
+	public String getFormatedStopDate(){
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String test = sdf.format(this.end_time.getDate());
+		return test;
+	}
+	
+	public String getFormatedStartTime(){
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+		String test = sdf.format(this.start_time.getDate());
+		return test;
+	}
+	
+	public String getFormatedStopTime(){
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
+		String test = sdf.format(this.start_time.getDate());
+		return test;
 	}
 }

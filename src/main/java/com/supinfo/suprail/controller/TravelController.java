@@ -39,13 +39,15 @@ public class TravelController {
         	
         	Travel travel = travel_job.findTravel(schStation);
 
+        	travel.getAller().get(0).getFormatedStartDate();
+        	travel.getAller().get(0).getFormatedStartTime();
         	model.addAttribute("travel", travel);
         	model.addAttribute("searchOk", "info");
         }catch(Exception ex){
         	model.addAttribute("errorsearch", "error");
         	return "/index";
         }
-    	return "redirect:/search-travel";		
+    	return "test-travel";		
     }
     @RequestMapping(value = "/user/historyUser", method = RequestMethod.GET)
     public String getHistoryPage(Model model,HttpServletRequest request) {
