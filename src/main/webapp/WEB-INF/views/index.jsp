@@ -153,10 +153,11 @@
                                         <input type="text" id="timepicker_end" name="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
                                     </div>
                                 </div>
+                               <input type="hidden" id="blah1" value="true" name="blah1" />
+                                
                             </div>
-                            <div class="hiddeninput">
-                            	<input type="hidden" id="blah1" value="true" name="blah1" />
-                            </div>
+                            
+            
                             <div class="form-group">
                                 <div class="form-elements">
                                     <label>Voyageur</label>
