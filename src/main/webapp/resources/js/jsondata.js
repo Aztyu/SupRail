@@ -1,3 +1,11 @@
+$(document).ready(function(){
+            $('input.chooseTravel[name!="check1"]').click(function(e){
+                $('input.chooseTravel[name="check1"]').prop('checked',false);
+            });
+            $('input.chooseTravel[name="check1"]').click(function(e){
+                $('input.chooseTravel[name!="check1"]').prop('checked',false);
+            });  
+            
 var options = {
 	
 			    url: "http://localhost:8080/api/stations",

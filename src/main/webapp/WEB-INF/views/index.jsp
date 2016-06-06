@@ -95,6 +95,22 @@
                     <div id="awe-search-tabs-4" class="search-flight">
 
                         <h2>RECHERCHER UN TRAJET</h2>
+                        <div class="widget widget_has_radio_checkbox_text" style="margin-bottom:0px;">                         
+	                        <div class="widget_content" style="margin-bottom:0px;">
+	                        <form>
+	                            <label>
+	                                <input type="checkbox"  name="check1" value="Value1">
+	                                <i class="awe-icon awe-icon-check"></i>
+	                                Aller / Retour
+	                            </label>
+	                            <label>
+	                                <input type="checkbox" name="check2" value="Value2">
+	                                <i class="awe-icon awe-icon-check"></i>
+	                                Aller
+	                            </label>
+	                        </form>
+	                        </div>
+                        </div>
                         <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <div class="form-group">
                                 <div class="form-elements">
@@ -129,17 +145,17 @@
                                         <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
                                     </div>
                                 </div>
-                                <div class="form-elements">
+                                <div class="form-elements clock_end">
                                     <label>Date retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
-                                        <input type="text" id="date_timepicker_end" value="" required name="date_timepicker_end">
+                                        <input type="text" id="date_timepicker_end" value="" name="date_timepicker_end">
                                     </div>
                                 </div>
                                 
                                 <div class="form-elements">
                                     <label>Heure de retour</label>
-                                    <div class="form-item">
+                                    <div class="form-item clock-end">
                                         <i class="awe-icon awe-icon-clock"></i>
                                         <input type="text" id="timepicker_end" name="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
                                     </div>

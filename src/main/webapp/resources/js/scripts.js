@@ -218,13 +218,13 @@
             yearRange: '2016:2017',
             dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
             dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
-            numberOfMonths: 1,
+            numberOfMonths: 2,
             onSelect: function(selected){
                 $("#date_timepicker_end").datepicker("option","minDate", selected)
             }
         }).datepicker("setDate", new Date());
         $("#date_timepicker_end").datepicker({ 
-        numberOfMonths: 1,
+        numberOfMonths: 2,
         yearRange: '2016:2017',
         dayNames: [ "Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi" ],
         dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],
