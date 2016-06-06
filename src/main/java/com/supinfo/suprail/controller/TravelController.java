@@ -1,5 +1,6 @@
 package com.supinfo.suprail.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,13 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.supinfo.suprail.entity.SearchStation;
+import com.supinfo.suprail.entity.Station;
 import com.supinfo.suprail.entity.Travel;
 import com.supinfo.suprail.interfaces.job.ITravelJob;
 import com.supinfo.suprail.interfaces.job.IUserJob;
+import com.supinfo.suprail.job.TravelJob;
 
 
 @Controller
@@ -45,15 +50,21 @@ public class TravelController {
         	model.addAttribute("errorsearch", "error");
         	return "/index";
         }
-    	return "test-travel";		
+    	return "search-travel";		
     }
     @RequestMapping(value = "/user/historyUser", method = RequestMethod.GET)
     public String getHistoryPage(Model model,HttpServletRequest request) {
         return "customer-history";	
     }
-    @RequestMapping(value = "/station-info", method = RequestMethod.GET)
-    public String getInfoStation(Model model,HttpServletRequest request) {
-        return "station-info";
+    @RequestMapping(value = "/station-info/{station_id}", method = RequestMethod.GET)
+    public String getInfoStation(Model model,HttpServletRequest request, @PathVariable int station_id) {
+        try {
+			Station station = travel_job.findStation(station_id);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return "station-info";
     }
     @RequestMapping(value = "/checkout-complete", method = RequestMethod.GET)
     public String getcheckoutComplete(Model model,HttpServletRequest request) {
@@ -62,7 +73,14 @@ public class TravelController {
     
     @RequestMapping(value = "/station-list", method = RequestMethod.GET)
     public String getListStation(Model model,HttpServletRequest request) {
-        return "station-list";	
+        try {
+			List<Station> list = travel_job.listStation();
+			model.addAttribute("stationList", list);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	return "station-list";	
     }
     
     @RequestMapping(value = "/test", method = RequestMethod.GET)

@@ -96,19 +96,12 @@
 
                         <h2>RECHERCHER UN TRAJET</h2>
                         <div class="widget widget_has_radio_checkbox_text" style="margin-bottom:0px;">                         
-	                        <div class="widget_content" style="margin-bottom:0px;">
-	                        <form>
+	                        <div class="widget_content" style="margin-bottom:0px;">								                       
 	                            <label>
-	                                <input type="checkbox"  name="check1" value="Value1">
+	                                <input type="checkbox" id="checkTravel" checked="" value="Value1">
 	                                <i class="awe-icon awe-icon-check"></i>
-	                                Aller / Retour
+	                                Aller/Retour
 	                            </label>
-	                            <label>
-	                                <input type="checkbox" name="check2" value="Value2">
-	                                <i class="awe-icon awe-icon-check"></i>
-	                                Aller
-	                            </label>
-	                        </form>
 	                        </div>
                         </div>
                         <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
@@ -142,10 +135,10 @@
                                     <label>Heure de départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-clock"></i>
-                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
+                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
                                     </div>
                                 </div>
-                                <div class="form-elements clock_end">
+                                <div class="form-elements date_end">
                                     <label>Date retour</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-calendar"></i>
@@ -153,7 +146,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="form-elements">
+                                <div class="form-elements clock_end">
                                     <label>Heure de retour</label>
                                     <div class="form-item clock-end">
                                         <i class="awe-icon awe-icon-clock"></i>

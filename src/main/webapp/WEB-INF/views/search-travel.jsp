@@ -43,78 +43,8 @@
                     <div class="col-md-9 col-md-push-3">
                         <div class="filter-page__content">
                             <div class="filter-item-wrapper">
-                                <!-- ITEM -->
-                                <div class="flight-item">
-                                    <div class="item-media">
-                                        <div class="image-cover">
-                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width:123px;margin-top:22px;">
-                                        </div>
-                                    </div>
-                                    <div class="item-body">
-                                        <div class="item-title">
-                                            <h2>
-                                                <a href="train-detail.html" style="color:#0091EA!important">Lufthansa : Hanoi - NYC</a>
-                                            </h2>
-                                        </div>
-                                        <table class="item-table">
-                                            <thead>
-                                                <tr>
-                                                    <th class="route">Trajet</th>
-                                                    <th class="depart">Depart</th>
-                                                    <th class="arrive">Arrivée</th>
-                                                    <th class="duration">Durée</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="route">
-                                                        <ul>
-                                                            <li>Lyon<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>Bordeaux<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                        </ul>
-                                                    </td>
-                                                    <td class="depart">
-                                                        <span>10:25</span>
-                                                        <span class="date">14 Fevrier</span>
-                                                    </td>
-                                                    <td class="arrive">
-                                                        <span>12:30</span>
-                                                    </td>
-                                                    <td class="duration">
-                                                        <span>8h5m</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="route">
-                                                        <ul>
-                                                            <li>Bordeaux<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>Lyon<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                        </ul>
-                                                    </td>
-                                                    <td class="depart">
-                                                        <span>10:25</span>
-                                                    </td>
-                                                    <td class="arrive">
-                                                        <span>12:30</span>
-                                                        <span class="date">15 Mar</span>
-                                                    </td>
-                                                    <td class="duration">
-                                                        <span>8h5m</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="item-price-more">
-                                        <div class="price" style="color:#0091EA!important">
-                                            <span class="amount">86 €</span>
-                                            Taxes incluses
-                                        </div>
-                                        <a href="train-detail.html" class="awe-btn">Ajouter</a>
-                                    </div>
-                                </div>
-                                <!-- END / ITEM -->
-
+                              
+							<c:forEach var="trip" items="${travel.aller}">
                                 <!-- ITEM -->
                                 <div class="flight-item">
                                     <div class="item-media">
@@ -125,52 +55,33 @@
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="train-detail.html">Cathay Pacific : Hanoi - NYC</a>
+                                                <a href="train-detail.html">Train en direction de ${ trip.end.name }</a>
                                             </h2>
                                         </div>
                                         <table class="item-table">
                                             <thead>
                                                 <tr>
-                                                    <th class="route">Route</th>
-                                                    <th class="depart">Depart</th>
-                                                    <th class="arrive">Arrive</th>
-                                                    <th class="duration">Duration</th>
+                                                    <th class="route">Trajet</th>
+                                                    <th class="depart">Départ</th>
+                                                    <th class="arrive">Arrivée</th>
+                                                    <th class="duration">Durée</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td class="route">
                                                         <ul>
-                                                            <li>HAN <i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>SVO <i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>JFK <i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                            <li>${ trip.start.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                            <li>${ trip.end.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
                                                         </ul>
                                                     </td>
                                                     <td class="depart">
-                                                        <span>10:25</span>
-                                                        <span class="date">14 Feb</span>
+                                                        <span>${ trip.formatedStartTime }</span>
+                                                        <span class="date">${ trip.formatedStartDate }</span>
                                                     </td>
                                                     <td class="arrive">
-                                                        <span>12:30</span>
-                                                    </td>
-                                                    <td class="duration">
-                                                        <span>38h5m</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="route">
-                                                        <ul>
-                                                            <li>JFK <i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>SVO <i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>HAN <i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                        </ul>
-                                                    </td>
-                                                    <td class="depart">
-                                                        <span>10:25</span>
-                                                    </td>
-                                                    <td class="arrive">
-                                                        <span>12:30</span>
-                                                        <span class="date">15 MAr</span>
+                                                        <span>${ trip.formatedStopDate }</span>
+                                                        <span class="date">${ trip.formatedStopDate }</span>
                                                     </td>
                                                     <td class="duration">
                                                         <span>38h5m</span>
@@ -196,6 +107,7 @@
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
+                                </c:forEach>
                             </div>
 
 
