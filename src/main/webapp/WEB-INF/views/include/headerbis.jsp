@@ -87,7 +87,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="attraction.html">A propos</a>
+                                <a href="${pageContext.request.contextPath}/about">À propos</a>
                             </li>
                             
                             <li class="menu-item-has-children">

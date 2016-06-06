@@ -39,4 +39,9 @@ public class HomeController {
 	public String mainUserPage(Model model) {
 		return "index";
 	}
+	
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	public String about(Model model) {
+		return "about";
+	}
 }
