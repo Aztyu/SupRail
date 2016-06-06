@@ -14,6 +14,17 @@
 		   <h2>${ trip.end.name }</h2>
 		   <p>${ trip.formatedStopDate }</p>
 		   <p>${ trip.formatedStopTime }</p>
-		</c:forEach>	
+		</c:forEach>
+		
+		<h2>Retour</h2>
+		<c:forEach var="trip" items="${travel.retour}">
+		   <h2>${ trip.start.name }</h2>
+		   <p>${ trip.formatedStartDate }</p>
+		   <p>${ trip.formatedStartTime }</p>
+		   
+		   <h2>${ trip.end.name }</h2>
+		   <p>${ trip.formatedStopDate }</p>
+		   <p>${ trip.formatedStopTime }</p>
+		</c:forEach>		
 	</body>
 </html>
