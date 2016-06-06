@@ -52,15 +52,15 @@
 	                            <input type="text" name="city" value="${sessionScope.user.city}">
 	                        </div>
 	                        <div class="form-row" id="billing_address_1_field">
-	                            <label>Address</label>
+	                            <label>Addresse</label>
 	                            <input type="text" name="address" value="${sessionScope.user.address}">
 	                        </div>
 	                        <div class="form-row" id="billing_postcode_field">
-	                            <label>Postcode / zip</label>
+	                            <label>Code Postal</label>
 	                            <input type="text" name="zipcode" value="${sessionScope.user.zipcode}">
 	                        </div>
 	                        <div class="form-row" id="billing_phone_field">
-	                            <label>Phone</label>
+	                            <label>Téléphone</label>
 	                            <input type="text" name="phone" value="${sessionScope.user.phone}">
 	                        </div>
 	                        

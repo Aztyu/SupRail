@@ -16,7 +16,8 @@
                                 <img src="${pageContext.request.contextPath}/resources/images/logo-footer.png" alt="">
                             </div>
                             <div class="widget_content">
-                                <p>SUPRAIL - Lyon 16 rue Desparmet</p>
+                                <p>SUPRAIL©</p>
+                                <p>Lyon - 16 rue Desparmet</p>
                                 <p>06.72.58.44.24</p>
                                 <a href="#">contact@suprail.com</a>
                             </div>
@@ -63,6 +64,7 @@
                                 <li><a href="${pageContext.request.contextPath}/user/updateUser">Mes informations</a></li>
                                 <li><a href="${pageContext.request.contextPath}/register">Inscription</a></li>
                                 <li><a href="${pageContext.request.contextPath}/register">Connexion</a></li>
+                                <li><a href="${pageContext.request.contextPath}/about">À propos</a></li>
                                 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
                             </ul>
                         </div>
