@@ -15,7 +15,7 @@
                     <div class="breadcrumb">
                         <ul>
                             <li><a href="#">Accueil</a></li>
-                            <li><span>Train</span></li>
+                            <li><span>Recherhe train</span></li>
                         </ul>
                     </div>
                     <!-- BREADCRUMB -->
@@ -43,7 +43,17 @@
                     <div class="col-md-9 col-md-push-3">
                         <div class="filter-page__content">
                             <div class="filter-item-wrapper">
-                              
+                            <c:if test = "${empty travel.aller}">
+                            <div class="row">
+			                    <div class="col-xs-12">
+			                        <h5 class="text-uppercase" style="color: red;">Aucun trajet disponible</h5>
+			                        <blockquote>
+			                            <p>Nous sommes désolés mais nous n'avons aucun train en direction correspondant à votre recherche.</p>
+			                            <footer>Service client</footer>
+			                        </blockquote>
+			                    </div>
+			                </div>
+                            </c:if>
 							<c:forEach var="trip" items="${travel.aller}">
                                 <!-- ITEM -->
                                 <div class="flight-item">
@@ -55,7 +65,7 @@
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="train-detail.html">Train en direction de ${ trip.end.name }</a>
+                                                <a href="train-detail.html">${ trip.end.name }</a>
                                             </h2>
                                         </div>
                                         <table class="item-table">
@@ -64,7 +74,6 @@
                                                     <th class="route">Trajet</th>
                                                     <th class="depart">Départ</th>
                                                     <th class="arrive">Arrivée</th>
-                                                    <th class="duration">Durée</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -80,12 +89,10 @@
                                                         <span class="date">${ trip.formatedStartDate }</span>
                                                     </td>
                                                     <td class="arrive">
-                                                        <span>${ trip.formatedStopDate }</span>
+                                                        <span>${ trip.formatedStopTime }</span>
                                                         <span class="date">${ trip.formatedStopDate }</span>
                                                     </td>
-                                                    <td class="duration">
-                                                        <span>38h5m</span>
-                                                    </td>
+                                                    
                                                 </tr>
                                                 <tr>
                                                 	<td>
@@ -108,17 +115,6 @@
                                 </div>
                                 <!-- END / ITEM -->
                                 </c:forEach>
-                            </div>
-
-
-                            <!-- PAGINATION -->
-                            <div class="page__pagination">
-                                <span class="pagination-prev"><i class="fa fa-caret-left"></i></span>
-                                <span class="current">1</span>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <a href="#" class="pagination-next"><i class="fa fa-caret-right"></i></a>
                             </div>
                             <!-- END / PAGINATION -->
                         </div>
