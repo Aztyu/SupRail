@@ -75,7 +75,7 @@
                       </div>
 
                       <div class="form-actions">
-                          <input type="submit" value="Inscriptions">
+                          <input type="submit" value="Inscription">
                       </div>
                   </form>
               </div>
