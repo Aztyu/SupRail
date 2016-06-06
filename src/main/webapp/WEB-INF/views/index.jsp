@@ -11,40 +11,40 @@
     <section class="hero-section">
         <div id="slider-revolution">
             <ul>
-                <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 1">
+                <li data-slotamount="7" data-masterspeed="500" data-title="Nos offres">
                     <img src="${pageContext.request.contextPath}/resources/images/bg/1.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
                     <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-1" data-x="500" data-y="230" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                      Last minute deal
+                      Offres de dernière minute
                     </div>
 
-                    <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Top discount Paris Hotels</div>
+                    <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Les meilleurs offres sur Paris</div>
                     
-                    <a href="#" class="tp-caption sfb fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">Book now</a>
+                    <a href="${pageContext.request.contextPath}/search-travel" class="tp-caption sfb fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">Réserver dès maintenant</a>
                 </li> 
 
-                <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 2">
+                <li data-slotamount="7" data-masterspeed="500" data-title="Nos voyages">
                     <img src="${pageContext.request.contextPath}/resources/images/bg/2.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
                     <div class="tp-caption  sft fadeout slider-caption-sub slider-caption-sub-2" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                      Check out the top weekly destination
+                      Consultez les meilleurs offres de la semaine
                     </div>
 
                     <div class="tp-caption sft fadeout slider-caption slider-caption-2" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack"  data-start="2000">
-                        Travel with us
+                        Voyagez avec nous
                     </div>
                     
-                    <a href="#" class="tp-caption sft fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="370" data-easing="easeOutBack" data-speed="700" data-start="2200">Book now</a>
+                    <a href="${pageContext.request.contextPath}/search-travel" class="tp-caption sft fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="370" data-easing="easeOutBack" data-speed="700" data-start="2200">Réserver dès maintenant</a>
                 </li>
 
-                <li data-slotamount="7" data-masterspeed="500" data-title="Slide title 3">
+                <li data-slotamount="7" data-masterspeed="500" data-title="Nos services">
                     <img src="${pageContext.request.contextPath}/resources/images/bg/3.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
                     <div class="tp-caption lfl fadeout slider-caption slider-caption-3" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack"  data-start="1500">
-                        Gofar
+                        Allez plus loin
                     </div>
                     
-                    <div href="#" class="tp-caption lfr fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2000">Take you to every corner of the world</div>
+                    <div href="#" class="tp-caption lfr fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2000">Voyagez dans les quatre coin du globe</div>
                 </li> 
 
             </ul>
@@ -182,7 +182,7 @@
         <div class="container">
             <div class="destination-grid-content">
                 <div class="section-title">
-                    <h3>SUPRAIL dessert plus de <a href="#">34 stations</a> dans toute la France.</h3>
+                    <h3>SUPRAIL dessert plus de <a href="${pageContext.request.contextPath}/station-list">34 stations</a> dans toute la France.</h3>
                 </div>
                 <div class="row">
                     <div class="awe-masonry">
@@ -294,7 +294,7 @@
                     </div>
                 </div>
                 <div class="more-destination">
-                    <a href="#">Découvrez toutes les villes que nous desservons</a>
+                    <a href="${pageContext.request.contextPath}/station-list">Découvrez toutes les villes que nous desservons</a>
                 </div>
             </div>
         </div>
@@ -340,7 +340,7 @@
                                                 <div class="line"></div>
                                             </td>
                                             <td class="sale-flights-tabs__item-depart">
-                                                <h4>Depart</h4>
+                                                <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
                                                     <li>10:25</li>
@@ -365,7 +365,7 @@
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
                                                 <span class="amount">$5,923</span>
-                                                <a href="#" class="awe-btn">Choose</a>
+                                                <a href="#" class="awe-btn">Choisir</a>
                                                 <div class="line"></div>
                                             </td>
                                         </tr>
@@ -391,7 +391,7 @@
                                                 </div>
                                             </td>
                                             <td class="sale-flights-tabs__item-depart">
-                                                <h4>Depart</h4>
+                                                <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
                                                     <li>10:25</li>
@@ -413,7 +413,7 @@
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
                                                 <span class="amount">$5,923</span>
-                                                <a href="#" class="awe-btn">Choose</a>
+                                                <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -438,7 +438,7 @@
                                                 </div>
                                             </td>
                                             <td class="sale-flights-tabs__item-depart">
-                                                <h4>Depart</h4>
+                                                <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
                                                     <li>10:25</li>
@@ -460,7 +460,7 @@
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
                                                 <span class="amount">$5,923</span>
-                                                <a href="#" class="awe-btn">Choose</a>
+                                                <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -485,7 +485,7 @@
                                                 </div>
                                             </td>
                                             <td class="sale-flights-tabs__item-depart">
-                                                <h4>Depart</h4>
+                                                <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
                                                     <li>10:25</li>
@@ -507,7 +507,7 @@
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
                                                 <span class="amount">$5,923</span>
-                                                <a href="#" class="awe-btn">Choose</a>
+                                                <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -532,7 +532,7 @@
                                                 </div>
                                             </td>
                                             <td class="sale-flights-tabs__item-depart">
-                                                <h4>Depart</h4>
+                                                <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
                                                     <li>10:25</li>
@@ -554,7 +554,7 @@
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
                                                 <span class="amount">$5,923</span>
-                                                <a href="#" class="awe-btn">Choose</a>
+                                                <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -579,7 +579,7 @@
                                                 </div>
                                             </td>
                                             <td class="sale-flights-tabs__item-depart">
-                                                <h4>Depart</h4>
+                                                <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
                                                     <li>10:25</li>
@@ -601,7 +601,7 @@
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
                                                 <span class="amount">$5,923</span>
-                                                <a href="#" class="awe-btn">Choose</a>
+                                                <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -627,7 +627,7 @@
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
                                     Satisfaction 100%
-                                    <span>De clients satisfaient</span>
+                                    <span>De clients satisfaits</span>
                                 </a>
                             </li>
                             <li>

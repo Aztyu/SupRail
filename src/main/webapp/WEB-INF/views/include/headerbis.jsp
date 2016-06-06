@@ -91,12 +91,12 @@
                             </li>
                             
                             <li class="menu-item-has-children">
-                                <a href="contact.html">Contact</a>
+                                <a href="${pageContext.request.contextPath}/contact">Contact</a>
                             </li>
                             
                             <li class="menu-item-has-children" style="border-left: 1px solid #D4D4D4;">
 	                            <c:if test="${empty sessionScope.user}">
-	                            <a href="${pageContext.request.contextPath}/register"><i class="fa fa-user" aria-hidden="true"></i> Inscriptions / Connexion</a>
+	                            <a href="${pageContext.request.contextPath}/register"><i class="fa fa-user" aria-hidden="true"></i> Inscription / Connexion</a>
 	                            </c:if>
 	                            
 								<c:if test="${not empty sessionScope.user}">

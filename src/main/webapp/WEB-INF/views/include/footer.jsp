@@ -29,7 +29,7 @@
                         <div class="widget widget_about_us">
                             <h3>A PROPOS</h3>
                             <div class="widget_content">
-                                <p>Suprail est une entreprise professionnel affiliï¿½e aux entreprises de transports ferroviaires, nous vous proposons une billeterie en ligne afin de rï¿½server votre billet pour le voyage de votre choix.</p>
+                                <p>Suprail est une entreprise professionnel affiliée aux entreprises de transports ferroviaires, nous vous proposons une billeterie en ligne afin de réserver votre billet pour le voyage de votre choix.</p>
                             </div>
                         </div>
                     </div>
@@ -38,16 +38,16 @@
                     <!-- WIDGET -->
                     <div class="col-md-2">
                         <div class="widget widget_categories">
-                            <h3>Categiries</h3>
+                            <h3>Gares principales</h3>
                             <ul>
-                                <li><a href="#">Countries</a></li>
-                                <li><a href="#">Regions</a></li>
-                                <li><a href="#">Cities</a></li>
-                                <li><a href="#">Districts</a></li>
-                                <li><a href="#">Countries</a></li>
-                                <li><a href="#">Airports</a></li>
-                                <li><a href="#">Hotels</a></li>
-                                <li><a href="#">Places of interest</a></li>
+                                <li><a href="#">- Lyon Part-Dieu</a></li>
+                                <li><a href="#">- Gare de Lille-Europe</a></li>
+                                <li><a href="#">- Paris-Gare-de-Lyon</a></li>
+                                <li><a href="#">- Gare de Nice-Ville</a></li>
+                                <li><a href="#">- Genève-Cornavin</a></li>
+                                <li><a href="#">- Gare d'Avignon TGV</a></li>
+                                <li><a href="#">- Marseille-Saint-Charles</a></li>
+                                <li><a href="#">- Montpellier-Saint-Roch</a></li>
                             </ul>
                         </div>
                     </div>
@@ -56,16 +56,14 @@
                     <!-- WIDGET -->
                     <div class="col-md-2">
                         <div class="widget widget_recent_entries">
-                            <h3>Recent Blog</h3>
+                            <h3>Navigation</h3>
                             <ul>
-                                <li><a href="#">Countries</a></li>
-                                <li><a href="#">Regions</a></li>
-                                <li><a href="#">Cities</a></li>
-                                <li><a href="#">Districts</a></li>
-                                <li><a href="#">Countries</a></li>
-                                <li><a href="#">Airports</a></li>
-                                <li><a href="#">Hotels</a></li>
-                                <li><a href="#">Places of interest</a></li>
+                            	<li><a href="${pageContext.request.contextPath}/index">Accueil</a></li>
+                                <li><a href="${pageContext.request.contextPath}/station-list">Nos gares</a></li>
+                                <li><a href="${pageContext.request.contextPath}/user/updateUser">Mes informations</a></li>
+                                <li><a href="${pageContext.request.contextPath}/register">Inscription</a></li>
+                                <li><a href="${pageContext.request.contextPath}/register">Connexion</a></li>
+                                <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -75,8 +73,8 @@
                     <div class="col-md-3">
                         <div class="widget widget_follow_us">
                             <div class="widget_content">
-                                <p>For Special booking request, please call</p>
-                                <span class="phone">099-099-000</span>
+                                <p>Une question sur notre site ou sur votre commande ? Veuillez contacter le numéro suivant :</p>
+                                <span class="phone">06 72 58 44 24</span>
                                 <div class="awe-social">
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -89,7 +87,7 @@
                     <!-- END / WIDGET -->
                 </div>
                 <div class="copyright">
-                    <p>@2016 SUPRAILï¿½ - Tous droits rÃ©servÃ©s.</p>
+                    <p>@2016 SUPRAIL© - Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
