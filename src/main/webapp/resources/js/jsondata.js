@@ -1,10 +1,12 @@
 $(document).ready(function(){
-            $('input.chooseTravel[name!="check1"]').click(function(e){
-                $('input.chooseTravel[name="check1"]').prop('checked',false);
-            });
-            $('input.chooseTravel[name="check1"]').click(function(e){
-                $('input.chooseTravel[name!="check1"]').prop('checked',false);
-            });  
+    $('#checkTravel').change(function(){
+        if(this.checked)
+        	$(".clock_end,.date_end").css('visibility', 'visible');
+        else
+        	$(".clock_end,.date_end").css('visibility', 'hidden');
+
+    });
+});
             
 var options = {
 	
