@@ -50,7 +50,7 @@ public class TravelController {
         	model.addAttribute("errorsearch", "error");
         	return "/index";
         }
-    	return "test-travel";		
+    	return "search-travel";		
     }
     @RequestMapping(value = "/user/historyUser", method = RequestMethod.GET)
     public String getHistoryPage(Model model,HttpServletRequest request) {
