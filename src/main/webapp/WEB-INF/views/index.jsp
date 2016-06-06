@@ -154,6 +154,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="hiddeninput">
+                            	<input type="hidden" id="blah1" value="true" name="blah1" />
+                            </div>
                             <div class="form-group">
                                 <div class="form-elements">
                                     <label>Voyageur</label>

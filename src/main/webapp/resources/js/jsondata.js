@@ -1,7 +1,8 @@
 $(document).ready(function(){
     $('#checkTravel').change(function(){
         if(this.checked)
-        	$(".clock_end,.date_end").css('visibility', 'visible');
+        	$(".clock_end,.date_end").css('visibility', 'visible'),
+        	$("#blah1").val("true");
         else
         	$(".clock_end,.date_end").css('visibility', 'hidden');
 
