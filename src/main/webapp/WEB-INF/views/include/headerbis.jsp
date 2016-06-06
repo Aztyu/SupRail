@@ -52,6 +52,7 @@
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
+    <script type="text/javascript">var contextPath = ${pageContext.request.contextPath}</script>
     
 </head>
 <body>

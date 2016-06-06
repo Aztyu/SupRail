@@ -15,7 +15,7 @@ $(document).ready(function(){
             
 var options = {
 	
-			    url: "http://localhost:8080/api/stations",
+			    url: contextPath + "/api/stations",
 	
 			    categories: [{listLocation: "stations"}],
 	
