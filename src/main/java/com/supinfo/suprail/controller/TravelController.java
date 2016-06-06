@@ -62,6 +62,11 @@ public class TravelController {
         return "checkout-complete";	
     }
     
+    @RequestMapping(value = "/station-list", method = RequestMethod.GET)
+    public String getListStation(Model model,HttpServletRequest request) {
+        return "station-list";	
+    }
+    
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String getTest(Model model,HttpServletRequest request) {
         return "/test";	

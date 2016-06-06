@@ -79,7 +79,12 @@
                                 <a href="${pageContext.request.contextPath}/index">Accueil</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="${pageContext.request.contextPath}/station-info">Nos gares</a>
+                                <a href="${pageContext.request.contextPath}/station-list">Nos gares</a>
+                                  <ul class="sub-menu">
+	                                <li>
+	                                	<a href="${pageContext.request.contextPath}/station-info">Gare de Lyon</a>
+	                                </li>
+                                </ul>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="attraction.html">A propos</a>
