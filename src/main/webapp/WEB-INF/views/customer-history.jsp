@@ -25,7 +25,7 @@
                                 </li>
                                 
                                 <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-3" aria-selected="false">
-                                    <a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">A propos de vos voyages</a>
+                                    <a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">A propos de votre voyage</a>
                                 </li>
                             </ul>
                             <div class="product-tabs__content">
