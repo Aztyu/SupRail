@@ -123,8 +123,8 @@
                     
                     <!-- SEARCH BOX -->
                     <div class="search-box">
-                        <span class="searchtoggle" >
-                       		 <i class="awe-icon awe-icon-cart" style="margin-top: 21px;"></i>
+                        <span class="searchtoggle" ><a href="${pageContext.request.contextPath}/user/historyUser">
+                       		 <i class="awe-icon awe-icon-cart" style="margin-top: 21px; "></i></a>
                         </span>
                         <form class="form-search">
                             

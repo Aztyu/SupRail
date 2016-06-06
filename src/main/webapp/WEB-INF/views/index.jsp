@@ -6,7 +6,6 @@
 <html>
 	<%@ include file="include/headerbis.jsp" %>
 	<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
-	
     <!-- HERO SECTION -->
     <section class="hero-section">
         <div id="slider-revolution">
@@ -660,7 +659,7 @@
                             </li>
                         </ul>
                         <div class="video-wrapper embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/50880604"></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YHds6cNJMs8?autohide=1"></iframe>
                         </div>
                     </div>
                 </div>
