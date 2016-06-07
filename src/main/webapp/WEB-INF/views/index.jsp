@@ -17,7 +17,7 @@
                       Offres de dernière minute
                     </div>
 
-                    <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Les meilleurs offres sur Paris</div>
+                    <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Les meilleures offres sur Paris</div>
                     
                     <a href="${pageContext.request.contextPath}/search-travel" class="tp-caption sfb fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">Réserver dès maintenant</a>
                 </li> 
@@ -327,7 +327,7 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°1</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
@@ -379,7 +379,7 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°2</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
@@ -426,7 +426,7 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°3</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
@@ -473,7 +473,7 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°4</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
@@ -520,7 +520,7 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°5</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
@@ -567,7 +567,7 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°6</h3>
                                                     </div>
                                                     <ul>
                                                         <li>

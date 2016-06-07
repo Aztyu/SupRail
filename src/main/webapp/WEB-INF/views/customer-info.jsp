@@ -12,7 +12,7 @@
 	                <div class="title">
 	                    <h1 class="text-uppercase">MENU</h1>
 	                </div>
-	                <span class="phone">En cas de problème, n'hésitez pas à <a href="/contact">nous contactez</a></span>
+	                <span class="phone">En cas de problème, n'hésitez pas à <a href="${pageContext.request.contextPath}/contact">nous contacter</a></span>
 	            </div>
 	        </div>
 	        <div class="col-lg-3">
@@ -52,7 +52,7 @@
 	                            <input type="text" name="city" value="${sessionScope.user.city}">
 	                        </div>
 	                        <div class="form-row" id="billing_address_1_field">
-	                            <label>Addresse</label>
+	                            <label>Adresse</label>
 	                            <input type="text" name="address" value="${sessionScope.user.address}">
 	                        </div>
 	                        <div class="form-row" id="billing_postcode_field">
