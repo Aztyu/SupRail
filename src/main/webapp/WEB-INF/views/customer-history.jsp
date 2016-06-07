@@ -13,7 +13,7 @@
                             <ul>
                                 <li class="current"><a href="${pageContext.request.contextPath}/user/historyUser">Votre panier</a></li>
                                 <li><a href="${pageContext.request.contextPath}/user/updateUser">Vos informations</a></li>
-                                <li><a href="${pageContext.request.contextPath}/checkout-complete">Commande terminée</a></li>
+                                <li><a href="${pageContext.request.contextPath}/user/checkout-complete">Commande terminée</a></li>
                             </ul>
                         </div>
                     </div>
