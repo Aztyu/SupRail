@@ -100,7 +100,7 @@
 									<a href="${pageContext.request.contextPath}/user/updateUser"><i class="fa fa-user" aria-hidden="true"></i> Bonjour ${sessionScope.user.lastName}</a>
 									<ul class="sub-menu">
                                       <li><a href="${pageContext.request.contextPath}/user/updateUser">Mes informations</a></li>
-                                      <li><a href="${pageContext.request.contextPath}/user/historyUser">Historique</a></li>
+                                      <li><a href="${pageContext.request.contextPath}/user/checkout-complete">Historique</a></li>
                                       <li>
 								        <c:choose>
 											<c:when test="${ sessionScope.user.googleUser == true }">
