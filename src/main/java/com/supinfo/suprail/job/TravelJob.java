@@ -22,6 +22,12 @@ import com.supinfo.suprail.request.ApiRequest;
 public class TravelJob implements ITravelJob{
 
 	@Override
+	public String getStations() throws Exception {
+		String req_url = BaseParam.base_api_url + "/stations"; 
+		return ApiRequest.sendGETRequest(req_url);
+	}
+	
+	@Override
 	public Travel findTravel(SearchStation search) throws Exception {
 		String req_url = BaseParam.base_api_url + "/travel/find"; 
 		

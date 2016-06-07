@@ -8,7 +8,7 @@
    <div class="container">
           <div class="content-title">
                       <span>Ne restez pas chez vous</span>
-                      <h2>REJOIGNEZ NOUS !</h2>
+                      <h2>REJOIGNEZ-NOUS !</h2>
                   </div>
                   
           <div class="login-register-page__content registerleft"> 
@@ -46,7 +46,7 @@
               <c:if test="${not empty erroregister}">
 				<div class="alert alert-danger">
 				    <a class="close" data-dismiss="alert">×</a>
-				    <strong>Erreur : Veuillez recommencer votre inscriptions </strong>
+				    <strong>Erreur : Veuillez recommencer votre inscription </strong>
 				</div>
 		 	  </c:if>
 		 	  <c:if test="${not empty registerok}">
@@ -56,7 +56,7 @@
 				</div>
 		 	  </c:if> 
                   <form action="${pageContext.request.contextPath}/register" method="post">
-                  <h3 style="margin: 0px 0px 8px 0px;"> INSCRIPTIONS  <i class="fa fa-sign-in" aria-hidden="true"></i></h3>
+                  <h3 style="margin: 0px 0px 8px 0px;"> INSCRIPTION  <i class="fa fa-sign-in" aria-hidden="true"></i></h3>
                   <div class="form-item">
                           <label>Nom</label>
                           <input type="text" name="firstname" required>

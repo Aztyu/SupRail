@@ -48,10 +48,7 @@
     <!-- CONNEXION GOOGLE API -->
     <script src="https://apis.google.com/js/platform.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/connexion.js"></script>	
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
+    <script type="text/javascript">var contextPath = "${pageContext.request.contextPath}"</script>
     
 </head>
 <body>
@@ -103,7 +100,7 @@
 									<a href="${pageContext.request.contextPath}/user/updateUser"><i class="fa fa-user" aria-hidden="true"></i> Bonjour ${sessionScope.user.lastName}</a>
 									<ul class="sub-menu">
                                       <li><a href="${pageContext.request.contextPath}/user/updateUser">Mes informations</a></li>
-                                      <li><a href="${pageContext.request.contextPath}/user/historyUser">Historique</a></li>
+                                      <li><a href="${pageContext.request.contextPath}/user/checkout-complete">Historique</a></li>
                                       <li>
 								        <c:choose>
 											<c:when test="${ sessionScope.user.googleUser == true }">

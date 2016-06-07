@@ -68,7 +68,7 @@ public class TravelController {
 		}
     	return "station-info";
     }
-    @RequestMapping(value = "/checkout-complete", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/checkout-complete", method = RequestMethod.GET)
     public String getcheckoutComplete(Model model,HttpServletRequest request) {
         return "checkout-complete";	
     }

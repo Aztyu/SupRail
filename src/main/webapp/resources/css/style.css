@@ -2238,6 +2238,7 @@ span.dropcap {
   overflow: hidden;
   float: left;
   margin-right: 14px;
+  margin-top: 25px;
 }
 .sale-flights-tabs__table tr .sale-flights-tabs__item-flight .td-content {
   overflow: hidden;
