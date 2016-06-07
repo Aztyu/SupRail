@@ -818,17 +818,6 @@ span.dropcap {
     opacity: 0;
   }
 
-  60.00001% {
-    background-color: #F57B3D;
-    -webkit-transform: scale(0);
-    opacity: 1;
-  }
-
-  80% {
-    background-color: #F57B3D;
-    -webkit-transform: scale(3);
-    opacity: 0;
-  }
 
   80.00001% {
     background-color: #04D9D9;
@@ -879,17 +868,6 @@ span.dropcap {
     opacity: 0;
   }
 
-  60.00001% {
-    background-color: #F57B3D;
-    -moz-transform: scale(0);
-    opacity: 1;
-  }
-
-  80% {
-    background-color: #F57B3D;
-    -moz-transform: scale(3);
-    opacity: 0;
-  }
 
   80.00001% {
     background-color: #04D9D9;
@@ -940,17 +918,6 @@ span.dropcap {
     opacity: 0;
   }
 
-  60.00001% {
-    background-color: #F57B3D;
-    transform: scale(0);
-    opacity: 1;
-  }
-
-  80% {
-    background-color: #F57B3D;
-    transform: scale(3);
-    opacity: 0;
-  }
 
   80.00001% {
     background-color: #04D9D9;
@@ -964,6 +931,7 @@ span.dropcap {
     opacity: 0;
   }
 }
+
 /* 2.   Header
 --------------------------------------------------------------------------------*/
 #header-page {
@@ -2238,6 +2206,7 @@ span.dropcap {
   overflow: hidden;
   float: left;
   margin-right: 14px;
+  margin-top: 25px;
 }
 .sale-flights-tabs__table tr .sale-flights-tabs__item-flight .td-content {
   overflow: hidden;

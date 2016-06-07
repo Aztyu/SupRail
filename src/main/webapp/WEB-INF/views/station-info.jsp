@@ -25,11 +25,11 @@
                     <div class="col-md-6">
                         <div class="product-detail__info">
                         <div class="category-heading-content" style="padding-top:0px!important;padding-bottom:10px!important;">
-                            <h3>LYON</h3><br>
-                            <h2>PART DIEU <a href="#"><i class="awe-icon awe-icon-info"></i></a></h2>
+                            <h3>${stationinfo.city}</h3><br>
+                            <h2 style="font-size:20px;">${stationinfo.name}<a href="#"><i class="awe-icon awe-icon-info"></i></a></h2>
                         </div>
                             <div class="product-address">
-                                <span>16 rue desparmet LYON 8eme | <strong>France</strong></span>
+                                <span>${stationinfo.address} | <strong>${stationinfo.country}</strong></span>
                             </div>
                             <div class="product-email" style="">
                                 <div class="call-to-book">
@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                             <div class="product-descriptions">
-                            <span>A propos :</span>
+                            <span style="font-weight:bold;">A propos :</span>
                                 <p>Situated along the famous Hung Vuong Street, Souvenir Nha Trang Hotel is within a convenient 2-minute walk to the beautiful Nha Trang Beach. Free Wi-Fi access is available in the entire property and complimentary parking is provided on site. <br><br>Fitted with tiled flooring, air-conditioned rooms are furnished with a wardrobe, a flat-screen cable TV, minibar and seating area. En suite bathrooms are equipped with a hairdryer, shower facilities, slippers and free toiletries. <br><br>Souvenir Nha Trang Hotel operates a 24-hour front desk that can assist with luggage storage, currency exchange and laundry services. Guests may rent a bicycle/car to explore the area, while the tour desk can organise sightseeing and travel arrangements.</p>
                             </div>
                             
@@ -92,33 +92,27 @@
                             <div class="product-slider-wrapper">
                                 <div class="product-slider">
                                     <div class="item">
-                                        <img src="${pageContext.request.contextPath}/resources/images/img/1.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="${pageContext.request.contextPath}/resources/images/img/2.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="${pageContext.request.contextPath}/resources/images/img/3.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="${pageContext.request.contextPath}/resources/images/img/4.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="${pageContext.request.contextPath}/resources/images/img/5.jpg" alt="">
-                                    </div>
-                                   
+                                        <img src="${pageContext.request.contextPath}/resources/images/villes/${stationinfo.id}.jpg" alt="">
+                                    </div>                                   
                                 </div>
-                                
                             </div>
+  
                             <h3 style="font-size: 20px;font-weight: 600;color: #0091ea;border-bottom: 2px solid #D4D4D4;padding: 8px 0;margin-top: 0;">Localisation de la gare</h3>
                             <div class="tour-map">
-                                <div data-latlong="21.036697, 105.834871"></div>
+                                <div data-latlong="${stationinfo.latitude}, ${stationinfo.longitude}"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <script type="text/javascript">
+	$('.toggle-menu-responsive').on('click', function(evt) {
+        evt.preventDefault();
+        $(this).toggleClass('toggle-active');
+        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
+    });
+	</script>
 	<%@ include file="include/footer.jsp" %>
 	
 	

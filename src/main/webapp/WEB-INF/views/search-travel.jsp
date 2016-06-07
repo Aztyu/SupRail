@@ -5,6 +5,7 @@
 
 <html>
 	<%@ include file="include/headerbis.jsp" %>
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 		<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
 	        <!-- HEADING PAGE -->
         <section class="awe-parallax category-heading-section-demo">
@@ -15,7 +16,7 @@
                     <div class="breadcrumb">
                         <ul>
                             <li><a href="#">Accueil</a></li>
-                            <li><span>Recherhe train</span></li>
+                            <li><span>Recherche train</span></li>
                         </ul>
                     </div>
                     <!-- BREADCRUMB -->
@@ -48,7 +49,7 @@
 			                    <div class="col-xs-12">
 			                        <h5 class="text-uppercase" style="color: red;">Aucun trajet disponible</h5>
 			                        <blockquote>
-			                            <p>Nous sommes désolés mais nous n'avons aucun train en direction correspondant à votre recherche.</p>
+			                            <p>Nous sommes désolés mais nous n'avons aucun train correspondant à votre recherche.</p>
 			                            <footer>Service client</footer>
 			                        </blockquote>
 			                    </div>
@@ -57,15 +58,15 @@
 							<c:forEach var="trip" items="${travel.aller}">
                                 <!-- ITEM -->
                                 <div class="flight-item">
-                                    <div class="item-media">
+                                    <div class="item-media" style="width:15%;">
                                         <div class="image-cover">
-                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 22px;">
+                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 35px;">
                                         </div>
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="train-detail.html">${ trip.end.name }</a>
+                                                <a href="train-detail.html"><span style="color:#38a9ee"> ${ trip.end.name }</span></a>
                                             </h2>
                                         </div>
                                         <table class="item-table">
@@ -96,7 +97,8 @@
                                                 </tr>
                                                 <tr>
                                                 	<td>
-                                                		<i class="awe-icon awe-icon-info"></i> <a data-toggle="collapse" href="#collapse1">Plus d'informations...</a>
+                                                		<i class="awe-icon awe-icon-info"></i>
+                                                		<a href="#collapse1" data-toggle="collapse">Plus d'informations...</a>
                                                 		<div id="collapse" class="collapse">
 													      <div class="panel-body">Panel Body</div>
 													    </div>
@@ -127,11 +129,7 @@
                             
                                 <h3 style="font-size:18px;"><i class="awe-icon awe-icon-search" style="color:gray;margin-right:7px;"></i>   Votre recherche</h3>
                                 <div class="widget_content">
-                                    <label>
-                                        <input type="checkbox">
-                                        <i class="awe-icon awe-icon-check"></i>
-                                        Aller
-                                    </label>
+                                   
                                     <label>
                                         <input type="checkbox" checked>
                                         <i class="awe-icon awe-icon-check"></i>
@@ -141,14 +139,16 @@
                                         Station de départ
                                         <span class="form-item db">
                                             <i class="awe-icon awe-icon-marker-1"></i>
-                                            <input type="text" value="Lyon">
-                                        </span>
+											<input type="text" id="StartCity" value="${ trip.start.name }" required name="StartCity">
+                                        	<input type="hidden" value="" id="StartCityId" name="StartCityId">                                        
+                                       	</span>
                                     </label>
                                     <label class="to">
                                         Station d'arrivée
                                         <span class="form-item db">
                                             <i class="awe-icon awe-icon-marker-1"></i>
-                                            <input type="text" value="Borde">
+                                            <input type="text" id="EndCity" value="${ trip.end.name }" required name="EndCity">
+                                        	<input type="hidden" value="" id="EndCityId" name="EndCityId">
                                         </span>
                                     </label>
                                     <label>Voyageur</label>
@@ -167,13 +167,13 @@
                             <div class="widget widget_price_filter">
                                 <h3><i class="awe-icon awe-icon-calendar" style="color:gray;margin-right:7px;"></i> Dates</h3>
                                     <div class="form-item">
-                                        
-                                        <input type="text" class="awe-calendar" value="Date de départ">
+                                        <input type="text" id="date_timepicker_start" value="Date de départ" required name="date_timepicker_start">
                                     </div>
+                                    
                                     <div style="margin:18px;"></div>
+                                    
                                     <div class="form-item">
-                                       
-                                        <input type="text" class="awe-calendar" value="Date d'arrivée">
+                                        <input type="text" id="date_timepicker_end" value="Date de retour" name="date_timepicker_end">
                                     </div>
                                     <div style="margin:28px;"></div>
                             </div>
@@ -184,13 +184,13 @@
                                 <h3><i class="awe-icon awe-icon-clock" style="color:gray;margin-right:7px;"></i> Horaires</h3>
                                 <div class="form-item">
                                         
-                                        <input type="text" class="awe-calendar" value="Heure de départ ">
+                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
                                         
                                     </div>
                                     <div style="margin:18px;"></div>
                                     <div class="form-item">
                                        
-                                        <input type="text" class="awe-calendar" value="Heure d'arrivée">
+                                        <input type="text" id="timepicker_end" name="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
                                     </div>
                                                                         <div style="margin:18px;"></div>
                                     

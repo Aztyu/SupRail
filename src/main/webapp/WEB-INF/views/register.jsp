@@ -8,7 +8,7 @@
    <div class="container">
           <div class="content-title">
                       <span>Ne restez pas chez vous</span>
-                      <h2>REJOIGNEZ NOUS !</h2>
+                      <h2>REJOIGNEZ-NOUS !</h2>
                   </div>
                   
           <div class="login-register-page__content registerleft"> 

@@ -17,7 +17,7 @@
                       Offres de dernière minute
                     </div>
 
-                    <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Les meilleurs offres sur Paris</div>
+                    <div class="tp-caption sfb fadeout slider-caption slider-caption-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">Les meilleures offres sur Paris</div>
                     
                     <a href="${pageContext.request.contextPath}/search-travel" class="tp-caption sfb fadeout awe-btn awe-btn-style3 awe-btn-slider" data-x="center" data-y="380" data-easing="easeOutBack" data-speed="700" data-start="2200">Réserver dès maintenant</a>
                 </li> 
@@ -106,7 +106,7 @@
                         <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <div class="form-group">
                                 <div class="form-elements">
-                                    <label>Aller</label>
+                                    <label>Départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="StartCity" value="Ville de départ" required name="StartCity">
@@ -114,7 +114,7 @@
                                     </div>
                                 </div>
                                 <div class="form-elements">
-                                    <label>Retour</label>
+                                    <label>Arrivée</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="EndCity" value="Ville d'arrivée" required name="EndCity">
@@ -134,7 +134,7 @@
                                     <label>Heure de départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-clock"></i>
-                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
+                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
                                     </div>
                                 </div>
                                 <div class="form-elements date_end">
@@ -191,16 +191,16 @@
                     <div class="awe-masonry">
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/1">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/1.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Paris</a></h2>
+                                <h2>Paris</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
@@ -212,16 +212,16 @@
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/32">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/2.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Toulouse</a></h2>
+                                <h2>Toulouse</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
@@ -233,28 +233,28 @@
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/2">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/3.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Lyon</a></h2>
+                                <h2>Lyon</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">60</span>
+                                <span class="count">24</span>
                                 voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/7">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/4.jpg" alt="">
                                 </div>
@@ -263,33 +263,33 @@
                                 <h2><a href="#">Lille</a></h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">29</span>
+                                <span class="count">21</span>
                                 voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/5">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/5.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Bordeaux</a></h2>
+                                <h2>Bordeaux</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">89</span>
+                                <span class="count">18</span>
                                 voyages
                             </div>
                         </div>
@@ -327,16 +327,16 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°1</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Marseille <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Lyon</span>
                                                         </li>
-                                                        <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                         <li>
+                                                            <span class="from">Lyon <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Toulouse</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -346,7 +346,7 @@
                                                 <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>12:40</li>
                                                 </ul>
                                                 <div class="line"></div>
                                             </td>
@@ -354,20 +354,20 @@
                                                 <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>14:30</li>
                                                 </ul>
                                                 <div class="line"></div>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 5min</li>
+                                                    <li>1h 50min</li>
                                                 </ul>
                                                 <div class="line"></div>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">95 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                                 <div class="line"></div>
                                             </td>
@@ -379,16 +379,16 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°2</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Rennes <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Paris</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Paris <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Brest</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -396,26 +396,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>8:00</li>
+                                                    <li>10:35</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>10:30</li>
+                                                    <li>12:35</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 30min</li>
+                                                    <li>2h 00min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">105 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -426,16 +426,16 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°3</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Saint-Étienne<i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Lyon</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Lyon <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Génève</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -443,26 +443,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>17:45</li>
+                                                    <li>19:45</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>19:30</li>
+                                                    <li>21:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>1h 45min</li>
+                                                    <li>1h 45min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">79.99 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -473,16 +473,16 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°4</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Poitiers <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Tours</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Tours <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">La Rochelle</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -490,26 +490,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>15:25</li>
+                                                    <li>17:35</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>17:30</li>
+                                                    <li>19:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 05min</li>
+                                                    <li>1h 55min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">125 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -520,16 +520,16 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°5</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Nice <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Montpellier</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Montpellier <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Valence</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -537,26 +537,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>11:25</li>
+                                                    <li>13:50</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>13:35</li>
+                                                    <li>17:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 10min</li>
+                                                    <li>2h 40min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">89.99 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -567,16 +567,16 @@
                                                 </div>
                                                 <div class="td-content">
                                                     <div class="title">
-                                                        <h3>Lufthansa</h3>
+                                                        <h3>Trajet n°6</h3>
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Amiens <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Paris</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Paris <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Le Mans</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -584,26 +584,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>9:35</li>
+                                                    <li>12:25</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>11:30</li>
+                                                    <li>14:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>1h 50min</li>
+                                                    <li>2h 05min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">200 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -637,7 +637,7 @@
                                 <a href="#">
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
-                                    24h/7j
+                                    	Disponible 365 jours/an
                                     <span>N'importe quand, n'importe ou</span>
                                 </a>
                             </li>
@@ -645,7 +645,7 @@
                                 <a href="#">
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
-                                    7/7j
+                                    7 jours/7
                                     <span>Service client</span>
                                 </a>
                             </li>
@@ -653,7 +653,7 @@
                                 <a href="#">
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
-                                    Flexibilité, tracabilité
+                                    Flexibilité, traçabilité
                                     <span>Un suivi personnalisé</span>
                                 </a>
                             </li>

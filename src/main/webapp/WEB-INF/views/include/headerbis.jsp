@@ -76,10 +76,24 @@
                                 <a href="${pageContext.request.contextPath}/index">Accueil</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="${pageContext.request.contextPath}/station-list">Nos gares</a>
+                                <a href="${pageContext.request.contextPath}/station-list">Nos stations</a>
                                   <ul class="sub-menu">
 	                                <li>
-	                                	<a href="${pageContext.request.contextPath}/station-info">Gare de Lyon</a>
+	                                	<a href="${pageContext.request.contextPath}/station-info">Rhône-Alpes</a>
+	                                	<ul class="sub-menu" style="left:208px!important;">
+	                                		<li>
+	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
+	                                		</li>
+	                                		<li>
+	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
+	                                		</li>
+	                                		<li>
+	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
+	                                		</li>
+	                                		<li>
+	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
+	                                		</li>
+	                                	</ul>
 	                                </li>
                                 </ul>
                             </li>

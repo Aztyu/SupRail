@@ -16,7 +16,7 @@
                                 <img src="${pageContext.request.contextPath}/resources/images/logo-footer.png" alt="">
                             </div>
                             <div class="widget_content">
-                                <p>SUPRAIL©</p>
+                                <p>SUPRAILï¿½</p>
                                 <p>Lyon - 16 rue Desparmet</p>
                                 <p>06.72.58.44.24</p>
                                 <a href="#">contact@suprail.com</a>
@@ -30,7 +30,7 @@
                         <div class="widget widget_about_us">
                             <h3>A PROPOS</h3>
                             <div class="widget_content">
-                                <p>Suprail est une entreprise professionnelle affiliée aux entreprises de transports ferroviaires, nous vous proposons une billetterie en ligne afin de réserver votre billet pour le voyage de votre choix.</p>
+                                <p>Suprail est une entreprise professionnelle affiliï¿½e aux entreprises de transports ferroviaires, nous vous proposons une billetterie en ligne afin de rï¿½server votre billet pour le voyage de votre choix.</p>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                                 <li><a href="#">- Gare de Lille-Europe</a></li>
                                 <li><a href="#">- Paris-Gare-de-Lyon</a></li>
                                 <li><a href="#">- Gare de Nice-Ville</a></li>
-                                <li><a href="#">- Genève-Cornavin</a></li>
+                                <li><a href="#">- Genï¿½ve-Cornavin</a></li>
                                 <li><a href="#">- Gare d'Avignon TGV</a></li>
                                 <li><a href="#">- Marseille-Saint-Charles</a></li>
                                 <li><a href="#">- Montpellier-Saint-Roch</a></li>
@@ -64,7 +64,7 @@
                                 <li><a href="${pageContext.request.contextPath}/user/updateUser">Mes informations</a></li>
                                 <li><a href="${pageContext.request.contextPath}/register">Inscription</a></li>
                                 <li><a href="${pageContext.request.contextPath}/register">Connexion</a></li>
-                                <li><a href="${pageContext.request.contextPath}/about">À propos</a></li>
+                                <li><a href="${pageContext.request.contextPath}/about">ï¿½ propos</a></li>
                                 <li><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
                             </ul>
                         </div>
@@ -75,7 +75,7 @@
                     <div class="col-md-3">
                         <div class="widget widget_follow_us">
                             <div class="widget_content">
-                                <p>Une question sur notre site ou sur votre commande ? Veuillez contacter le numéro suivant :</p>
+                                <p>Une question sur notre site ou sur votre commande ? Veuillez contacter le numï¿½ro suivant :</p>
                                 <span class="phone">06 72 58 44 24</span>
                                 <div class="awe-social">
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -89,7 +89,7 @@
                     <!-- END / WIDGET -->
                 </div>
                 <div class="copyright">
-                    <p>@2016 SUPRAIL© - Tous droits réservés.</p>
+                    <p>@2016 SUPRAILï¿½ - Tous droits rï¿½servï¿½s.</p>
                 </div>
             </div>
         </footer>

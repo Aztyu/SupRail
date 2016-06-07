@@ -111,4 +111,9 @@ public class UserController {
         request.getSession().removeAttribute("user");
     	return "redirect:/";		
     }
+    
+    @RequestMapping(value = "/receipt", method = RequestMethod.GET)
+    public String getTestPdf(Model model,HttpServletRequest request) {
+        return "include/receipt";
+    }
 }
