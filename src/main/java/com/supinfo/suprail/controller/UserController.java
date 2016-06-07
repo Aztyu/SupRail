@@ -112,8 +112,8 @@ public class UserController {
     	return "redirect:/";		
     }
     
-    @RequestMapping(value = "user/receipt", method = RequestMethod.GET)
+    @RequestMapping(value = "/receipt", method = RequestMethod.GET)
     public String getTestPdf(Model model,HttpServletRequest request) {
-        return "receipt";
+        return "include/receipt";
     }
 }
