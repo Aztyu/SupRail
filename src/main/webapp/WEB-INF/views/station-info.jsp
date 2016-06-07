@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                             <div class="product-descriptions">
-                            <span>A propos :</span>
+                            <span style="font-weight:bold;">A propos :</span>
                                 <p>Situated along the famous Hung Vuong Street, Souvenir Nha Trang Hotel is within a convenient 2-minute walk to the beautiful Nha Trang Beach. Free Wi-Fi access is available in the entire property and complimentary parking is provided on site. <br><br>Fitted with tiled flooring, air-conditioned rooms are furnished with a wardrobe, a flat-screen cable TV, minibar and seating area. En suite bathrooms are equipped with a hairdryer, shower facilities, slippers and free toiletries. <br><br>Souvenir Nha Trang Hotel operates a 24-hour front desk that can assist with luggage storage, currency exchange and laundry services. Guests may rent a bicycle/car to explore the area, while the tour desk can organise sightseeing and travel arrangements.</p>
                             </div>
                             
@@ -106,6 +106,13 @@
                 </div>
             </div>
         </section>
+        <script type="text/javascript">
+	$('.toggle-menu-responsive').on('click', function(evt) {
+        evt.preventDefault();
+        $(this).toggleClass('toggle-active');
+        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
+    });
+	</script>
 	<%@ include file="include/footer.jsp" %>
 	
 	

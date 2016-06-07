@@ -5,13 +5,15 @@
 
 <html>
 	<%@ include file="include/headerbis.jsp" %>
+		<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
+	
 	  <!-- BREADCRUMB -->
             <section>
               <div class="container">
                 <div class="breadcrumb">
                   <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><span>Nos gares</span></li>
+                    <li><a href="${pageContext.request.contextPath}/index">Accueil</a></li>
+                    <li><span><a href="">Nos gares</a></span></li>
                   </ul>
                 </div>
               </div>
@@ -37,7 +39,7 @@
                           <div class="item-body">
                             <div class="item-title">
                               <h2>
-                                <a href="#" style="color:#2f91ea">${trip.name }</a>
+                                <a href="${pageContext.request.contextPath}/station-info/${trip.id}" style="color:#2f91ea">${trip.name }</a>
                               </h2>
                             </div>
                             <div class="item-address">
@@ -72,9 +74,10 @@
                     </div>
                   </div>
                   <div class="col-md-3">
-                  <form>
+                  
                     <div class="detail-sidebar" style="margin-top: 0px!important;">
                         <div class="booking-info">
+                        <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                           <div class="call-to-book">
                             <i class="awe-icon awe-icon-train"></i>
                             <span>RECHERCHER VOTRE TRAJET</span>
@@ -84,79 +87,88 @@
                             <div class="widget widget_has_radio_checkbox_text">
                               <div class="widget_content">
                                 <label>
-                                <input type="checkbox">
-                                <i class="awe-icon awe-icon-check"></i>
-                                Aller
-                                </label>
-                                <label>
-                                <input type="checkbox" checked>
-                                <i class="awe-icon awe-icon-check"></i>
-                                Aller / Retour
-                                </label>
-                                <label class="from">
-                                Station de départ
-                                <span class="form-item db">
-                                <i class="awe-icon awe-icon-marker-1" style="margin:-9px 0px"></i>
-                                <input type="text" value="Lyon">
-                                </span>
-                                </label>
-                                <label class="to">
-                                Station d'arrivée
-                                <span class="form-item db">
-                                <i class="awe-icon awe-icon-marker-1" style="margin:-9px 0px"></i>
-                                <input type="text" value="Borde">
-                                </span>
-                                </label>
-                                <label>Voyageur</label>
-                                <div class="form-item" >
-                                  <select class="awe-select" name="travelers" id="travelers">
-                                    <option selected="selected">1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- END / WIDGET -->
-                            <!-- WIDGET -->
-                            <div class="widget widget_price_filter">
-                              <h3><i class="awe-icon awe-icon-calendar" style="background: white;margin-right:7px;"></i> Dates</h3>
-                              <div class="form-item">
-                                <input type="text" class="awe-calendar" value="Date de départ">
-                              </div>
-                              <div style="margin:18px;"></div>
-                              <div class="form-item">
-                                <input type="text" class="awe-calendar" value="Date d'arrivée">
-                              </div>
-                              <div style="margin:28px;"></div>
-                            </div>
-                            <!-- END / WIDGET -->
-                            <!-- WIDGET -->
-                            <div class="widget widget_has_radio_checkbox">
-                              <h3><i class="awe-icon awe-icon-clock" style="background: white;margin-right:7px;"></i> Horaires</h3>
-                              <div class="form-item">
-                                <input type="text" class="awe-calendar" value="Heure de départ ">
-                              </div>
-                              <div style="margin:18px;"></div>
-                              <div class="form-item">
-                                <input type="text" class="awe-calendar" value="Heure d'arrivée">
-                              </div>
-                              <div style="margin:18px;"></div>
-                            </div>
-                          </div>
-                          <div class="form-submit">
-                            <div class="add-to-cart">
-                              <button type="submit">
-                              <i class="awe-icon awe-icon-cart"></i>Rechercher
-                              </button>
-                            </div>
-                          </div>
+	                                <input type="checkbox" id="checkTravel" checked="" value="Value1">
+	                                <i class="awe-icon awe-icon-check"></i>
+	                                Aller/Retour
+	                            </label>
+	                                <label class="from">
+		                                Station de départ
+		                                <span class="form-item db">
+		                                <i class="awe-icon awe-icon-marker-1" style="margin:-9px 0px"></i>
+		                                <input type="text" id="StartCity" value="Ville de départ" required name="StartCity">
+		                                <input type="hidden" value="" id="StartCityId" name="StartCityId">
+		                                </span>
+	                                </label>
+	                                <label class="to">
+		                                Station d'arrivée
+		                                <span class="form-item db">
+		                                <i class="awe-icon awe-icon-marker-1" style="margin:-9px 0px"></i>
+		                                <input type="text" id="EndCity" value="Ville d'arrivée" required name="EndCity">
+		                                <input type="hidden" value="" id="EndCityId" name="EndCityId">
+		                                </span>
+	                                </label>
+	                                <label>Voyageur</label>
+		                                <div class="form-item" >
+		                                  <select class="awe-select" name="travelers" id="travelers">
+	                                            <option value="1">1</option>
+	                                            <option value="2">2</option>
+	                                            <option value="3">3</option>
+	                                        </select>
+		                                </div>
+	                              </div>
+	                            </div>
+	                            <!-- END / WIDGET -->
+	                            <!-- WIDGET -->
+	                            <div class="widget widget_price_filter">
+	                              <h3><i class="awe-icon awe-icon-calendar" style="background: white;margin-right:7px;"></i> Dates</h3>
+	                              <div class="form-item">
+	                                 <input type="text" id="date_timepicker_start" value="" required name="date_timepicker_start">
+	                              </div>
+	                              <div style="margin:18px;"></div>
+	                              <div class="form-item date_end">
+	                                 <input type="text" id="date_timepicker_end" value="" name="date_timepicker_end">
+	                              </div>
+	                              <div style="margin:28px;"></div>
+	                            </div>
+	                            <!-- END / WIDGET -->
+	                            <!-- WIDGET -->
+	                            <div class="widget widget_has_radio_checkbox">
+	                              <h3><i class="awe-icon awe-icon-clock" style="background: white;margin-right:7px;"></i> Horaires</h3>
+	                              <div class="form-item">
+	                                 <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
+	                              </div>
+	                              <div style="margin:18px;"></div>
+	                              <div class="form-item clock_end">
+	                                 <input type="text" id="timepicker_end" name="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
+	                              </div>
+	                              <div style="margin:18px;"></div>
+	                            </div>
+	                          </div>
+	                          <div class="form-submit">
+	                            <div class="add-to-cart">
+	                              <button type="submit">
+	                              <i class="awe-icon awe-icon-cart"></i>Rechercher
+	                              </button>
+	                            </div>
+	                          </div>
+                          </form>
                       </div>
                     </div>
                   </div>
-                  </form>
+                  
                 </div>
               </div>
             </section>
-
+            <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/min/wickedpicker.min.js"></script>  
+		    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
+		    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slider.js"></script>
+			<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
+			<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
+			<script type="text/javascript">
+				$('.toggle-menu-responsive').on('click', function(evt) {
+			        evt.preventDefault();
+			        $(this).toggleClass('toggle-active');
+			        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
+			    });
+				</script>
 	<%@ include file="include/footer.jsp" %>

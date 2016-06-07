@@ -134,7 +134,7 @@
                                     <label>Heure de départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-clock"></i>
-                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
+                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" required/>
                                     </div>
                                 </div>
                                 <div class="form-elements date_end">
@@ -191,16 +191,16 @@
                     <div class="awe-masonry">
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/1">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/1.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Paris</a></h2>
+                                <h2>Paris</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
@@ -212,16 +212,16 @@
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/32">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/2.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Toulouse</a></h2>
+                                <h2>Toulouse</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
@@ -233,28 +233,28 @@
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/2">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/3.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Lyon</a></h2>
+                                <h2>Lyon</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">60</span>
+                                <span class="count">24</span>
                                 voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/7">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/4.jpg" alt="">
                                 </div>
@@ -263,33 +263,33 @@
                                 <h2><a href="#">Lille</a></h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">29</span>
+                                <span class="count">21</span>
                                 voyages
                             </div>
                         </div>
                         <!-- END / GALLERY ITEM -->
                         <!-- GALLERY ITEM -->
                         <div class="awe-masonry__item">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath}/station-info/5">
                                 <div class="image-wrap image-cover">
                                     <img src="${pageContext.request.contextPath}/resources/images/img/5.jpg" alt="">
                                 </div>
                             </a>
                             <div class="item-title">
-                                <h2><a href="#">Bordeaux</a></h2>
+                                <h2>Bordeaux</h2>
                                 <div class="item-cat">
                                     <ul>
-                                        <li><a href="#">France</a></li>
+                                        <li>France</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="item-available">
-                                <span class="count">89</span>
+                                <span class="count">18</span>
                                 voyages
                             </div>
                         </div>

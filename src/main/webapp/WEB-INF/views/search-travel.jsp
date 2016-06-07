@@ -58,15 +58,15 @@
 							<c:forEach var="trip" items="${travel.aller}">
                                 <!-- ITEM -->
                                 <div class="flight-item">
-                                    <div class="item-media">
+                                    <div class="item-media" style="width:15%;">
                                         <div class="image-cover">
-                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 22px;">
+                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 35px;">
                                         </div>
                                     </div>
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="train-detail.html">En direction de :<span style="color:#38a9ee"> ${ trip.end.name }</span></a>
+                                                <a href="train-detail.html"><span style="color:#38a9ee"> ${ trip.end.name }</span></a>
                                             </h2>
                                         </div>
                                         <table class="item-table">
@@ -213,6 +213,10 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
 	<script type="text/javascript">
-	
+	$('.toggle-menu-responsive').on('click', function(evt) {
+        evt.preventDefault();
+        $(this).toggleClass('toggle-active');
+        $(document).find('.awe-navigation-responsive').toggleClass('awe-navigation-responsive-active');
+    });
 	</script>
 	<%@ include file="include/footer.jsp" %>
