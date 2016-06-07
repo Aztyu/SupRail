@@ -27,6 +27,7 @@ public class Station {
 	private String country;
 	private double latitude;
 	private double longitude;
+	private String description;
 
 	@OneToMany(mappedBy="station")
 	private List<StationLineAssociation> lines;
@@ -102,5 +103,13 @@ public class Station {
 
 	public void setLongitude(double longitude) {
 		this.longitude = longitude;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }
