@@ -82,9 +82,4 @@ public class TravelController {
 		}
     	return "station-list";	
     }
-    
-    @RequestMapping(value = "/toto", method = RequestMethod.GET)
-    public String getTestPdf(Model model,HttpServletRequest request) {
-        return "toto";
-    }
 }
