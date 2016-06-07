@@ -331,12 +331,12 @@
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Marseille <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Lyon</span>
                                                         </li>
-                                                        <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                         <li>
+                                                            <span class="from">Lyon <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Toulouse</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -346,7 +346,7 @@
                                                 <h4>Départ</h4>
                                                 <ul>
                                                     <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>12:40</li>
                                                 </ul>
                                                 <div class="line"></div>
                                             </td>
@@ -354,20 +354,20 @@
                                                 <h4>Arrivée</h4>
                                                 <ul>
                                                     <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>14:30</li>
                                                 </ul>
                                                 <div class="line"></div>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 5min</li>
+                                                    <li>1h 50min</li>
                                                 </ul>
                                                 <div class="line"></div>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">95 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                                 <div class="line"></div>
                                             </td>
@@ -383,12 +383,12 @@
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Rennes <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Paris</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Paris <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Brest</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -396,26 +396,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>8:00</li>
+                                                    <li>10:35</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>10:30</li>
+                                                    <li>12:35</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 30min</li>
+                                                    <li>2h 00min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">105 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -430,12 +430,12 @@
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Saint-Étienne<i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Lyon</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Lyon <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Génève</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -443,26 +443,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>17:45</li>
+                                                    <li>19:45</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>19:30</li>
+                                                    <li>21:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>1h 45min</li>
+                                                    <li>1h 45min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">79.99 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -477,12 +477,12 @@
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Poitiers <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Tours</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Tours <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">La Rochelle</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -490,26 +490,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>15:25</li>
+                                                    <li>17:35</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>17:30</li>
+                                                    <li>19:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 05min</li>
+                                                    <li>1h 55min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">125 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -524,12 +524,12 @@
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Nice <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Montpellier</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Montpellier <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Valence</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -537,26 +537,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>11:25</li>
+                                                    <li>13:50</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>13:35</li>
+                                                    <li>17:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>2h 10min</li>
+                                                    <li>2h 40min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">89.99 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -571,12 +571,12 @@
                                                     </div>
                                                     <ul>
                                                         <li>
-                                                            <span class="from">HAN <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">SVO</span>
+                                                            <span class="from">Amiens <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Paris</span>
                                                         </li>
                                                         <li>
-                                                            <span class="from">SVO <i class="awe-icon awe-icon-arrow-right"></i></span>
-                                                            <span class="to">JFK</span>
+                                                            <span class="from">Paris <i class="awe-icon awe-icon-arrow-right"></i></span>
+                                                            <span class="to">Le Mans</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -584,26 +584,26 @@
                                             <td class="sale-flights-tabs__item-depart">
                                                 <h4>Départ</h4>
                                                 <ul>
-                                                    <li>10:25</li>
-                                                    <li>10:25</li>
+                                                    <li>9:35</li>
+                                                    <li>12:25</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-arrive">
                                                 <h4>Arrivée</h4>
                                                 <ul>
-                                                    <li>12:30</li>
-                                                    <li>12:30</li>
+                                                    <li>11:30</li>
+                                                    <li>14:30</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-duration">
                                                 <h4>Durée</h4>
                                                 <ul>
-                                                    <li>38h5m</li>
-                                                    <li>38h5m</li>
+                                                    <li>1h 50min</li>
+                                                    <li>2h 05min</li>
                                                 </ul>
                                             </td>
                                             <td class="sale-flights-tabs__item-choose">
-                                                <span class="amount">$5,923</span>
+                                                <span class="amount">200 €</span>
                                                 <a href="#" class="awe-btn">Choisir</a>
                                             </td>
                                         </tr>
@@ -637,7 +637,7 @@
                                 <a href="#">
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
-                                    24h/7j
+                                    	Disponible 365 jours/an
                                     <span>N'importe quand, n'importe ou</span>
                                 </a>
                             </li>
@@ -645,7 +645,7 @@
                                 <a href="#">
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
-                                    7/7j
+                                    7 jours/7
                                     <span>Service client</span>
                                 </a>
                             </li>
@@ -653,7 +653,7 @@
                                 <a href="#">
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
-                                    Flexibilité, tracabilité
+                                    Flexibilité, traçabilité
                                     <span>Un suivi personnalisé</span>
                                 </a>
                             </li>
