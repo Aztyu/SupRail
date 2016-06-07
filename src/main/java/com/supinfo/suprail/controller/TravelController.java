@@ -43,9 +43,9 @@ public class TravelController {
         	schStation.setDeparture_date(request.getParameter("date_timepicker_start"), request.getParameter("timepicker_start"));
         	schStation.setArrivalDate(request.getParameter("date_timepicker_end"), request.getParameter("timepicker_end"));
         	
-        	Travel travel = travel_job.findTravel(schStation);
+        	List<Travel> travel = travel_job.findTravel(schStation);
 
-        	model.addAttribute("travel", travel);
+        	model.addAttribute("travels", travel);
         	model.addAttribute("searchOk", "info");
         }catch(Exception ex){
         	model.addAttribute("errorsearch", "error");
