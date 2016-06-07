@@ -30,7 +30,7 @@
                         <div class="widget widget_about_us">
                             <h3>A PROPOS</h3>
                             <div class="widget_content">
-                                <p>Suprail est une entreprise professionnel affiliée aux entreprises de transports ferroviaires, nous vous proposons une billeterie en ligne afin de réserver votre billet pour le voyage de votre choix.</p>
+                                <p>Suprail est une entreprise professionnelle affiliée aux entreprises de transports ferroviaires, nous vous proposons une billetterie en ligne afin de réserver votre billet pour le voyage de votre choix.</p>
                             </div>
                         </div>
                     </div>

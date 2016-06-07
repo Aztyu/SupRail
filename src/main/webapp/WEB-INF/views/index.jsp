@@ -26,7 +26,7 @@
                     <img src="${pageContext.request.contextPath}/resources/images/bg/2.jpg" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
                     <div class="tp-caption  sft fadeout slider-caption-sub slider-caption-sub-2" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                      Consultez les meilleurs offres de la semaine
+                      Consultez les meilleures offres de la semaine
                     </div>
 
                     <div class="tp-caption sft fadeout slider-caption slider-caption-2" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack"  data-start="2000">
@@ -43,7 +43,7 @@
                         Allez plus loin
                     </div>
                     
-                    <div href="#" class="tp-caption lfr fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2000">Voyagez dans les quatre coin du globe</div>
+                    <div href="#" class="tp-caption lfr fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2000">Voyagez dans les quatre coins du globe</div>
                 </li> 
 
             </ul>
@@ -621,7 +621,7 @@
                                 <a href="#">
                                     <i class="awe-icon awe-icon-check"></i>
                                     <i class="awe-icon awe-icon-arrow-right"></i>
-                                    100 voyages par jours
+                                    100 voyages par jour
                                     <span>En France et en Europe</span>
                                 </a>
                             </li>
