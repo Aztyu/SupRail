@@ -15,7 +15,7 @@ $(document).ready(function(){
             
 var options = {
 	
-			    url: contextPath + "/api/stations",
+			    url: contextPath + "/api/get-stations",
 	
 			    categories: [{listLocation: "stations"}],
 	
