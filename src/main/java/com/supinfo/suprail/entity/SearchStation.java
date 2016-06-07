@@ -23,6 +23,8 @@ public class SearchStation {
 	
 	private int passager;
 	
+	private boolean aller_only;
+	
 	public void setDeparture_date(String departure_date, String time) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = sdf.parse(departure_date);
@@ -87,5 +89,13 @@ public class SearchStation {
 
 	public void setPassager(int passager) {
 		this.passager = passager;
+	}
+
+	public boolean isAller_only() {
+		return aller_only;
+	}
+
+	public void setAller_only(boolean aller_only) {
+		this.aller_only = aller_only;
 	}
 }
