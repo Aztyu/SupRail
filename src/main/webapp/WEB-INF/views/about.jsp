@@ -20,11 +20,12 @@
                                
                                 <div class="post-body">
                                     <div class="post-content">
-                                        <p>This year I’ll be offering two short tours in the fall: one to Paris and Amsterdam and one to PragOn the second Wednesday of the month, Kristin Addis from Be My Travel Muse writes a guest column featuring tips and advice on solo female travel. It’s an important topic I can’t cover so I brought in an expert to share her advice. This month her column is on safety tips, since it’s been a common question on my book tour stops. <br><br>One of the chief concerns for most would-be solo travelers is safety. Can I stay safe on my own? How can I convince my friends and family that I’ll be okay? The good news is: yes, you will be safe on the road. It’s easier than you think, because you already have the skills you need – the same methods you use to stay safe at home are relevant abroad as well.ue and</p>
+                                        <p>SupRail est une nouvelle société de voyage ferroviaire axée sur la réservation de billets de train en ligne. La France est notre première cible, puis nous nous développerons à d'autres chemins de fer européens dans le futur. Composé d’un groupe de 6 membres (voir liste ci-dessous) nous sommes le sous-traitant attitré pour l’infrastructure technique.</p>
                                         <br>
+                                        <p>Basé sur un service de réservation de billets en ligne qui permettent aux utilisateurs de se déplacer d'une ville à l'autre. L’utilisateur pourra choisir une des stations de départ / arrivée, il peut trouver le plus efficace (le plus court / moins chers, deux options) solution, et gérer les interconnexions entre les réseaux de chemin de fer.</p>
                                         <h3>"Rail Of Success"</h3>
                                         <br>
-                                        <p>This year I’ll be offering two short tours in the fall: one to Paris and Amsterdam and one to PragOn the second Wednesday of the month, Kristin Addis from Be My Travel Muse writes a guest column featuring tips and advice on solo female travel. It’s an important topic I can’t cover so I brought in an expert to share her advice. This month her column is on safety tips, since it’s been a common question on my book tour stops. <br><br>One of the chief concerns for most would-be solo travelers is safety. Can I stay safe on my own? How can I convince my friends and family that I’ll be okay? The good news is: yes, you will be safe on the road. It’s easier than you think, because you already have the skills you need – the same methods you use to stay safe at home are relevant abroad as well.ue and</p>
+                                        <p>Le site a une connaissance de tous les trains sur tous les réseaux, y compris leur départ / arrivée / arrêt, avec des heures et des prix pour chaque trajet. Avec l'utilisation de ces stations d'informations interconnectées, on pourra générer un itinéraire existant, avec possibilité de consulter son historique de trajet, un récapitulatif de sa commande, ainsi que diverses informations sur les villes desservies.</p>
                                     	<br>
                                     	<p>SUPRAIL - Lyon 69008 - 16 rue Desparmet</p>
                                 		<p>06.72.58.44.24</p>
@@ -37,15 +38,15 @@
                                         <div class="share">
                                             <a href="#">
                                                 <i class="fa fa-twitter"></i>
-                                                <span class="count">2</span>
+                                                <span class="count">500k</span>
                                             </a>
                                             <a href="#">
                                                 <i class="fa fa-pinterest"></i>
-                                                <span class="count">43</span>
+                                                <span class="count">50</span>
                                             </a>
                                             <a href="#">
                                                 <i class="fa fa-facebook"></i>
-                                                <span class="count">124</span>
+                                                <span class="count">600k</span>
                                             </a>
                                             <a href="#">
                                                 <i class="fa fa-google-plus"></i>
@@ -70,10 +71,10 @@
                                         <h4>Corentin Béal</h4>
                                     </div>
                                     <div class="author-name">
-                                        <h3>Grand Manitou</h3>
+                                        <h3>Développpeur web</h3>
                                     </div>
                                     <div class="author-content">
-                                        <p>Codeur de génie , mais est plus interessé par les femmes à fortes poitrines pour vraiment avancer dan la vie</p>
+                                        <p>A aidé dans la réalisation technique et le développement informatique de SupRail.</p>
                                     </div>
 
                                 </div>
@@ -92,7 +93,7 @@
                                         <h3>Développeur web</h3>
                                     </div>
                                     <div class="author-content">
-                                        <p>Codeur de génie , mais est plus interessé par les femmes à fortes poitrines pour vraiment avancer dan la vie</p>
+                                        <p>A aidé dans la réalisation technique et le développement informatique de SupRail.</p>
                                     </div>
 								</div>
                             </div>
@@ -110,7 +111,7 @@
                                         <h3>Développeur web</h3>
                                     </div>
                                     <div class="author-content">
-                                        <p>Codeur de génie , mais est plus interessé par les femmes à fortes poitrines pour vraiment avancer dan la vie</p>
+                                        <p>A aidé dans la réalisation technique et le développement informatique de SupRail.</p>
                                     </div>
 
                                 </div>
@@ -129,7 +130,7 @@
                                         <h3>Développeur web</h3>
                                     </div>
                                     <div class="author-content">
-                                        <p>Codeur de génie , mais est plus interessé par les femmes à fortes poitrines pour vraiment avancer dan la vie</p>
+                                        <p>A aidé dans la réalisation technique et le développement informatique de SupRail.</p>
                                     </div>
 
                                 </div>
@@ -148,7 +149,7 @@
                                         <h3>Développeur web</h3>
                                     </div>
                                     <div class="author-content">
-                                        <p>Codeur de génie , mais est plus interessé par les femmes à fortes poitrines pour vraiment avancer dan la vie</p>
+                                        <p>A aidé dans la réalisation technique et le développement informatique de SupRail.</p>
                                     </div>
 
                                 </div>
@@ -167,7 +168,7 @@
                                         <h3>Développeur web</h3>
                                     </div>
                                     <div class="author-content">
-                                        <p>Codeur de génie , mais est plus interessé par les femmes à fortes poitrines pour vraiment avancer dan la vie</p>
+                                        <p>A aidé dans la réalisation technique et le développement informatique de SupRail.</p>
                                     </div>
 
                                 </div>
