@@ -60,6 +60,8 @@ public class TravelController {
     public String getInfoStation(Model model,HttpServletRequest request, @PathVariable int station_id) {
         try {
 			Station station = travel_job.findStation(station_id);
+			
+			model.addAttribute("stationinfo", station);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -74,17 +76,29 @@ public class TravelController {
     @RequestMapping(value = "/station-list", method = RequestMethod.GET)
     public String getListStation(Model model,HttpServletRequest request) {
         try {
+        	int page = 0;
 			List<Station> list = travel_job.listStation();
+			String pagination = request.getParameter("page");
+			if(pagination == null){
+				page = 1;
+				list = list.subList(0, 10);
+			}
+			else{
+				page = Integer.parseInt(pagination);
+				int end = page*10;
+				int start = end-10;
+				
+				if(end > list.size()){
+					end = list.size();
+				}
+				list = list.subList(start, end);
+			}
 			model.addAttribute("stationList", list);
+			model.addAttribute("page", page);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     	return "station-list";	
-    }
-    
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public String getTest(Model model,HttpServletRequest request) {
-        return "/test";	
     }
 }

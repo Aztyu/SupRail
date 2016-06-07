@@ -1,9 +1,11 @@
 package com.supinfo.suprail.job;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 
 import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -51,8 +53,8 @@ public class TravelJob implements ITravelJob{
 
 		ObjectMapper mapper = new ObjectMapper();
 		
-		JSONObject json = new JSONObject();
 		String result = ApiRequest.sendGETRequest(req_url);
+		JSONObject json = new JSONObject(result);
 		String json_station = json.getJSONObject("station").toString();
 		
 		Station station = mapper.readValue(json_station, Station.class);
@@ -63,7 +65,7 @@ public class TravelJob implements ITravelJob{
 	
 	@Override
 	public List<Station> listStation() throws Exception {
-		String req_url = BaseParam.base_api_url + "/station/list"; 
+		String req_url = BaseParam.base_api_url + "/stations"; 
 		
 		ObjectMapper mapper = new ObjectMapper();
 		//Debug
@@ -71,17 +73,21 @@ public class TravelJob implements ITravelJob{
 		String result = ApiRequest.sendGETRequest(req_url);
 		
 		JSONObject json = new JSONObject(result);
-		String json_travel = json.getJSONObject("stationlist").toString();
-		
-		Station stationList = mapper.readValue(json_travel, Station.class);
-		
-		//TODO : récupération de l'objet et affichage dans une nouvelle page
+		String json_travel = json.getJSONArray("stations").toString();
+		JsonNode node = mapper.readTree(result);
 		
 		int status = json.getInt("html_status");
-		if(status != 200){
-			throw new Exception();
-		}
+
+	    try {
+		   return (List<Station>)mapper.convertValue(node.get("stations"), mapper.getTypeFactory().constructCollectionType(List.class, Station.class));
+	  		} 
+	    catch (IllegalArgumentException e) {
+		   // TODO Auto-generated catch block
+		   
+		   throw new Exception();
+		  }
+	
+		//TODO : récupération de l'objet et affichage dans une nouvelle page
 		
-		return (List<Station>) stationList;
 	}
 }

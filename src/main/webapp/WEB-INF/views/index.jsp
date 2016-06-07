@@ -106,7 +106,7 @@
                         <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <div class="form-group">
                                 <div class="form-elements">
-                                    <label>Aller</label>
+                                    <label>Départ</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="StartCity" value="Ville de départ" required name="StartCity">
@@ -114,7 +114,7 @@
                                     </div>
                                 </div>
                                 <div class="form-elements">
-                                    <label>Retour</label>
+                                    <label>Arrivée</label>
                                     <div class="form-item">
                                         <i class="awe-icon awe-icon-marker-1"></i>
                                         <input type="text" id="EndCity" value="Ville d'arrivée" required name="EndCity">

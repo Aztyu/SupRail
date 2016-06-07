@@ -19,33 +19,33 @@
             <!-- BREADCRUMB -->
             <section class="product-detail">
               <div class="container">
-                <h2 style="color:#2f91ea">Liste des stations de France</h2>
+              <div class="blog-heading-content text-uppercase" style="padding-top:0px;padding-bottom:15px;">
+                    <h2>Liste des stations de France</h2>
+                </div>
                 <div class="row">
                   <div class="col-md-9">
                     <div class="filter-page__content">
+                    <c:forEach var="trip" items="${stationList}">
                       <div class="filter-item-wrapper">
                         <!-- ITEM -->
                         <div class="hotel-item" style="min-height: 151px!important;">
                           <div class="item-media">
                             <div class="image-cover">
-                              <img src="${pageContext.request.contextPath}/resources/images/img/2.jpg" alt="">
+                              <img src="${pageContext.request.contextPath}/resources/images/villes/${trip.id}.jpg" alt="">
                             </div>
                           </div>
                           <div class="item-body">
                             <div class="item-title">
                               <h2>
-                                <a href="#">Gare Lyon Part Dieu</a>
+                                <a href="#" style="color:#2f91ea">${trip.name }</a>
                               </h2>
                             </div>
                             <div class="item-address">
                               <i class="awe-icon awe-icon-marker-2"></i>
-                              69003 Lyon | 16 rue desparmet 
+                              ${trip.address } | ${trip.zipcode }
                             </div>
                             <div class="item-footer">
-                              <div class="item-rate">
-                                <span>7.5 Good</span>
-                              </div>
-                              <div class="item-icon">
+                              <div class="item-icon" style="float:left;">
                                 <i class="awe-icon awe-icon-wifi"></i>
                                 <i class="awe-icon awe-icon-car"></i>
                                 <i class="awe-icon awe-icon-key"></i>
@@ -54,14 +54,21 @@
                             </div>
                           </div>
                           <div class="item-price-more">
-                            <div class="price">Prix :
-                              <span class="amount">200 €</span>
-                            </div>
-                            <a href="#" class="awe-btn">PLUS D'INFOS</a>
+							<img src="/suprail/resources/images/logo.png" alt="">
+                            <a href="${pageContext.request.contextPath}/station-info/${trip.id}" class="awe-btn">PLUS D'INFOS</a>
                           </div>
                         </div>
                       </div>
+                      
                       <!-- END / PAGINATION -->
+                      </c:forEach>
+                      
+                      <div class="page__pagination">
+                        <c:forEach var="i" begin="1" end="4">
+	                      <a href="${pageContext.request.contextPath}/station-list?page=${i}" <c:if test="${i eq page}">style="background-color:#0091ea;color:white"</c:if> >${i}</a>
+                      	</c:forEach>
+                       </div>
+                       
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -151,5 +158,5 @@
                 </div>
               </div>
             </section>
-	
+
 	<%@ include file="include/footer.jsp" %>
