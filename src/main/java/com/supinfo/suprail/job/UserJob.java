@@ -80,6 +80,20 @@ public class UserJob implements IUserJob{
 			throw new Exception();
 		}
 	}
-	
-	
+
+	@Override
+	public User getUserFromFacebook(String id, String email, String name)
+			throws GeneralSecurityException, IOException {
+		String req_url = BaseParam.base_api_url + "/user/login/facebook?id="+id+"&name="+name+"&email="+email; 
+		
+		String result = ApiRequest.sendGETRequest(req_url);
+		
+		JSONObject json = new JSONObject(result);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String json_user = json.getJSONObject("user").toString();
+		User user = mapper.readValue(json_user, User.class);
+		
+		return user;
+	}
 }

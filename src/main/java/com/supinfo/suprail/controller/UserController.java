@@ -1,19 +1,31 @@
 package com.supinfo.suprail.controller;
 
+import java.io.IOException;
+import java.net.URLEncoder;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.supinfo.suprail.config.BaseParam;
 import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.User;
 import com.supinfo.suprail.interfaces.job.IUserJob;
+import com.supinfo.suprail.request.ApiRequest;
 
 @Controller
 public class UserController {
@@ -115,5 +127,33 @@ public class UserController {
     @RequestMapping(value = "/receipt", method = RequestMethod.GET)
     public String getTestPdf(Model model,HttpServletRequest request) {
         return "include/receipt";
+    }
+    
+    @RequestMapping(value = "/login/facebook", method = RequestMethod.GET)
+    public String loginFacebookUser(Model model,HttpServletRequest request) {
+        try{
+        	User user = user_job.getUserFromFacebook(request.getParameter("id"), request.getParameter("email"), request.getParameter("name"));
+        	request.getSession().setAttribute("user", user);
+        }catch(Exception ex){
+        	model.addAttribute("errorlogin", "error");
+        	ex.printStackTrace();
+        	return "/register";
+        }
+        return "redirect:/";
+    }
+    
+    
+    @RequestMapping(value = "/login/facebook", method = RequestMethod.POST)
+	public @ResponseBody String loginFacebookUser(Model model, HttpServletRequest request, @RequestBody String json) throws JsonGenerationException, JsonMappingException, IOException {
+    	String user_json = json;
+    	
+    	JSONObject node = new JSONObject(user_json);
+		String id = URLEncoder.encode(node.getString("id"));
+		String name = URLEncoder.encode(node.getString("name"));
+		String email = node.getString("email");
+		String req_url = BaseParam.base_api_url + "/user/login/facebook?id="+id+"&name="+name+"&email="+email; 
+		String result = ApiRequest.sendGETRequest(req_url);
+
+    	return "true";
     }
 }
