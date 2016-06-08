@@ -60,7 +60,7 @@ public class HomeController {
 			
 			String smtpHost = "smtp.gmail.com";
 		    String from = "suprail.contact@gmail.com";
-		    String to = "fanagame007@gmail.com";
+		    String to = "coco.bea@hotmail.fr";
 		    String username = "suprail.contact@gmail.com";
 		    String password = "kikibouchet42";
 		 
@@ -84,11 +84,9 @@ public class HomeController {
 		    tr.sendMessage(message,message.getAllRecipients());
 		    tr.close();
 		} catch (AddressException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (MessagingException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 }
