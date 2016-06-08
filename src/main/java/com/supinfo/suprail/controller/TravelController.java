@@ -36,7 +36,7 @@ public class TravelController {
         try{
         	SearchStation schStation = new SearchStation();
 
-        	schStation.setAller_only(((String)request.getParameter("blah1")).equals("true"));
+        	schStation.setAller_only(((String)request.getParameter("blah1")).equals("false"));
         	schStation.setDeparture_station_id(Long.parseLong((String) request.getParameter("StartCityId")));
         	schStation.setArrival_station_id(Long.parseLong((String) request.getParameter("EndCityId")));
         	schStation.setPassager(Integer.parseInt(request.getParameter("travelers")));
