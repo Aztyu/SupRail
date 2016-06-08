@@ -9,8 +9,8 @@
             <div class="container">
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Gare</a></li>
+                        <li><a href="${pageContext.request.contextPath}/index">Accueil</a></li>
+                        <li><a href="${pageContext.request.contextPath}/station-list">Gare</a></li>
                         <li><span>Lyon - Part dieu</span></li>
                     </ul>
                 </div>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="product-descriptions">
                             <span style="font-weight:bold;">A propos :</span>
-                                <p>Situated along the famous Hung Vuong Street, Souvenir Nha Trang Hotel is within a convenient 2-minute walk to the beautiful Nha Trang Beach. Free Wi-Fi access is available in the entire property and complimentary parking is provided on site. <br><br>Fitted with tiled flooring, air-conditioned rooms are furnished with a wardrobe, a flat-screen cable TV, minibar and seating area. En suite bathrooms are equipped with a hairdryer, shower facilities, slippers and free toiletries. <br><br>Souvenir Nha Trang Hotel operates a 24-hour front desk that can assist with luggage storage, currency exchange and laundry services. Guests may rent a bicycle/car to explore the area, while the tour desk can organise sightseeing and travel arrangements.</p>
+                                <p>${stationinfo.description}</p>
                             </div>
                             
                             <div class="property-highlights">
@@ -97,7 +97,7 @@
                                 </div>
                             </div>
   
-                            <h3 style="font-size: 20px;font-weight: 600;color: #0091ea;border-bottom: 2px solid #D4D4D4;padding: 8px 0;margin-top: 0;">Localisation de la gare</h3>
+                            <h3 style="font-size: 20px;font-weight: 600;color: #0091ea;border-bottom: 2px solid #D4D4D4;padding: 8px 0;margin-top: 15px;">Localisation de la gare</h3>
                             <div class="tour-map">
                                 <div data-latlong="${stationinfo.latitude}, ${stationinfo.longitude}"></div>
                             </div>

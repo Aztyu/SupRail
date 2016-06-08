@@ -57,6 +57,7 @@ public class TravelController {
     public String getHistoryPage(Model model,HttpServletRequest request) {
         return "customer-history";	
     }
+    
     @RequestMapping(value = "/station-info/{station_id}", method = RequestMethod.GET)
     public String getInfoStation(Model model,HttpServletRequest request, @PathVariable int station_id) {
         try {
@@ -69,6 +70,7 @@ public class TravelController {
 		}
     	return "station-info";
     }
+    
     @RequestMapping(value = "/user/checkout-complete", method = RequestMethod.GET)
     public String getcheckoutComplete(Model model,HttpServletRequest request) {
         return "checkout-complete";	

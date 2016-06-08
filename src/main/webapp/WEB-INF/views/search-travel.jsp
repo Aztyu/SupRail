@@ -34,14 +34,16 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="page-top">
-                            <select class="awe-select">
-                                <option>Trier par prix</option>
-                                <option>Trier par distance</option>
+                            <select class="awe-select" id="numbers">
+                            	<option value="0">Par défaut</option>
+                                <option value="1">Trier par prix</option>
+                                <option value="2">Trier par distance</option>
                             </select>
+                        </form>
                         </div>
                     </div>
                     <div class="col-md-9 col-md-push-3">
-                        <div class="filter-page__content">
+                        <div class="filter-page__content" style="display: flex;flex-direction: column;">
                             <div class="filter-item-wrapper">
                             <c:if test = "${empty travels}">
                             <div class="row">
@@ -54,10 +56,10 @@
 			                    </div>
 			                </div>
                             </c:if>
+                            <div id="sortdata">
                             <c:forEach var="travel" items="${travels}">
-							<c:forEach var="trip" items="${travel.aller}">
                                 <!-- ITEM -->
-                                <div class="flight-item">
+                                <div class="flight-item" style="order:1;">
                                     <div class="item-media" style="width:15%;">
                                         <div class="image-cover">
                                             <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 35px;">
@@ -69,10 +71,41 @@
                                                 <a href="train-detail.html"><span style="color:#38a9ee"> ${ trip.end.name }</span></a>
                                             </h2>
                                         </div>
+                                        <c:forEach var="trip" items="${travel.aller}">
                                         <table class="item-table">
                                             <thead>
                                                 <tr>
-                                                    <th class="route">Trajet</th>
+                                                    <th class="route">Trajet aller</th>
+                                                    <th class="depart">Départ</th>
+                                                    <th class="arrive">Arrivée</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="route">
+                                                        <ul>
+                                                            <li>${ trip.start.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                            <li>${ trip.end.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td class="depart">
+                                                        <span>${ trip.formatedStartTime }</span>
+                                                        <span class="date">${ trip.formatedStartDate }</span>
+                                                    </td>
+                                                    <td class="arrive">
+                                                        <span>${ trip.formatedStopTime }</span>
+                                                        <span class="date">${ trip.formatedStopDate }</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </c:forEach>
+                                        <c:forEach var="trip" items="${travel.retour}">
+                                        <hr style="border-top:1px solid #0091ea">
+                                        <table class="item-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="route">Trajet retour</th>
                                                     <th class="depart">Départ</th>
                                                     <th class="arrive">Arrivée</th>
                                                 </tr>
@@ -98,26 +131,114 @@
                                                 <tr>
                                                 	<td>
                                                 		<i class="awe-icon awe-icon-info"></i>
-                                                		<a href="#collapse1" data-toggle="collapse">Plus d'informations...</a>
-                                                		<div id="collapse" class="collapse">
-													      <div class="panel-body">Panel Body</div>
-													    </div>
+                                                		<a href="#collapse1" data-toggle="collapse">Le prix comprend l'aller et le retour</a>
                                                 	</td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        </c:forEach>
+                                        
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            <span class="amount">$5,923</span>
-                                            exclude Fare
+                                            <span class="amount pricesort">80</span>
+                                            Taxes incluses
                                         </div>
-                                        <a href="train-detail.html" class="awe-btn">Book now</a>
+                                        <a href="train-detail.html" class="awe-btn">Acheter</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
                                 </c:forEach>
-                               </c:forEach>
+                                <div class="flight-item" style="order:1;">
+                                    <div class="item-media" style="width:15%;">
+                                        <div class="image-cover">
+                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 35px;">
+                                        </div>
+                                    </div>
+                                    <div class="item-body">
+                                        <div class="item-title">
+                                            <h2>
+                                                <a href="train-detail.html"><span style="color:#38a9ee"> ${ trip.end.name }</span></a>
+                                            </h2>
+                                        </div>
+                                        <c:forEach var="trip" items="${travel.aller}">
+                                        <table class="item-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="route">Trajet aller</th>
+                                                    <th class="depart">Départ</th>
+                                                    <th class="arrive">Arrivée</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="route">
+                                                        <ul>
+                                                            <li>${ trip.start.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                            <li>${ trip.end.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td class="depart">
+                                                        <span>${ trip.formatedStartTime }</span>
+                                                        <span class="date">${ trip.formatedStartDate }</span>
+                                                    </td>
+                                                    <td class="arrive">
+                                                        <span>${ trip.formatedStopTime }</span>
+                                                        <span class="date">${ trip.formatedStopDate }</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </c:forEach>
+                                        <c:forEach var="trip" items="${travel.retour}">
+                                        <hr style="border-top:1px solid #0091ea">
+                                        <table class="item-table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="route">Trajet retour</th>
+                                                    <th class="depart">Départ</th>
+                                                    <th class="arrive">Arrivée</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="route">
+                                                        <ul>
+                                                            <li>${ trip.start.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                            <li>${ trip.end.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td class="depart">
+                                                        <span>${ trip.formatedStartTime }</span>
+                                                        <span class="date">${ trip.formatedStartDate }</span>
+                                                    </td>
+                                                    <td class="arrive">
+                                                        <span>${ trip.formatedStopTime }</span>
+                                                        <span class="date">${ trip.formatedStopDate }</span>
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                	<td>
+                                                		<i class="awe-icon awe-icon-info"></i>
+                                                		<a href="#collapse1" data-toggle="collapse">Le prix comprend l'aller et le retour</a>
+                                                	</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </c:forEach>
+                                        
+                                    </div>
+                                    <div class="item-price-more">
+                                        <div class="price">
+                                            <span class="amount pricesort">59</span>
+                                            Taxes incluses
+                                        </div>
+                                        <a href="train-detail.html" class="awe-btn">Acheter</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END DIV SORT -->
                             </div>
                             <!-- END / PAGINATION -->
                         </div>
@@ -128,7 +249,7 @@
                             <!-- WIDGET -->
                             <div class="widget widget_has_radio_checkbox_text">
                             
-                                <h3 style="font-size:18px;"><i class="awe-icon awe-icon-search" style="color:gray;margin-right:7px;"></i>   Votre recherche</h3>
+                                <h3 style="font-size:18px;"><i class="awe-icon awe-icon-search" style="color:gray;margin-right:7px;"></i> Rechercher un trajet</h3>
                                 <div class="widget_content">
                                    
                                    <label>
@@ -204,11 +325,13 @@
             </div>
         </section>
 		
-   <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/min/wickedpicker.min.js"></script>  
-		    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
-		    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slider.js"></script>
-			<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
-			<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/min/wickedpicker.min.js"></script>  
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slider.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/sortData.js"></script>
+	
 	<script type="text/javascript">
 	$('.toggle-menu-responsive').on('click', function(evt) {
         evt.preventDefault();
