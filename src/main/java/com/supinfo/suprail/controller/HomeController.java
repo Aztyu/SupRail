@@ -5,14 +5,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Properties;
 
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -52,43 +44,5 @@ public class HomeController {
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
 	public String about(Model model) {
 		return "about";
-	}
-
-	@RequestMapping(value = "/mail", method = RequestMethod.GET)
-	public void sendMail() {
-		try {	
-			
-			String smtpHost = "smtp.gmail.com";
-		    String from = "suprail.contact@gmail.com";
-		    String to = "fanagame007@gmail.com";
-		    String username = "suprail.contact@gmail.com";
-		    String password = "kikibouchet42";
-		 
-		    Properties props = new Properties();
-		    props.put("mail.smtps.host", smtpHost);
-		    props.put("mail.smtps.auth", "true");
-		 
-		    Session session = Session.getDefaultInstance(props);
-		    session.setDebug(true);
-		 
-		    MimeMessage message = new MimeMessage(session); 
-	    	
-		    message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-		    message.setSubject("Hello");
-		    message.setText("Hello World");
-		 
-		    Transport tr = session.getTransport("smtps");
-		    tr.connect(smtpHost, username, password);
-		    message.saveChanges();
-		 	 
-		    tr.sendMessage(message,message.getAllRecipients());
-		    tr.close();
-		} catch (AddressException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MessagingException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		}
 	}
 }
