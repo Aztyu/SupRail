@@ -74,6 +74,19 @@ function statusChangeCallback(response) {
       console.log('Connexion réussie pour: ' + response.name);
       document.getElementById('status').innerHTML =
         'Merci de vous être connecté, ' + response.name + '!';
-	  window.location.href = "http://localhost:8080/suprail/login/facebook?facebook_id=" + response.authResponse.accessToken;
+      var arr = { id: response.id, name: response.name, email: response.email };
+      $.ajax({
+          url: contextPath+"/login/facebook",
+          type: 'POST',
+          data: JSON.stringify(arr),
+          contentType: 'application/json; charset=utf-8',
+          dataType: 'json',
+          async: false,
+          success: function(msg) {
+        	  if(msg == true) {
+        		  window.location.href = "http://localhost:8080/suprail/login/facebook?email=" + response.email;
+        	  }
+          }
+    });
     });
   }
