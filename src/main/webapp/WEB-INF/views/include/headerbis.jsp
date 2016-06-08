@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <head>
     <meta charset="utf-8">
     
@@ -82,7 +81,7 @@
                                 <a href="${pageContext.request.contextPath}/station-list">Nos stations</a>
                                   <ul class="sub-menu">
 	                                <li>
-	                                	<a href="${pageContext.request.contextPath}/station-info">RhÃ´ne-Alpes</a>
+	                                	<a href="${pageContext.request.contextPath}/station-info">Rhône-Alpes</a>
 	                                	<ul class="sub-menu" style="left:208px!important;">
 	                                		<li>
 	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
@@ -101,7 +100,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="${pageContext.request.contextPath}/about">Ã€ propos</a>
+                                <a href="${pageContext.request.contextPath}/about">À propos</a>
                             </li>
                             
                             <li class="menu-item-has-children">
@@ -121,10 +120,10 @@
                                       <li>
 								        <c:choose>
 											<c:when test="${ sessionScope.user.googleUser == true }">
-												<a onclick="googleLogOut()">DÃ©connexion</a>
+												<a onclick="googleLogOut()">Déconnexion</a>
 											</c:when>
 											<c:otherwise>
-												<a onclick="simpleLogOut()">DÃ©connexion</a>
+												<a onclick="simpleLogOut()">Déconnexion</a>
 											</c:otherwise>
 										</c:choose>
 									  </li>
