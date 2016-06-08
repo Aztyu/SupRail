@@ -68,14 +68,6 @@ public class Line {
 		this.name = name;
 	}
 
-	public Double getAvg_speed() {
-		return avg_speed;
-	}
-
-	public void setAvg_speed(Double avg_speed) {
-		this.avg_speed = avg_speed;
-	}
-
 	public List<StationLineAssociation> getStations() {
 		return stations;
 	}
@@ -90,6 +82,10 @@ public class Line {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	public double getAvg_speed() {
+		return avg_speed;
 	}
 
 	public void setAvg_speed(double avg_speed) {

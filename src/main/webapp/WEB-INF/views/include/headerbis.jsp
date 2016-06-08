@@ -51,6 +51,8 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/connexion.js"></script>	
     <script type="text/javascript">var contextPath = "${pageContext.request.contextPath}"</script>
     
+    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/images/favicon.ico"/>
+    
 </head>
 <body>
     <!-- PAGE WRAP -->

@@ -69,7 +69,8 @@ function statusChangeCallback(response) {
 
   function testAPI() {
     console.log('Bienvenue!  Fetching your information.... ');
-    FB.api('/me', function(response) {
+    FB.api('/me?fields=id,name,email,permissions', function(response) {
+	  console.log(response.email);
       console.log('Connexion réussie pour: ' + response.name);
       document.getElementById('status').innerHTML =
         'Merci de vous être connecté, ' + response.name + '!';
