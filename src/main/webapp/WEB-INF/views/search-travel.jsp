@@ -5,7 +5,6 @@
 
 <html>
 	<%@ include file="include/headerbis.jsp" %>
-	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 		<link href="<c:url value="/resources/css/lib/wickedpicker.min.css" />" rel="stylesheet">
 	        <!-- HEADING PAGE -->
         <section class="awe-parallax category-heading-section-demo">
@@ -37,14 +36,14 @@
                         <div class="page-top">
                             <select class="awe-select">
                                 <option>Trier par prix</option>
-                                <option>Trier par ordre croissant</option>
+                                <option>Trier par distance</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-9 col-md-push-3">
                         <div class="filter-page__content">
                             <div class="filter-item-wrapper">
-                            <c:if test = "${empty travel.aller}">
+                            <c:if test = "${empty travels}">
                             <div class="row">
 			                    <div class="col-xs-12">
 			                        <h5 class="text-uppercase" style="color: red;">Aucun trajet disponible</h5>
@@ -55,6 +54,7 @@
 			                    </div>
 			                </div>
                             </c:if>
+                            <c:forEach var="travel" items="${travels}">
 							<c:forEach var="trip" items="${travel.aller}">
                                 <!-- ITEM -->
                                 <div class="flight-item">
@@ -117,30 +117,31 @@
                                 </div>
                                 <!-- END / ITEM -->
                                 </c:forEach>
+                               </c:forEach>
                             </div>
                             <!-- END / PAGINATION -->
                         </div>
                     </div>
                     <div class="col-md-3 col-md-pull-9">
                         <div class="page-sidebar">
-                        	<form action="">
+                        <form id="searchTrain" action="${pageContext.request.contextPath}/searchTravel" method="POST">
                             <!-- WIDGET -->
                             <div class="widget widget_has_radio_checkbox_text">
                             
                                 <h3 style="font-size:18px;"><i class="awe-icon awe-icon-search" style="color:gray;margin-right:7px;"></i>   Votre recherche</h3>
                                 <div class="widget_content">
                                    
-                                    <label>
-                                        <input type="checkbox" checked>
-                                        <i class="awe-icon awe-icon-check"></i>
-                                        Aller / Retour
-                                    </label>
+                                   <label>
+	                                <input type="checkbox" id="checkTravel" checked="" value="Value1">
+	                                <i class="awe-icon awe-icon-check"></i>
+	                                Aller/Retour
+	                            </label>
                                     <label class="from">
                                         Station de départ
                                         <span class="form-item db">
                                             <i class="awe-icon awe-icon-marker-1"></i>
 											<input type="text" id="StartCity" value="${ trip.start.name }" required name="StartCity">
-                                        	<input type="hidden" value="" id="StartCityId" name="StartCityId">                                        
+		                                <input type="hidden" value="" id="StartCityId" name="StartCityId">                                        
                                        	</span>
                                     </label>
                                     <label class="to">
@@ -148,17 +149,17 @@
                                         <span class="form-item db">
                                             <i class="awe-icon awe-icon-marker-1"></i>
                                             <input type="text" id="EndCity" value="${ trip.end.name }" required name="EndCity">
-                                        	<input type="hidden" value="" id="EndCityId" name="EndCityId">
+		                                <input type="hidden" value="" id="EndCityId" name="EndCityId">
                                         </span>
                                     </label>
                                     <label>Voyageur</label>
                                     <div class="form-item" >
-                                        <select class="awe-select" style="width:58px!important;" name="travelers" id="travelers">
-                                            <option selected="selected">1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                        </select>
-                                    </div>
+		                                  <select class="awe-select" name="travelers" id="travelers" style="width: 80px;">
+	                                            <option value="1">1</option>
+	                                            <option value="2">2</option>
+	                                            <option value="3">3</option>
+	                                        </select>
+		                                </div>
                                 </div>
                             </div>
                             <!-- END / WIDGET -->
@@ -167,13 +168,13 @@
                             <div class="widget widget_price_filter">
                                 <h3><i class="awe-icon awe-icon-calendar" style="color:gray;margin-right:7px;"></i> Dates</h3>
                                     <div class="form-item">
-                                        <input type="text" id="date_timepicker_start" value="Date de départ" required name="date_timepicker_start">
+	                                 <input type="text" id="date_timepicker_start" value="" required name="date_timepicker_start">
                                     </div>
                                     
                                     <div style="margin:18px;"></div>
                                     
-                                    <div class="form-item">
-                                        <input type="text" id="date_timepicker_end" value="Date de retour" name="date_timepicker_end">
+                                    <div class="form-item date_end">
+	                                 <input type="text" id="date_timepicker_end" value="" name="date_timepicker_end">
                                     </div>
                                     <div style="margin:28px;"></div>
                             </div>
@@ -183,17 +184,12 @@
                             <div class="widget widget_has_radio_checkbox">
                                 <h3><i class="awe-icon awe-icon-clock" style="color:gray;margin-right:7px;"></i> Horaires</h3>
                                 <div class="form-item">
-                                        
-                                        <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
-                                        
-                                    </div>
-                                    <div style="margin:18px;"></div>
-                                    <div class="form-item">
-                                       
-                                        <input type="text" id="timepicker_end" name="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
-                                    </div>
-                                                                        <div style="margin:18px;"></div>
-                                    
+	                                 <input type="text" name="timepicker_start" class="timepicker-24-hr hasWickedpicker" id="timepicker_start" />
+                                </div>
+                                <div style="margin:18px;"></div>
+                                <div class="form-item clock_end">
+	                                 <input type="text" id="timepicker_end" name="timepicker_end" class="timepicker-24-hr hasWickedpicker" id="timepicker_end" required>
+                                 </div>
                             </div>
                             <!-- END / WIDGET -->
 
@@ -208,10 +204,11 @@
             </div>
         </section>
 		
-    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/min/wickedpicker.min.js"></script>  
-    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
+   <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/min/wickedpicker.min.js"></script>  
+		    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/time_picker.js"></script> 
+		    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/slider.js"></script>
+			<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jsondata.js"></script>
+			<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
 	<script type="text/javascript">
 	$('.toggle-menu-responsive').on('click', function(evt) {
         evt.preventDefault();
