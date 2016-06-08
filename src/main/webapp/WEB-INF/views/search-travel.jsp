@@ -59,7 +59,7 @@
                             <div id="sortdata">
                             <c:forEach var="travel" items="${travels}">
                                 <!-- ITEM -->
-                                <div class="flight-item" style="order:1;">
+                                <div class="flight-item">
                                     <div class="item-media" style="width:15%;">
                                         <div class="image-cover">
                                             <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 35px;">
@@ -141,7 +141,7 @@
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            <span class="amount pricesort">80</span>
+                                            <span class="amount pricesort">${ travel.price } €</span>
                                             Taxes incluses
                                         </div>
                                         <a href="train-detail.html" class="awe-btn">Acheter</a>
@@ -149,94 +149,6 @@
                                 </div>
                                 <!-- END / ITEM -->
                                 </c:forEach>
-                                <div class="flight-item" style="order:1;">
-                                    <div class="item-media" style="width:15%;">
-                                        <div class="image-cover">
-                                            <img src="${pageContext.request.contextPath}/resources/images/flight/1.jpg" alt="" style="width: 123px!important;margin-top: 35px;">
-                                        </div>
-                                    </div>
-                                    <div class="item-body">
-                                        <div class="item-title">
-                                            <h2>
-                                                <a href="train-detail.html"><span style="color:#38a9ee"> ${ trip.end.name }</span></a>
-                                            </h2>
-                                        </div>
-                                        <c:forEach var="trip" items="${travel.aller}">
-                                        <table class="item-table">
-                                            <thead>
-                                                <tr>
-                                                    <th class="route">Trajet aller</th>
-                                                    <th class="depart">Départ</th>
-                                                    <th class="arrive">Arrivée</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="route">
-                                                        <ul>
-                                                            <li>${ trip.start.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>${ trip.end.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                        </ul>
-                                                    </td>
-                                                    <td class="depart">
-                                                        <span>${ trip.formatedStartTime }</span>
-                                                        <span class="date">${ trip.formatedStartDate }</span>
-                                                    </td>
-                                                    <td class="arrive">
-                                                        <span>${ trip.formatedStopTime }</span>
-                                                        <span class="date">${ trip.formatedStopDate }</span>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        </c:forEach>
-                                        <c:forEach var="trip" items="${travel.retour}">
-                                        <hr style="border-top:1px solid #0091ea">
-                                        <table class="item-table">
-                                            <thead>
-                                                <tr>
-                                                    <th class="route">Trajet retour</th>
-                                                    <th class="depart">Départ</th>
-                                                    <th class="arrive">Arrivée</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="route">
-                                                        <ul>
-                                                            <li>${ trip.start.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            <li>${ trip.end.name }<i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                        </ul>
-                                                    </td>
-                                                    <td class="depart">
-                                                        <span>${ trip.formatedStartTime }</span>
-                                                        <span class="date">${ trip.formatedStartDate }</span>
-                                                    </td>
-                                                    <td class="arrive">
-                                                        <span>${ trip.formatedStopTime }</span>
-                                                        <span class="date">${ trip.formatedStopDate }</span>
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                	<td>
-                                                		<i class="awe-icon awe-icon-info"></i>
-                                                		<a href="#collapse1" data-toggle="collapse">Le prix comprend l'aller et le retour</a>
-                                                	</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        </c:forEach>
-                                        
-                                    </div>
-                                    <div class="item-price-more">
-                                        <div class="price">
-                                            <span class="amount pricesort">59</span>
-                                            Taxes incluses
-                                        </div>
-                                        <a href="train-detail.html" class="awe-btn">Acheter</a>
-                                    </div>
-                                </div>
                             </div>
                             <!-- END DIV SORT -->
                             </div>
