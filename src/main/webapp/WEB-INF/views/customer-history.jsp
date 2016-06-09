@@ -32,7 +32,7 @@
                                 <div id="tabs-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">
                                     <div class="filter-page__content" style="display: flex;flex-direction: column;">
                             <div class="filter-item-wrapper">
-                            <c:if test = "${empty travels}">
+                            <c:if test = "${empty travelCart}">
                             <div class="row">
 			                    <div class="col-xs-12">
 			                        <h5 class="text-uppercase" style="color: red;">Aucun trajet</h5>
@@ -133,7 +133,7 @@
                                         <div style="display:none">
                                         <p class="distsort">${ travel.minutes_aller}</p>
                                         </div>
-                                        <a href="${pageContext.request.contextPath}/buyTravel/${loop.index}" class="awe-btn">Acheter</a>
+                                        <a href="${pageContext.request.contextPath}/addTravelCart/${loop.index}" class="awe-btn">Commander</a>
                                         <c:if test = "${not empty travel.retour}">
 	                                        
 	                                        	<div style="margin-top:15px;">

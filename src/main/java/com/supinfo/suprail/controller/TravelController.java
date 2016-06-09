@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.Station;
 import com.supinfo.suprail.entity.Travel;
+import com.supinfo.suprail.entity.User;
 import com.supinfo.suprail.interfaces.job.ITravelJob;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 import com.supinfo.suprail.job.TravelJob;
@@ -39,7 +40,6 @@ public class TravelController {
 		List<Travel> tr = (List<Travel>)session.getAttribute("list");
 		Travel travel = tr.get(id);
 		
-		
 		List<Travel> arrList = (List<Travel>)session.getAttribute("travelCart");
 		if( arrList == null){
 			arrList = new ArrayList<Travel>();
@@ -56,6 +56,25 @@ public class TravelController {
 			model.addAttribute("erreurUser", "error");
 			return "redirect:/register";
 		}
+    }
+	
+	@RequestMapping(value = "/addTravelCart/{id}", method = RequestMethod.GET)
+    public String AddTravelCart(Model model,HttpServletRequest request, @PathVariable int id) {
+		try {
+			HttpSession session = request.getSession();
+			User user = (User)session.getAttribute("user");
+			List<Travel> tr = (List<Travel>)session.getAttribute("travelCart");
+			
+			if(!tr.isEmpty()){
+				Travel travel = tr.get(id);
+				travel_job.sendCart(travel, String.valueOf(user.getId()));
+			}
+			return "testtoto";
+		} catch (Exception e) {
+			model.addAttribute("erreurCart", "error");
+			return "redirect:/user/historyUser";
+		}
+
     }
 
     @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)

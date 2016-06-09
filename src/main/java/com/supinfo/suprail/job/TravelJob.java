@@ -82,4 +82,20 @@ public class TravelJob implements ITravelJob{
 			return null;
 		}
 	}
+
+	@Override
+	public void sendCart(Travel travel, String user) throws Exception {
+		String req_url = BaseParam.base_api_url + "/travel/buy/"+user;
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String json_param = mapper.writeValueAsString(travel);
+
+		String result = ApiRequest.sendPOSTRequest(req_url, json_param);
+		JsonNode node = mapper.readTree(result);
+		
+		int status = node.get("html_status").asInt();
+		if(status != 200){
+			throw new Exception();
+		}
+	}
 }
