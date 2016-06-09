@@ -80,25 +80,225 @@
                             <li class="menu-item-has-children">
                                 <a href="${pageContext.request.contextPath}/station-list">Nos stations</a>
                                   <ul class="sub-menu">
-	                                <li>
-	                                	<a href="${pageContext.request.contextPath}/station-info">Rhône-Alpes</a>
-	                                	<ul class="sub-menu" style="left:208px!important;">
-	                                		<li>
-	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
-	                                		</li>
-	                                		<li>
-	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
-	                                		</li>
-	                                		<li>
-	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
-	                                		</li>
-	                                		<li>
-	                                			<a href="${pageContext.request.contextPath}/station-info">Lyon</a>
-	                                		</li>
-	                                	</ul>
-	                                </li>
-                                </ul>
-                            </li>
+                                  	<li>
+                                  		<a href="#">Nord-Est</a>
+		                                  	<ul class="sub-menu">
+			                                	<li>
+			                                	<a href="#">Bourgogne</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/20">Dijon</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Champagne-Ardenne</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/19">Troyes</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Alsace</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/12">Strasbourg</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Lorraine</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/13">Nancy</a>
+				                                		</li>	
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/14">Metz</a>
+				                                		</li>			                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Île-de-France</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/1">Paris</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Nord-Pas-de-Calais</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/7">Lille</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Picardie</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/8">Amiens</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+	                               			 </ul>
+                               	 		</li>
+                               	 		<li>
+                                  		<a href="#">Nord-Ouest</a>
+		                                  	<ul class="sub-menu">
+			                                	<li>
+			                                	<a href="#">Bretagne</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/11">Brest</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/10">Rennes</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Pays de la Loire</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/9">Le Mans</a>
+				                                		</li>				                                			                                		
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Centre</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/15">Orléans</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/16">Tours</a>
+				                                		</li>				                                		
+			                                		</ul>
+		                                		</li>
+	                               			 </ul>
+                               	 		</li>
+                               	 		<li>
+                                  		<a href="#">Sud-Est</a>
+		                                  	<ul class="sub-menu">
+			                                	<li>
+			                                	<a href="#">Languedoc-Roussillon</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/4">Perpignan</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/34">Montpellier</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/33">Nîmes</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Rhône-Alpes</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/2">Lyon</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/29">Saint-Étienne</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/28">Grenoble</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/21">Valence</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/30">Annecy</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Provence-Alpes-Côte d'Azur</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/3">Avignon</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/22">Marseille</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/23">Toulon</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/24">Nice</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Auvergne</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/27">Clermont-Ferrand</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Suisse</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/31">Genêve</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+	                               			 </ul>
+                               	 		</li>
+                               	 		<li>
+                                  		<a href="#">Sud-Ouest</a>
+		                                  	<ul class="sub-menu">
+			                                	<li>
+			                                	<a href="#">Aquitaine</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/18">Bayonne</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/5">Bordeaux</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Midi-Pyrénées</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/32">Toulouse</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Poitou-Charentes</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/25">La Rochelle</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/6">Angoulême</a>
+				                                		</li>
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/17">Poitiers</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+		                                		<li>
+			                                	<a href="#">Limousin</a>
+			                                		<ul class="sub-menu">
+				                                		<li>
+				                                			<a href="${pageContext.request.contextPath}/station-info/26">Limoges</a>
+				                                		</li>
+			                                		</ul>
+		                                		</li>
+	                               			 </ul>
+                               	 		</li>
+                              		</ul>
+                            	</li>
                             <li class="menu-item-has-children">
                                 <a href="${pageContext.request.contextPath}/about">À propos</a>
                             </li>

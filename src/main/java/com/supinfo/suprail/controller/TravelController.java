@@ -30,6 +30,14 @@ public class TravelController {
     public String getSearchPage(Model model,HttpServletRequest request) {
         return "/search-travel";	
     }
+	
+	@RequestMapping(value = "/buyTravel/{id}", method = RequestMethod.GET)
+    public String buyTravelPage(Model model,HttpServletRequest request, @PathVariable int id) {
+		List<Travel> tr = (List<Travel>)request.getSession().getAttribute("list");
+		Travel travel = tr.get(id);
+		
+        return "/search-travel";	
+    }
 
     @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)
     public String searchTravel(Model model,HttpServletRequest request) {
@@ -44,6 +52,7 @@ public class TravelController {
         	schStation.setArrivalDate(request.getParameter("date_timepicker_end"), request.getParameter("timepicker_end"));
         	
         	List<Travel> travel = travel_job.findTravel(schStation);
+        	request.getSession().setAttribute("list", travel);
 
         	model.addAttribute("travels", travel);
         	model.addAttribute("searchOk", "info");
