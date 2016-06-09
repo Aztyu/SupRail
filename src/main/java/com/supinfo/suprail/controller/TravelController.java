@@ -1,5 +1,6 @@
 package com.supinfo.suprail.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +39,16 @@ public class TravelController {
 		List<Travel> tr = (List<Travel>)session.getAttribute("list");
 		Travel travel = tr.get(id);
 		
-		session.setAttribute("travelCart", travel);
+		
+		List<Travel> arrList = (List<Travel>)session.getAttribute("travelCart");
+		if( arrList == null){
+			arrList = new ArrayList<Travel>();
+			
+		}
+		arrList.add(travel);
+		
+		
+		session.setAttribute("travelCart", arrList);
 		
 		if(session.getAttribute("user") != null){
 			return "redirect:/user/historyUser";		
