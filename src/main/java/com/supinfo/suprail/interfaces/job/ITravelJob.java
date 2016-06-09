@@ -14,5 +14,7 @@ public interface ITravelJob {
 	public List<Station> listStation() throws Exception;
 
 	public String getStations() throws Exception;
+
+	public void sendCart(Travel travel, String string) throws Exception;
 	
 }
