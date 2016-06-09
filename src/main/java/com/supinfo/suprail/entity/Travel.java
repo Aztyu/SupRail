@@ -55,4 +55,12 @@ private List<SearchStep> aller;
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	public String getStationAller(){
+		return aller.get(0).start.getName();
+	}
+	
+	public String getStationRetour(){
+		return aller.get(aller.size()-1).end.getName();
+	}
 }

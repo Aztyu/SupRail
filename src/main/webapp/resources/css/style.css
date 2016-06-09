@@ -495,9 +495,7 @@ span.dropcap {
   color: #666;
   pointer-events: none;
 }
-.flight-item .item-body .item-table thead tr th:not(:first-child)) {
-display:none;
-}
+
 .awe-select-wrapper .fa:before {
   position: absolute;
   top: 50%;

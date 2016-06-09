@@ -68,7 +68,7 @@
                                     <div class="item-body">
                                         <div class="item-title">
                                             <h2>
-                                                <a href="train-detail.html"><span style="color:#38a9ee"> ${ trip.end.name }</span></a>
+                                                <a href="train-detail.html">En direction de : <span style="color:#38a9ee">${ travel.stationAller }</span></a>
                                             </h2>
                                         </div>
                                         <c:forEach var="trip" items="${travel.aller}">
