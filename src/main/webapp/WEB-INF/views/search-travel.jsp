@@ -183,7 +183,7 @@
                                         Station de départ
                                         <span class="form-item db">
                                             <i class="awe-icon awe-icon-marker-1"></i>
-											<input type="text" id="StartCity" value="${ travels.stationAller }" required name="StartCity">
+											<input type="text" id="StartCity" value="${ stationStart }" required name="StartCity">
 		                                <input type="hidden" value="" id="StartCityId" name="StartCityId">                                        
                                        	</span>
                                     </label>
@@ -191,7 +191,7 @@
                                         Station d'arrivée
                                         <span class="form-item db">
                                             <i class="awe-icon awe-icon-marker-1"></i>
-                                            <input type="text" id="EndCity" value="${ travels.stationRetour }" required name="EndCity">
+                                            <input type="text" id="EndCity" value="${ stationEnd }" required name="EndCity">
 		                                <input type="hidden" value="" id="EndCityId" name="EndCityId">
                                         </span>
                                     </label>

@@ -75,6 +75,8 @@ public class TravelController {
 
         	model.addAttribute("travels", travel);
         	model.addAttribute("searchOk", "info");
+        	model.addAttribute("stationStart", travel.get(0).getStationAller());
+        	model.addAttribute("stationEnd", travel.get(0).getStationRetour());
         }catch(Exception ex){
         	model.addAttribute("errorsearch", "error");
         	return "/index";
