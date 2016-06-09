@@ -495,7 +495,7 @@ span.dropcap {
   color: #666;
   pointer-events: none;
 }
-thead tr th .route:not(:first-child)) {
+.flight-item .item-body .item-table thead tr th:not(:first-child)) {
 display:none;
 }
 .awe-select-wrapper .fa:before {
