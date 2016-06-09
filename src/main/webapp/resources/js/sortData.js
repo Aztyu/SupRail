@@ -12,12 +12,19 @@ $(function() {
             });
             ascending = ascending ? false : true;
 
-            $('#sortdata').html(sorted);
+            $('#sortdata').html(sorted); 
+        }
+        else if ($(this).val() == 2)
+        {
+        	var sorted = $('.flight-item').sort(function(a,b){
+                return (ascending ==
+                       (parseInt($(a).find('.distsort').html()) < 
+                        parseInt($(b).find('.distsort').html()))) ? 1 : -1;
+            });
+            ascending = ascending ? false : true;
 
-            
+            $('#sortdata').html(sorted); 
         }
-        else {
-        	console.log("toto");
-        }
+       
     });
 });

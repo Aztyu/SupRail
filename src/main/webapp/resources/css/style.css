@@ -495,7 +495,7 @@ span.dropcap {
   color: #666;
   pointer-events: none;
 }
-thead tr th .route:not(:first-child)) {
+.flight-item .item-body .item-table thead tr th:not(:first-child)) {
 display:none;
 }
 .awe-select-wrapper .fa:before {
@@ -1039,7 +1039,7 @@ display:none;
 .awe-navigation .menu-list li .sub-menu .sub-menu {
   top: 0;
   right: auto;
-  left: -100%;
+  left: 100%;
 }
 .awe-navigation .menu-list li:hover > .sub-menu {
   opacity: 1;

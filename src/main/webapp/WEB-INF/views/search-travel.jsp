@@ -14,7 +14,7 @@
                     <!-- BREADCRUMB -->
                     <div class="breadcrumb">
                         <ul>
-                            <li><a href="#">Accueil</a></li>
+                            <li><a href="${pageContext.request.contextPath}/index">Accueil</a></li>
                             <li><span>Recherche train</span></li>
                         </ul>
                     </div>
@@ -75,7 +75,7 @@
                                         <table class="item-table">
                                             <thead>
                                                 <tr>
-                                                    <th class="route">Trajet aller</th>
+                                                    <th class="route">Étapes trajet aller</th>
                                                     <th class="depart">Départ</th>
                                                     <th class="arrive">Arrivée</th>
                                                 </tr>
@@ -100,12 +100,17 @@
                                             </tbody>
                                         </table>
                                         </c:forEach>
+                                        <c:if test = "${not empty travel.retour}">
+                                        <hr style="border-top:1px solid #0091ea;margin:5px">
+                                       	 <h3 style="margin:0px;font-size: 14px;color:#0091ea;text-align:center;">RETOUR</h3>
+                                       	 <hr style="border-top:1px solid #0091ea;margin:5px">
+                                        </c:if>
+                                        
                                         <c:forEach var="trip" items="${travel.retour}">
-                                        <hr style="border-top:1px solid #0091ea">
                                         <table class="item-table">
                                             <thead>
                                                 <tr>
-                                                    <th class="route">Trajet retour</th>
+                                                    <th class="route">Étapes trajet retour</th>
                                                     <th class="depart">Départ</th>
                                                     <th class="arrive">Arrivée</th>
                                                 </tr>
@@ -126,14 +131,8 @@
                                                         <span>${ trip.formatedStopTime }</span>
                                                         <span class="date">${ trip.formatedStopDate }</span>
                                                     </td>
-                                                    
                                                 </tr>
-                                                <tr>
-                                                	<td>
-                                                		<i class="awe-icon awe-icon-info"></i>
-                                                		<a href="#collapse1" data-toggle="collapse">Le prix comprend l'aller et le retour</a>
-                                                	</td>
-                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                         </c:forEach>
@@ -144,7 +143,18 @@
                                             <span class="amount pricesort">${ travel.price } €</span>
                                             Taxes incluses
                                         </div>
+                                        <div style="display:none">
+                                        <p class="distsort">${ travel.minutes_aller}</p>
+                                        </div>
                                         <a href="train-detail.html" class="awe-btn">Acheter</a>
+                                        <c:if test = "${not empty travel.retour}">
+	                                        
+	                                        	<div style="margin-top:15px;">
+	                                        		<i class="awe-icon awe-icon-info"></i>
+	                                        		<a href="#collapse1" data-toggle="collapse">Le prix comprend l'aller et le retour</a>
+	                                        	</div>
+                                        </c:if>
+                                        
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
