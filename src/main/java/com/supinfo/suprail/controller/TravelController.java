@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,10 +34,18 @@ public class TravelController {
 	
 	@RequestMapping(value = "/buyTravel/{id}", method = RequestMethod.GET)
     public String buyTravelPage(Model model,HttpServletRequest request, @PathVariable int id) {
-		List<Travel> tr = (List<Travel>)request.getSession().getAttribute("list");
+		HttpSession session = request.getSession();
+		List<Travel> tr = (List<Travel>)session.getAttribute("list");
 		Travel travel = tr.get(id);
 		
-        return "/search-travel";	
+		session.setAttribute("travelCart", travel);
+		
+		if(session.getAttribute("user") != null){
+			return "redirect:/user/historyUser";		
+		}else{
+			model.addAttribute("erreurUser", "error");
+			return "redirect:/register";
+		}
     }
 
     @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)

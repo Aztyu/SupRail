@@ -18,7 +18,13 @@
 			    <a class="close" data-dismiss="alert">×</a>
 			    <strong>Erreur : Impossible de vous connectez, veuillez recommencer. </strong>
 			</div>
-		 </c:if>        
+		  </c:if>
+		  <c:if test="${not empty erreurUser}">
+			<div class="alert alert-danger">
+			    <a class="close" data-dismiss="alert">×</a>
+			    <strong>Erreur : Vous devez vous contacter pour acheter un billet </strong>
+			</div>
+		  </c:if>         
                 <form action="${pageContext.request.contextPath}/login" method="POST">
                   <h3 style="margin: 0px 0px 8px 0px;"> CONNEXION  <i class="fa fa-user" aria-hidden="true"></i></i></h3>
                       

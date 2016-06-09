@@ -11,7 +11,7 @@
                     <ul>
                         <li><a href="${pageContext.request.contextPath}/index">Accueil</a></li>
                         <li><a href="${pageContext.request.contextPath}/station-list">Gare</a></li>
-                        <li><span>Lyon - Part dieu</span></li>
+                        <li><span>${stationinfo.name}</span></li>
                     </ul>
                 </div>
             </div>

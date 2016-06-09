@@ -57,7 +57,7 @@
 			                </div>
                             </c:if>
                             <div id="sortdata">
-                            <c:forEach var="travel" items="${travels}">
+                            <c:forEach var="travel" items="${travels}" varStatus="loop">
                                 <!-- ITEM -->
                                 <div class="flight-item">
                                     <div class="item-media" style="width:15%;">
@@ -146,7 +146,7 @@
                                         <div style="display:none">
                                         <p class="distsort">${ travel.minutes_aller}</p>
                                         </div>
-                                        <a href="train-detail.html" class="awe-btn">Acheter</a>
+                                        <a href="${pageContext.request.contextPath}/buyTravel/${loop.index}" class="awe-btn">Acheter</a>
                                         <c:if test = "${not empty travel.retour}">
 	                                        
 	                                        	<div style="margin-top:15px;">

@@ -3182,8 +3182,8 @@ body.single-post .blog-page__content > .post .post-content {
   position: relative;
   border-bottom: 1px solid #D4D4D4;
   overflow: hidden;
-  padding-bottom: 35px;
-  margin-bottom: 35px;
+  padding-bottom: 15px;
+  margin-bottom: 39px;
 }
 .about-author .image-thumb {
   width: 70px;
@@ -3199,7 +3199,7 @@ body.single-post .blog-page__content > .post .post-content {
 }
 .about-author .author-title h4 {
   font-size: 16px;
-  color: #262626;
+  color: #0091ea;
   margin-top: 0;
   text-shadow: none;
   line-height: 1.2em;
