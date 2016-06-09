@@ -13,6 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -34,6 +35,7 @@ public class User {
 	private int zipcode;
 	private int phone;
 	private String salt;
+	private List<Reservation> reservations;
 	
 	private boolean googleUser;
 	private boolean facebookUser;
@@ -135,5 +137,11 @@ public class User {
 	
 	public String getApiAuthString(){
 		return "id=" + this.getId() + "&=" + this.getPassword();
+	}
+	public List<Reservation> getReservations() {
+		return reservations;
+	}
+	public void setReservations(List<Reservation> reservations) {
+		this.reservations = reservations;
 	}
 }
