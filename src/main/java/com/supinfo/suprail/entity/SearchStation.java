@@ -46,8 +46,11 @@ public class SearchStation {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = sdf.parse(arrival_date);
 		Timestamp timestamp = new Timestamp(date.getTime());
-		int hour = Integer.parseInt(time.substring(0, 2));
-		int minute = Integer.parseInt(time.substring(5, 7));
+		String toParse = time.replace(" ", "");
+		String[] times = toParse.split(":");
+		
+		int hour = Integer.parseInt(times[0]);
+		int minute = Integer.parseInt(times[1]);
 		
 		timestamp.setMinutes(minute);
 		timestamp.setHours(hour);
