@@ -1,6 +1,7 @@
 package com.supinfo.suprail.controller;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,6 +23,7 @@ import com.braintreegateway.Environment;
 import com.braintreegateway.Result;
 import com.braintreegateway.Transaction;
 import com.braintreegateway.TransactionRequest;
+import com.supinfo.suprail.entity.Reservation;
 import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.Station;
 import com.supinfo.suprail.entity.Travel;
@@ -79,7 +81,7 @@ public class TravelController {
 			
 			if(tr != null && !tr.isEmpty()){
 				Travel travel = tr.get(id);
-				travel_job.sendCart(travel, String.valueOf(user.getId()));
+				Reservation r = travel_job.sendCart(travel, String.valueOf(user.getId()));
 				model.addAttribute("travel", travel);
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 				model.addAttribute("now",  sdf.format(new Date()));
