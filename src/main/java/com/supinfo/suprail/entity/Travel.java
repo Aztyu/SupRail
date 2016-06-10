@@ -2,6 +2,7 @@ package com.supinfo.suprail.entity;
 
 import java.util.List;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 @JsonSerialize(include=JsonSerialize.Inclusion.NON_EMPTY)
@@ -56,10 +57,12 @@ private List<SearchStep> aller;
 		this.price = price;
 	}
 	
+	@JsonIgnore
 	public String getStationAller(){
 		return aller.get(0).start.getName();
 	}
 	
+	@JsonIgnore
 	public String getStationRetour(){
 		return aller.get(aller.size()-1).end.getName();
 	}

@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 @JsonSerialize(include=JsonSerialize.Inclusion.NON_EMPTY)
@@ -82,24 +83,28 @@ public class SearchStep {
 		this.time = time;
 	}
 
+	@JsonIgnore
 	public String getFormatedStartDate(){
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = new Date(this.start_time.getTime());
 		return sdf.format(date);
 	}
 	
+	@JsonIgnore
 	public String getFormatedStopDate(){
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Date date = new Date(this.end_time.getTime());
 		return sdf.format(date);
 	}
 	
+	@JsonIgnore
 	public String getFormatedStartTime(){
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		Date date = new Date(this.start_time.getTime());
 		return sdf.format(date);
 	}
 	
+	@JsonIgnore
 	public String getFormatedStopTime(){
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		Date date = new Date(this.end_time.getTime());
