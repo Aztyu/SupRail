@@ -24,12 +24,12 @@
 	                               <th>Commande</th>
 	                               <th>Date</th>
 	                               <th>Total</th>
-	                               <th>MÃ©thode de paiement</th>
+	                               <th>Méthode de paiement</th>
 	                           </tr>
 	                       </thead>
 	                       <tbody>
 	                           <tr>
-	                               <td>${travel.price}</td>
+	                               <td># 558</td>
 	                               <td>${now}</td>
 	                               <td>${travel.price} €</td>
 	                               <td>Paiement internet</td>
