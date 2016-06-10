@@ -85,23 +85,25 @@ public class TravelJob implements ITravelJob{
 	}
 
 	@Override
-	public Reservation sendCart(Travel travel, String user) throws Exception {
+	public Reservation sendCart(Travel travel, User user) throws Exception {
 		String req_url = BaseParam.base_api_url + "/travel/buy/"+user;
 		
 		ObjectMapper mapper = new ObjectMapper();
 		String json_param = mapper.writeValueAsString(travel);
 
-		String result = ApiRequest.sendPOSTRequest(req_url, json_param);
-		JsonNode node = mapper.readTree(result);
+		//String result = ApiRequest.sendPOSTRequest(req_url, json_param);
+		//JsonNode node = mapper.readTree(result);
 			
-		Reservation rsrv = mapper.treeToValue(node.get("reservation"), Reservation.class);
+		Reservation rsrv = new Reservation();//mapper.treeToValue(node.get("reservation"), Reservation.class);
+		rsrv.setTravel(travel);
+		rsrv.setUser(user);
 		
-		int status = node.get("html_status").asInt();
+		/*int status = node.get("html_status").asInt();
 		if(status != 200){
 			throw new Exception();
-		}else{
+		}else{*/
 			return rsrv;
-		}
+		//}
 	}
 	
 	@Override

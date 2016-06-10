@@ -84,7 +84,7 @@ public class TravelController {
 			if(tr != null && !tr.isEmpty()){
 				Travel travel = tr.get(id);
 				
-				Reservation r = travel_job.sendCart(travel, String.valueOf(user.getId()));
+				Reservation r = travel_job.sendCart(travel, user);
 				session.setAttribute("braintree", r);
 				model.addAttribute("travel", travel);
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
