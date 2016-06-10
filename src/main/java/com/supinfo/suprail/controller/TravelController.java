@@ -1,5 +1,6 @@
 package com.supinfo.suprail.controller;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.braintreegateway.BraintreeGateway;
+import com.braintreegateway.Environment;
+import com.braintreegateway.Result;
+import com.braintreegateway.Transaction;
+import com.braintreegateway.TransactionRequest;
 import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.Station;
 import com.supinfo.suprail.entity.Travel;
@@ -58,6 +64,13 @@ public class TravelController {
 		}
     }
 	
+	private static BraintreeGateway gateway = new BraintreeGateway(
+	  Environment.SANDBOX,
+	  "7dfdk5btdwvndg8q",
+	  "kk7nrs89x7tbsygj",
+	  "41774679325fc1e9ad1d4582e9caf413"
+	);
+	
 	@RequestMapping(value = "/addTravelCart/{id}", method = RequestMethod.GET)
     public String AddTravelCart(Model model,HttpServletRequest request, @PathVariable int id) {
 		try {
@@ -69,12 +82,37 @@ public class TravelController {
 				Travel travel = tr.get(id);
 				travel_job.sendCart(travel, String.valueOf(user.getId()));
 			}
+			
+			model.addAttribute("token", gateway.clientToken().generate());
+			
 			return "testtoto";
 		} catch (Exception e) {
 			model.addAttribute("erreurCart", "error");
 			return "redirect:/user/historyUser";
 		}
 
+    }
+	
+	@RequestMapping(value = "/user/validate", method = RequestMethod.POST)
+    public String validateRequestBraintree(Model model,HttpServletRequest request) throws Exception {
+		String nonceFromTheClient = request.getParameter("payment_method_nonce");
+	    
+		TransactionRequest t_request = new TransactionRequest()
+		    .amount(new BigDecimal("10.00"))
+		    .paymentMethodNonce(nonceFromTheClient)
+		    .options()
+		      .submitForSettlement(true)
+		      .done();
+
+		Result<Transaction> result = gateway.transaction().sale(t_request);
+		if(result.isSuccess()){
+			Transaction tr = result.getTarget();
+			String oumouk = "jkhjkshg";
+		}else{
+			throw new Exception();
+		}
+	
+		return "yolo";
     }
 
     @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)
