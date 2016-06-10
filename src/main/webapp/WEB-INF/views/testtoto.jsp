@@ -29,7 +29,7 @@
 	                       </thead>
 	                       <tbody>
 	                           <tr>
-	                               <td># 558</td>
+	                               <td># ${r.id}</td>
 	                               <td>${now}</td>
 	                               <td>${travel.price} €</td>
 	                               <td>Paiement internet</td>
@@ -43,19 +43,21 @@
 	                               <tr>
 	                                   <td>
 	                                       <h4 class="title">Nom du client</h4>
-	                                       <p>All in One</p>
+	                                       <p>${user.firstName}</p>
 	                                   </td>
 	                               </tr>
 	                               <tr>
 	                                   <td>
 	                                       <h4 class="title">Email</h4>
-	                                       <p><a href="#">AllinOne@mail.com</a></p>
+	                                       <p>${user.email}</p>
 	                                   </td>
 	                               </tr>
 	                               <tr>
 	                                   <td>
 	                                       <h4 class="title">Adresse</h4>
-	                                       <p>Boudin ham hock chicken,. Leberkas ham sausage doner pastrami porchetta tri-tip boudin shankle. Meatball shoulder rump spare ribs tongue venison short</p>
+	                                       <p>${user.address}</p>
+	                                       <p>${user.zipcode}</p>
+	                                       <p>${user.city}</p>
 	                                   </td>
 	                               </tr>
 	                           </tbody>
@@ -66,14 +68,14 @@
 	                       <table class="cart-detail-table">
 	                           <tbody>
 	                               <tr>
-	                                   <th>Product Category 1 eg.Hotel</th>
-	                                   <td>67.909 â¬</td>
+	                                   <th>${r.travel.stationAller} - ${r.travel.stationRetour }</th>
+	                                   <td>${travel.price} €</td>
 	                               </tr>
 	                           </tbody>
 	                           <tfoot>
 	                               <tr class="order-total">
 	                                   <th>Total</th>
-	                                   <td><span class="amount">${travel.price} €</span></td>
+	                                   <td style="width:70px;"><span class="amount">${travel.price} €</span></td>
 	                               </tr>
 	                           </tfoot>
 	                       </table>
