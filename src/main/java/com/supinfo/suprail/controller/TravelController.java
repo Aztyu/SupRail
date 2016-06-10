@@ -10,6 +10,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.braintreegateway.BraintreeGateway;
 import com.braintreegateway.Environment;
@@ -81,7 +83,9 @@ public class TravelController {
 			
 			if(tr != null && !tr.isEmpty()){
 				Travel travel = tr.get(id);
+				
 				Reservation r = travel_job.sendCart(travel, String.valueOf(user.getId()));
+				session.setAttribute("braintree", r);
 				model.addAttribute("travel", travel);
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 				model.addAttribute("now",  sdf.format(new Date()));
@@ -100,25 +104,34 @@ public class TravelController {
     }
 	
 	@RequestMapping(value = "/user/validate", method = RequestMethod.POST)
-    public String validateRequestBraintree(Model model,HttpServletRequest request) throws Exception {
-		String nonceFromTheClient = request.getParameter("payment_method_nonce");
-	    
-		TransactionRequest t_request = new TransactionRequest()
-		    .amount(new BigDecimal("10.00"))
-		    .paymentMethodNonce(nonceFromTheClient)
-		    .options()
-		      .submitForSettlement(true)
-		      .done();
+    public @ResponseBody String validateRequestBraintree(Model model,HttpServletRequest request) throws Exception {
+		try{
+			HttpSession session = request.getSession();
+			Reservation reserv = (Reservation)session.getAttribute("braintree");
+			
+			String nonceFromTheClient = request.getParameter("payment_method_nonce");
+		    
+			TransactionRequest t_request = new TransactionRequest()
+			    .amount(new BigDecimal(String.valueOf(reserv.getTravel().getPrice())))
+			    .paymentMethodNonce(nonceFromTheClient)
+			    .options()
+			      .submitForSettlement(true)
+			      .done();
 
-		Result<Transaction> result = gateway.transaction().sale(t_request);
-		if(result.isSuccess()){
-			Transaction tr = result.getTarget();
-			String oumouk = "jkhjkshg";
-		}else{
-			throw new Exception();
+			Result<Transaction> result = gateway.transaction().sale(t_request);
+			if(result.isSuccess()){
+				Transaction tr = result.getTarget();
+				
+				
+				travel_job.validateReservation(reserv);
+				
+				return "ok";
+			}else{
+				throw new Exception();
+			}
+		}catch(Exception ex){
+			return "error";
 		}
-	
-		return "yolo";
     }
 
     @RequestMapping(value = "/searchTravel", method = RequestMethod.POST)

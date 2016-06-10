@@ -77,12 +77,10 @@
 	                               </tr>
 	                           </tfoot>
 	                       </table>
-	                       <form id="checkout" method="post" action="${pageContext.request.contextPath}/validate">
+	                       <form id="checkout" method="post" action="${pageContext.request.contextPath}/user/validate">
 							  <div id="payment-form"></div>
-							  <input type="submit" value="Pay $10">
+							  <input type="submit" value="Payer">
 							</form>
-							
-							
 	                   </div>
 	               </div>
 	           </div>

@@ -103,4 +103,10 @@ public class TravelJob implements ITravelJob{
 			return rsrv;
 		}
 	}
+	
+	@Override
+	public void validateReservation(Reservation reserv) {
+		// TODO Auto-generated method stub
+		//sendMail
+	}
 }
