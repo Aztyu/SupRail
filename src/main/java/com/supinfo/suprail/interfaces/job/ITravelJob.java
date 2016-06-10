@@ -19,5 +19,7 @@ public interface ITravelJob {
 	public Reservation sendCart(Travel travel, String string) throws Exception;
 
 	public List<Reservation> getHistoryUser(long userId) throws Exception;
+
+	public Reservation getPdf(int id) throws Exception;
 	
 }

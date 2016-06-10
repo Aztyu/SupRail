@@ -19,7 +19,7 @@
 	                               <th>Commande</th>
 	                               <th>Date</th>
 	                               <th>Total</th>
-	                               <th>Méthode de paiement</th>
+	                               <th>M�thode de paiement</th>
 	                           </tr>
 	                       </thead>
 	                       <tbody>
@@ -38,7 +38,7 @@
 	                               <tr>
 	                                   <td>
 	                                       <h4 class="title">Nom :</h4>
-	                                       <p>All in One</p>
+	                                       <p>${reservation.user.firstName}</p>
 	                                   </td>
 	                                   <td>
 	                                       <h4 class="title">Prénom :</h4>

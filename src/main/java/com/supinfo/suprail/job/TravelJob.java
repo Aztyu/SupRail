@@ -122,4 +122,20 @@ public class TravelJob implements ITravelJob{
 			return null;
 		}
 	}
+
+	@Override
+	public Reservation getPdf(int id) throws Exception {
+		String req_url = BaseParam.base_api_url + "/reservation/" + String.valueOf(id); 
+
+		ObjectMapper mapper = new ObjectMapper();
+		
+		String result = ApiRequest.sendGETRequest(req_url);
+		JSONObject json = new JSONObject(result);
+		String json_reservation = json.getJSONObject("reservation").toString();
+		
+		Reservation reservation = mapper.readValue(json_reservation, Reservation.class);
+		
+		
+		return reservation;
+	}
 }
