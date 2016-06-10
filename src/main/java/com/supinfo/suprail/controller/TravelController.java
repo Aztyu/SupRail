@@ -2,6 +2,7 @@ package com.supinfo.suprail.controller;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -52,8 +53,6 @@ public class TravelController {
 			
 		}
 		arrList.add(travel);
-		
-		
 		session.setAttribute("travelCart", arrList);
 		
 		if(session.getAttribute("user") != null){
@@ -81,6 +80,9 @@ public class TravelController {
 			if(tr != null && !tr.isEmpty()){
 				Travel travel = tr.get(id);
 				travel_job.sendCart(travel, String.valueOf(user.getId()));
+				model.addAttribute("travel", travel);
+				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+				model.addAttribute("now",  sdf.format(new Date()));
 			}else{
 				throw new Exception();
 			}
