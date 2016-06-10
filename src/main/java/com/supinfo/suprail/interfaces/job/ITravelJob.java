@@ -2,6 +2,7 @@ package com.supinfo.suprail.interfaces.job;
 
 import java.util.List;
 
+import com.supinfo.suprail.entity.Reservation;
 import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.Station;
 import com.supinfo.suprail.entity.Travel;
@@ -15,6 +16,6 @@ public interface ITravelJob {
 
 	public String getStations() throws Exception;
 
-	public void sendCart(Travel travel, String string) throws Exception;
+	public Reservation sendCart(Travel travel, String string) throws Exception;
 	
 }
