@@ -71,16 +71,18 @@ public class TravelController {
 	  "41774679325fc1e9ad1d4582e9caf413"
 	);
 	
-	@RequestMapping(value = "/addTravelCart/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/user/addTravelCart/{id}", method = RequestMethod.GET)
     public String AddTravelCart(Model model,HttpServletRequest request, @PathVariable int id) {
 		try {
 			HttpSession session = request.getSession();
 			User user = (User)session.getAttribute("user");
 			List<Travel> tr = (List<Travel>)session.getAttribute("travelCart");
 			
-			if(!tr.isEmpty()){
+			if(tr != null && !tr.isEmpty()){
 				Travel travel = tr.get(id);
 				travel_job.sendCart(travel, String.valueOf(user.getId()));
+			}else{
+				throw new Exception();
 			}
 			
 			model.addAttribute("token", gateway.clientToken().generate());

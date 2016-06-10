@@ -133,7 +133,7 @@
                                         <div style="display:none">
                                         <p class="distsort">${ travel.minutes_aller}</p>
                                         </div>
-                                        <a href="${pageContext.request.contextPath}/addTravelCart/${loop.index}" class="awe-btn">Commander</a>
+                                        <a href="${pageContext.request.contextPath}/user/addTravelCart/${loop.index}" class="awe-btn">Commander</a>
                                         <c:if test = "${not empty travel.retour}">
 	                                        
 	                                        	<div style="margin-top:15px;">

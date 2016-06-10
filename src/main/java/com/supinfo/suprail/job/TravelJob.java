@@ -12,6 +12,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONObject;
 
 import com.supinfo.suprail.config.BaseParam;
+import com.supinfo.suprail.entity.Reservation;
 import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.Station;
 import com.supinfo.suprail.entity.Travel;
@@ -84,7 +85,7 @@ public class TravelJob implements ITravelJob{
 	}
 
 	@Override
-	public void sendCart(Travel travel, String user) throws Exception {
+	public Reservation sendCart(Travel travel, String user) throws Exception {
 		String req_url = BaseParam.base_api_url + "/travel/buy/"+user;
 		
 		ObjectMapper mapper = new ObjectMapper();
@@ -92,10 +93,14 @@ public class TravelJob implements ITravelJob{
 
 		String result = ApiRequest.sendPOSTRequest(req_url, json_param);
 		JsonNode node = mapper.readTree(result);
+			
+		Reservation rsrv = mapper.treeToValue(node.get("reservation"), Reservation.class);
 		
 		int status = node.get("html_status").asInt();
 		if(status != 200){
 			throw new Exception();
+		}else{
+			return rsrv;
 		}
 	}
 }
