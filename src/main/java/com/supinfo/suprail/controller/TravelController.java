@@ -89,6 +89,8 @@ public class TravelController {
 				model.addAttribute("travel", travel);
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 				model.addAttribute("now",  sdf.format(new Date()));
+				model.addAttribute("user", user);
+				model.addAttribute("r", r);
 			}else{
 				throw new Exception();
 			}
@@ -179,6 +181,18 @@ public class TravelController {
     
     @RequestMapping(value = "/user/checkout-complete", method = RequestMethod.GET)
     public String getcheckoutComplete(Model model,HttpServletRequest request) {
+    	try {
+    		HttpSession session = request.getSession();
+			User user = (User)session.getAttribute("user");
+			long userId = user.getId();
+        	List<Reservation> reserv = travel_job.getHistoryUser(userId);
+			model.addAttribute("reservation", reserv);
+
+		} catch (Exception e) {
+			model.addAttribute("erreurCart", "error");
+			return "redirect:/user/checkout-complete";
+			}
+    	
         return "checkout-complete";	
     }
     

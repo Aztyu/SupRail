@@ -16,14 +16,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.supinfo.suprail.config.BaseParam;
+import com.supinfo.suprail.entity.Reservation;
 import com.supinfo.suprail.entity.SearchStation;
 import com.supinfo.suprail.entity.User;
+import com.supinfo.suprail.interfaces.job.ITravelJob;
 import com.supinfo.suprail.interfaces.job.IUserJob;
 import com.supinfo.suprail.request.ApiRequest;
 
@@ -31,6 +34,9 @@ import com.supinfo.suprail.request.ApiRequest;
 public class UserController {
 	@Autowired
     IUserJob user_job;
+	
+	@Autowired
+    ITravelJob travel_job;
     
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String getCreationUser(Model model,HttpServletRequest request) {
@@ -124,8 +130,16 @@ public class UserController {
     	return "redirect:/";		
     }
     
-    @RequestMapping(value = "/receipt", method = RequestMethod.GET)
-    public String getTestPdf(Model model,HttpServletRequest request) {
+    @RequestMapping(value = "/receipt/{id}", method = RequestMethod.GET)
+    public String getTestPdf(Model model,HttpServletRequest request, @PathVariable int id) {
+    	Reservation reservation;
+		try {
+			reservation = travel_job.getPdf(id);
+	    	model.addAttribute("reservation", reservation);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         return "include/receipt";
     }
     

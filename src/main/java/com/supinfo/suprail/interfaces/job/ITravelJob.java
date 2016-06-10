@@ -14,4 +14,8 @@ public interface ITravelJob {
 	public String getStations() throws Exception;
 	public Reservation sendCart(Travel travel, String string) throws Exception;
 	public void validateReservation(Reservation reserv);
+	public List<Reservation> getHistoryUser(long userId) throws Exception;
+
+	public Reservation getPdf(int id) throws Exception;
+	
 }

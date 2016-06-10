@@ -17,6 +17,14 @@ public class Reservation {
 	@ManyToOne
 	private User user;
 	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	@OneToOne
 	@JoinColumn(name = "travel_id")
 	private Travel travel;

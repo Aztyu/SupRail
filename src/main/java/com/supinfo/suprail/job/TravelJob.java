@@ -109,4 +109,39 @@ public class TravelJob implements ITravelJob{
 		// TODO Auto-generated method stub
 		//sendMail
 	}
+
+	@Override
+	public List<Reservation> getHistoryUser(long userId) throws Exception {
+		String req_url = BaseParam.base_api_url + "/reservations/" + userId; 
+
+		ObjectMapper mapper = new ObjectMapper();
+		String result = ApiRequest.sendGETRequest(req_url);
+
+		JSONObject json = new JSONObject(result);
+		String json_travel = json.getJSONArray("reservations").toString();
+		JsonNode node = mapper.readTree(result);
+		
+		int status = json.getInt("html_status");
+		if(status == 200){
+			return (List<Reservation>)mapper.convertValue(node.get("reservations"), mapper.getTypeFactory().constructCollectionType(List.class, Reservation.class));
+		}else{
+			return null;
+		}
+	}
+
+	@Override
+	public Reservation getPdf(int id) throws Exception {
+		String req_url = BaseParam.base_api_url + "/reservation/" + String.valueOf(id); 
+
+		ObjectMapper mapper = new ObjectMapper();
+		
+		String result = ApiRequest.sendGETRequest(req_url);
+		JSONObject json = new JSONObject(result);
+		String json_reservation = json.getJSONObject("reservation").toString();
+		
+		Reservation reservation = mapper.readValue(json_reservation, Reservation.class);
+		
+		
+		return reservation;
+	}
 }
