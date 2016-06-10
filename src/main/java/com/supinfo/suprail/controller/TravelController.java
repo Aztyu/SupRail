@@ -85,6 +85,8 @@ public class TravelController {
 				model.addAttribute("travel", travel);
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 				model.addAttribute("now",  sdf.format(new Date()));
+				model.addAttribute("user", user);
+				model.addAttribute("r", r);
 			}else{
 				throw new Exception();
 			}
