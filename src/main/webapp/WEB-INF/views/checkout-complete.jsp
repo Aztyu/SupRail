@@ -17,7 +17,7 @@
               <div class="col-lg-12">
                   <div class="checkout-page__top">
                       <div class="title">
-                          <h1 class="text-uppercase">PANIER</h1>
+                          <h1 class="text-uppercase">HISTORIQUE</h1>
                       </div>
                       <span class="phone">Service Client: +1-888-8765-1234</span>
                   </div>
@@ -35,7 +35,7 @@
               <div class="your-cart-footer text-right">
                  <a href="#" class="awe-btn awe-btn-style3">Retour à l'accueil</a>
                  <a href="http://api.html2pdfrocket.com/pdf?value=http://alticraft.fr:8080/suprail/receipt&apikey=feee5ee0-6f25-4023-b269-4f03013855ac">Télécharger en PDF</a>
-                 <a href="http://api.html2pdfrocket.com/pdf?value=${pageContext.request.contextPath}/receipt&apikey=feee5ee0-6f25-4023-b269-4f03013855ac">Télécharger en PDF</a>
+                 <!--<a href="http://api.html2pdfrocket.com/pdf?value=${pageContext.request.contextPath}/receipt&apikey=feee5ee0-6f25-4023-b269-4f03013855ac">Télécharger en PDF</a>-->
              </div>
           </div>
       </div>
